@@ -9,7 +9,7 @@
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2005/12/01 or later.
 %%
-%% This work has the LPPL maintenance status `maintained'.
+%% This work has the LPPL maintenance status ``'maintained'.
 %% 
 %% The Current Maintainer of this work is the abnTeX2 team, led
 %% by Lauro César Araujo. Further information are available on 
@@ -41,8 +41,8 @@
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
-	french,				% idioma adicional para hifenização
-	spanish,			% idioma adicional para hifenização
+	% french,				% idioma adicional para hifenização
+	% spanish,			% idioma adicional para hifenização
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
@@ -100,7 +100,7 @@
 \local{Brasil}
 \data{2018, v-1.0.0}
 \orientador{Leandro Carlos Fernandez}
-\coorientador{}
+\coorientador{Danielle Colturato}
 \instituicao{%
   Universidade Paulista -- UNIP
   \par
@@ -110,8 +110,11 @@
 \tipotrabalho{Tese (Graduação)}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Trabalho apresentado a UNIP - UNIVERSIDADE PAULISTA
+como pré-requisito
+para obtenção da Certificação de Conclusão do
+Curso de Bacharelado em Ciência da Computação.
+Orientador: Prof. \imprimirorientador}
 % ---
 
 
@@ -216,12 +219,13 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 	\imprimirdata.}\\
 	
 	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		I. Orientador.
-		II. Universidade xxx.
-		III. Faculdade de xxx.
-		IV. Título\\ 			
+		1. JavaScript.
+		2. Desenvolvimento de aplicações.
+		I. Orientador \imprimirorientador.
+		II. Universidade Paulista -- UNIP.
+		III. Faculdade de Ciência da Computação.
+		IV. \imprimirtitulo 
+		V. \imprimirautor
 	
 	\hspace{8.75cm} CDU 02:141:005.7\\
 	
@@ -235,27 +239,27 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % Inserir errata
 % ---
 \begin{errata}
-Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
+% Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
 
 \vspace{\onelineskip}
 
-FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
-reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
-rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
-cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
-Zootecnia, Universidade de São Paulo, São Paulo, 2011.
+% FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
+% reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
+% rico em plaquetas}: estudo crítico na cirurgia de preservação de membro em
+% cães. 2011. 128 f. Tese (Livre-Docência) - Faculdade de Medicina Veterinária e
+% Zootecnia, Universidade de São Paulo, São Paulo, 2011.
 
-\begin{table}[htb]
-\center
-\footnotesize
-\begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
-  \hline
-   \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
-    \hline
-    1 & 10 & auto-conclavo & autoconclavo\\
-   \hline
-\end{tabular}
-\end{table}
+% \begin{table}[htb]
+% \center
+% \footnotesize
+% \begin{tabular}{|p{1.4cm}|p{1cm}|p{3cm}|p{3cm}|}
+%   \hline
+%    \textbf{Folha} & \textbf{Linha}  & \textbf{Onde se lê}  & \textbf{Leia-se}  \\
+%     \hline
+%     1 & 10 & auto-conclavo & autoconclavo\\
+%    \hline
+% \end{tabular}
+% \end{table}
 
 \end{errata}
 % ---
@@ -289,7 +293,7 @@ Zootecnia, Universidade de São Paulo, São Paulo, 2011.
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2012:
+   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2018:
 
    \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
    \assinatura{\textbf{Professor} \\ Convidado 1}
@@ -389,26 +393,6 @@ contribuirão para a evolução do \abnTeX.
    \textbf{Key-words}: latex. abntex. text editoration.
  \end{otherlanguage*}
 \end{resumo}
-
-% resumo em francês 
-\begin{resumo}[Résumé]
- \begin{otherlanguage*}{french}
-    Il s'agit d'un résumé en français.
- 
-   \textbf{Mots-clés}: latex. abntex. publication de textes.
- \end{otherlanguage*}
-\end{resumo}
-
-% resumo em espanhol
-\begin{resumo}[Resumen]
- \begin{otherlanguage*}{spanish}
-   Este es el resumen en español.
-  
-   \textbf{Palabras clave}: latex. abntex. publicación de textos.
- \end{otherlanguage*}
-\end{resumo}
-% ---
-
 % ---
 % inserir lista de ilustrações
 % ---
@@ -429,8 +413,9 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de abreviaturas e siglas
 % ---
 \begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
+%   \item[ABNT] Associação Brasileira de Normas Técnicas
+%   \item[abnTeX] ABsurdas Normas para TeX
+  \item[JS] JavaScript
 \end{siglas}
 % ---
 
@@ -438,15 +423,13 @@ contribuirão para a evolução do \abnTeX.
 % inserir lista de símbolos
 % ---
 \begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
+	\item
+%   \item[$ \in $] Pertence
 \end{simbolos}
 % ---
 
 % ---
-% inserir o sumario
+% inserir o sumariopr
 % ---
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
@@ -470,13 +453,23 @@ contribuirão para a evolução do \abnTeX.
 Inicialmente implementada com o objetivo no desenvolvimento web para o lado do
 cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape se tornou
 uma das linguagens mais populares atualmente, sendo a terceira camada do bolo quando
-se fala de tecnologias web, das quais HTML e CSS fazem parte.
+se fala de tecnologias web, das quais HTML e CSS também fazem parte. 
+
+Com navegadores cada vez mais modernos a  tendência  é  que  nossos  sites  também  fiquem  cada  vez  mais sofisticados.
+
+Todo projeto que iniciamos existe uma origem, uma necessidade e um 
+problema a ser resolvido. Há algum tempo, um grande problema ganhou 
+atenção: a reutilização de trechos de código. São módulos de código 
+(trechos em HTML, CSS, JavaScript, etc) que juntos criam padronizações 
+e organizações, mas sobretudo flexibilidade. São os chamados frameworks.
 
 Nos últimos anos a linguagem JavaScript ganhou maior importância, com o
 surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não
 somente web sites mas também aplicativos, single page applications, programas desktop,
 progressive web apps e muito mais. Sendo alguns deles Angular, React, Vue, jQuery e
 Node.js.
+
+Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
 
 O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores,
 levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na
@@ -488,70 +481,115 @@ JavaScript acrescido de tipagem de dados, ou seja, agora erros podem ser detecta
 durante a digitação do código, sem dúvidas podemos considerar o TypeScript como uma
 evolução do JavaScript.
 
+Neste trabalho você irá se atualizar do que há de mais novo no desenvolvimento com a linguagem JavaScript, é necessário conhecimento prévio básico da linguagem para um melhor entendimento. 
+
 
 % ----------------------------------------------------------
-% PARTE
+% PARTE 1. JAVASCRIPT
 % ----------------------------------------------------------
-\part{Preparação da pesquisa}
+\part{A Linguagem JavaScript}
 % ----------------------------------------------------------
+% ---
+% Capitulo O Básico sobre JS
+% ---
+\chapter{O Básico sobre JS}
 
 % ---
-% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% Capitulo JavaScript não é Java
 % ---
-\include{abntex2-modelo-include-comandos}
-% ---
-
-% ----------------------------------------------------------
-% PARTE
-% ----------------------------------------------------------
-\part{Referenciais teóricos}
-% ----------------------------------------------------------
+\chapter{JavaScript não é Java}
 
 % ---
-% Capitulo de revisão de literatura
+% Capitulo A linguagem nos dias atuais
 % ---
-\chapter{Lorem ipsum dolor sit amet}
-% ---
+\chapter{A linguagem nos dias atuais}
+
+\section{ECMA}
 
 % ---
-\section{Aliquam vestibulum fringilla lorem}
+% Capitulo JavaScript além dos navegadores
 % ---
+\chapter{JavaScript além dos navegadores}
 
-\lipsum[1]
-
-\lipsum[2-3]
 
 % ----------------------------------------------------------
-% PARTE
+% PARTE 2. TYPESCRIPT
 % ----------------------------------------------------------
-\part{Resultados}
+\part{O TypeScript}
 % ----------------------------------------------------------
+% ---
+% Capitulo O JS com poderes
+% ---
+\chapter{O JS com poderes}
+
 
 % ---
-% primeiro capitulo de Resultados
+% Capitulo Compiladores
 % ---
-\chapter{Lectus lobortis condimentum}
+\chapter{Compiladores}
+
+% \lipsum[1]
+
+% \lipsum[2-3]
+
+% ----------------------------------------------------------
+% PARTE 3. Frameworks
+% ----------------------------------------------------------
+\part{Frameworks}
+% ----------------------------------------------------------
 % ---
+% Capitulo jQuery
+% ---
+\chapter{jQuery}
+
 
 % ---
-\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae}
+% Capitulo React
 % ---
+\chapter{React}
 
-\lipsum[21-22]
-
-% ---
-% segundo capitulo de Resultados
-% ---
-\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
-elementum}
-% ---
 
 % ---
-\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
+% Capitulo Angular
 % ---
+\chapter{Angular}
 
-\lipsum[24]
+
+% ---
+% Capitulo Node.js
+% ---
+\chapter{Node.js}
+
+
+% ---
+% Capitulo Vue.js
+% ---
+\chapter{Vue.js}
+
+
+% ----------------------------------------------------------
+% PARTE 4. MEAN Stack
+% ----------------------------------------------------------
+\part{MEAN Stack}
+% ----------------------------------------------------------
+% ---
+% Capitulo A pilha
+% ---
+\chapter{A pilha}
+
+\section{MongoDB}
+
+\section{Express}
+
+\section{Angular}
+
+\section{Node.js}
+
+% ----------------------------------------------------------
+% PARTE 5. Conclusão
+% ----------------------------------------------------------
+\part{Conclusão}
+% ----------------------------------------------------------
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -561,10 +599,10 @@ elementum}
 %\phantompart
 
 % ---
-% Conclusão (outro exemplo de capítulo sem numeração e presente no sumário)
+% Considerações finais (outro exemplo de capítulo sem numeração e presente no sumário)
 % ---
-\chapter*[Conclusão]{Conclusão}
-\addcontentsline{toc}{chapter}{Conclusão}
+\chapter*[Considerações finais]{Considerações finais}
+\addcontentsline{toc}{chapter}{Considerações finais}
 % ---
 
 \lipsum[31-33]
@@ -595,24 +633,24 @@ elementum}
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
+% \begin{apendicesenv}
 
-% Imprime uma página indicando o início dos apêndices
-\partapendices
+% % Imprime uma página indicando o início dos apêndices
+% \partapendices
 
-% ----------------------------------------------------------
-\chapter{Quisque libero justo}
-% ----------------------------------------------------------
+% % ----------------------------------------------------------
+% \chapter{Quisque libero justo}
+% % ----------------------------------------------------------
 
-\lipsum[50]
+% \lipsum[50]
 
-% ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-\lipsum[55-57]
+% % ----------------------------------------------------------
+% \chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+% ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+% % ----------------------------------------------------------
+% \lipsum[55-57]
 
-\end{apendicesenv}
+% \end{apendicesenv}
 % ---
 
 
@@ -623,30 +661,30 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+% \begin{anexosenv}
 
-% Imprime uma página indicando o início dos anexos
-\partanexos
+% % Imprime uma página indicando o início dos anexos
+% \partanexos
 
-% ---
-\chapter{Morbi ultrices rutrum lorem.}
-% ---
-\lipsum[30]
+% % ---
+% \chapter{Morbi ultrices rutrum lorem.}
+% % ---
+% \lipsum[30]
 
-% ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
-% ---
+% % ---
+% \chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+% parturient montes nascetur ridiculus mus}
+% % ---
 
-\lipsum[31]
+% \lipsum[31]
 
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
+% % ---
+% \chapter{Fusce facilisis lacinia dui}
+% % ---
 
-\lipsum[32]
+% \lipsum[32]
 
-\end{anexosenv}
+% \end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO

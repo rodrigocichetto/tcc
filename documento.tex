@@ -72,6 +72,11 @@
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
 % --- 
+% CONFIGURAÇÃO DE FIGURAS
+% --- 
+\graphicspath{ {imagens/} }
+
+% --- 
 % CONFIGURAÇÕES DE PACOTES
 % --- 
 
@@ -238,10 +243,10 @@ Orientador: Prof. \imprimirorientador}
 % ---
 % Inserir errata
 % ---
-\begin{errata}
+% \begin{errata}
 % Elemento opcional da \citeonline[4.2.1.2]{NBR14724:2011}. Exemplo:
 
-\vspace{\onelineskip}
+% \vspace{\onelineskip}
 
 % FERRIGNO, C. R. A. \textbf{Tratamento de neoplasias ósseas apendiculares com
 % reimplantação de enxerto ósseo autólogo autoclavado associado ao plasma
@@ -260,8 +265,7 @@ Orientador: Prof. \imprimirorientador}
 %    \hline
 % \end{tabular}
 % \end{table}
-
-\end{errata}
+% \end{errata}
 % ---
 
 % ---
@@ -315,37 +319,36 @@ Orientador: Prof. \imprimirorientador}
 % ---
 % Dedicatória
 % ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{ Este trabalho é dedicado às crianças adultas que,\\
-   quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
-\end{dedicatoria}
+% \begin{dedicatoria}
+%    \vspace*{\fill}
+%    \centering
+%    \noindent
+%    \textit{ Este trabalho é dedicado às crianças adultas que,\\
+%    quando pequenas, sonharam em se tornar cientistas.} \vspace*{\fill}
+% \end{dedicatoria}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-\begin{agradecimentos}
-Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
-Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
-Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
-projeto abn\TeX\ foram extraídos de
-\url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
-contribuíram para que a produção de trabalhos acadêmicos conforme
-as normas ABNT com \LaTeX\ fosse possível.
+% \begin{agradecimentos}
+% Os agradecimentos principais são direcionados à Gerald Weber, Miguel Frasson,
+% Leslie H. Watter, Bruno Parente Lima, Flávio de Vasconcellos Corrêa, Otavio Real
+% Salvador, Renato Machnievscz\footnote{Os nomes dos integrantes do primeiro
+% projeto abn\TeX\ foram extraídos de
+% \url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
+% contribuíram para que a produção de trabalhos acadêmicos conforme
+% as normas ABNT com \LaTeX\ fosse possível.
 
-Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
-da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
-Brasília (CPAI), ao grupo de usuários
-\emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
-novos voluntários do grupo
-\emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
-\url{http://abntex2.googlecode.com/}}~que contribuíram e que ainda
-contribuirão para a evolução do \abnTeX.
-
-\end{agradecimentos}
+% Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
+% da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
+% Brasília (CPAI), ao grupo de usuários
+% \emph{latex-br}\footnote{\url{http://groups.google.com/group/latex-br}} e aos
+% novos voluntários do grupo
+% \emph{\abnTeX}\footnote{\url{http://groups.google.com/group/abntex2} e
+% \url{http://abntex2.googlecode.com/}}~que contribuíram e que ainda
+% contribuirão para a evolução do \abnTeX.
+% \end{agradecimentos}
 % ---
 
 % ---
@@ -354,11 +357,9 @@ contribuirão para a evolução do \abnTeX.
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
+		\textit{``Cada sonho que você deixa pra trás,\\
+		é um pedaço do seu futuro que deixa de existir. \\
+		(Steve Jobs)}
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -370,27 +371,32 @@ contribuirão para a evolução do \abnTeX.
 % resumo em português
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
+%  Segundo a \citeonline[3.1-3.2]{NBR6028:2003}
+Nos últimos tempos a linguagem JavaScript ganhou muita importância em quaisquer cenários que envolvam programação, e vem sendo utilizada em sites, aplicações, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. 
 
- \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
+Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro JavaScript, não é mais uma linguagem voltada somente para desenvolvedores front-end, mas sim uma obrigação para todo desenvolvedor, que deve conhecer pelo menos o básico de JS. 
+
+Este trabalho visa atualizar o leitor sobre as tendências do que mais vem sendo utilizado para a construção de aplicações utilizando a linguagem, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+
+ \vspace{\onelineskip}
+
+ \textbf{Palavras-chaves}: javascript, desenvolvimento de aplicações, typescript, frameworks
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
-   This is the english abstract.
+
+In recent times the JavaScript language has gained a lot of importance in any scenarios involving programming, and has been used in websites, applications, servers, automation of tests, automation of tasks, internet of things, among others.
+
+Being part of the three main technologies that move the internet, being HTML, CSS and JavaScript, is no longer a language aimed only at front-end developers, but a must for every developer, who must know at least the basics of JS .
+
+This work aims to update the reader on the trends of the most used for the construction of applications using the language, showing the most recent and most famous frameworks. But remember with great powers comes great responsibilities.
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Key-words}: latex. abntex. text editoration.
+   \textbf{Key-words}: javascript, application development, typescript, frameworks
  \end{otherlanguage*}
 \end{resumo}
 % ---
@@ -416,16 +422,20 @@ contribuirão para a evolução do \abnTeX.
 %   \item[ABNT] Associação Brasileira de Normas Técnicas
 %   \item[abnTeX] ABsurdas Normas para TeX
   \item[JS] JavaScript
+  \item[HTML] Abreviação para HyperText Markup Language, que em português significa Linguagem de Marcação de Hipertexto.
+  \item[DOM] Abreviação para Document Object Model, que em português significa Modelo de Objetos e Documentos.
+  \item[CSS] Abreviação para Cascading Style Sheets, que em português significa Folhas de Estilo em Cascata.
+  \item[ECMA] Acrônimo para European Computer Manufacturers Association, que em português significa Associação Européia de Fabricantes de Computadores.
 \end{siglas}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\begin{simbolos}
-	\item
-%   \item[$ \in $] Pertence
-\end{simbolos}
+% \begin{simbolos}
+% 	\item
+% %   \item[$ \in $] Pertence
+% \end{simbolos}
 % ---
 
 % ---
@@ -494,22 +504,92 @@ Neste trabalho você irá se atualizar do que há de mais novo no desenvolviment
 % ---
 \chapter{O Básico sobre JS}
 
+JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
+
+Atualmente, é praticamente impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos abaixo que são exemplos de aplicação da linguagem em \textit{web sites}.
+
+\begin{figure}[h]
+    \centering
+    \label{fig:Monocristalino}
+    \includegraphics[scale=0.25]{js-example-carrousel} \\
+    \caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel.}
+    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/carousel/)}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \label{fig:Monocristalino}
+    \includegraphics[scale=0.25]{js-example-validation} \\
+    \caption{\textit{Validation} - Validação de formulários}
+    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/forms/)}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \label{fig:Monocristalino}
+    \includegraphics[scale=0.25]{js-example-modal} \\
+    \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário.}
+    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/modal/)}
+\end{figure}
+
+A web está infestada de códigos JavaScript, pode ter certeza de que diariamente muito código JS está sendo executado durante uma pesquisa no Google, seu tempo no Facebook, acesso a seu banco na internet, ou até mesmo para leitura de uma notícia em um portal. Seu uso primário na web é de funções incluídas no HTML que interagem com o Modelo de Objetos e Documentos (DOM) da página.
+
+DOM é uma interface de programação para documentos HTML, ele fornece a representação e interação com objetos os estruturando em nós de uma árvore chamada de Árvore DOM. É assim que o JavaScript consegue manusear as estruturas, estilos e conteúdos dos elementos presentes no HTML. Vale ressaltar que ele não faz parte da linguagem JavaScript, pois também pode ser acessado por outras linguagens, como por exemplo o CSS.
+
+O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
+
+% \section{Caracteristicas}
+Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
+
+É uma linguagem interpretada, pois seus comandos são executados sem que haja necessidade de compilação, tendo como interpretador de \textit{script} o \textit{browser} do usuário. Sendo assim independente de plataformas, como os comandos são interpretados pelo navegador do usuário é irrelevante se o usuário está utilizando Windows, Linux ou Mac OS.
+
+Sua tipagem é dinâmica, ou seja, tipos são associados com valores. Por exemplo, uma variável pode ser associada a um número e posteriormente associada a um texto.
+
+Baseada em objetos, no JavaScript os objetos são matrizes associativas, ou seja obj.a = 10 e obj["a"] = 10 são equivalentes, sendo a única diferença a própria sintaxe.
+
+As funções em JS são tratadas como objetos, possuindo métodos e propriedades, podendo assim serem atríbuidas a variáveis, retornadas como objetos, ou até mesmo passadas como argumentos para outras funções, o que é chamado de aninhamento de funções.
+
+Com JavaScript também é possível a detecção de eventos, sempre que algo de importante acontece é disparado um evento, o clique de um botão, o preenchimento de um campo de formulário, a movimentação do mouse, são alguns exemplos dos eventos que são disparados. Isso nos permite reagir a estes eventos deixando assim que nossa aplicação deixe de ser estática.
+
+A linguagem possui grande tolerância a erros, uma vez que conversões automáticas são realizadas durante suas operações.
+
+Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador pressionando as teclas F12, também importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
+
+No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador e só. O JavaScript revolucionou o que podemos fazer, hoje não só na web, mas praticamente em todas as áreas que se possa programar.
 % ---
 % Capitulo JavaScript não é Java
 % ---
 \chapter{JavaScript não é Java}
+Acredite JavaScript não é Java, criada em 1995 por Brendan Eich a linguagem ganhou esse nome somente por estratégia publicitária, na época a recém lançada linguagem Java tinha muita sucesso. O que causou muitas confusões que existem até hoje para aqueles que iniciam no mundo da programação, pois esses indivíduos pensam que as linguagens são iguais ou que o JavaScript é uma versão mais simples do Java, o que não é verdade. É muito importante deixar claro que Java e Javascript são linguagens diferentes e com propósitos também distintos, a única coisa parecida entre elas é o nome.
+
+Brendan Eich, trabalhava na Netscape quando desenvolveu em apenas 10 dias uma linguagem de programação simples com o intuito de atrair novos programadores para ela.
+
+\begin{figure}[h]
+    \centering
+    \label{fig:Monocristalino}
+    \includegraphics[scale=0.5]{brendan-eich} \\
+    \caption{\textit{Brendan Eich} - Criador do JavaScript.}
+    Fonte: {Wikipedia (https://pt.wikipedia.org/wiki/)}
+	% https://pt.wikipedia.org/wiki/Brendan_Eich
+\end{figure}
+
+Originalmente desenvolvida com o nome Mocha (nome de um tipo de café), posteriormente teve seu nome modificado para LiveScript e, por fim, JavaScript em 4 de dezembro de 1995, nome pelo qual ficou tão conhecida.
+
+O JavaScript teve grande influencia da linguagem C, suportando elementos de sintaxe de programação estruturada do C (por exemplo while, if, switch) ambas diferem expressões e comandos, temos como exceção o escopo em blocos, que em seu lugar o JS utiliza escopos a níveis de funções. Uma diferença curiosa do C é que a quebra de linha termina automaticamente o comando, sendo assim o ponto e vírgula opcional ao fim do comando.
+
+Logo a linguagem adquiriu ampla aceitação e cresceu cada vez mais, desde então o JavaScript se tornou a linguagem de programação mais popular da web. Suportada por todos os navegadores, a linguagem é responsável por praticamente qualquer tipo de dinamismo que queiramos em nossas páginas.
 
 % ---
 % Capitulo A linguagem nos dias atuais
 % ---
 \chapter{A linguagem nos dias atuais}
 
-\section{ECMA}
+Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em vários lugares. 
 
-% ---
-% Capitulo JavaScript além dos navegadores
-% ---
-\chapter{JavaScript além dos navegadores}
+\section{JavaScript além dos navegadores}
+
+
+\section{ECMA}
 
 
 % ----------------------------------------------------------
@@ -526,7 +606,7 @@ Neste trabalho você irá se atualizar do que há de mais novo no desenvolviment
 % ---
 % Capitulo Compiladores
 % ---
-\chapter{Compiladores}
+% \chapter{Compiladores}
 
 % \lipsum[1]
 
@@ -537,6 +617,12 @@ Neste trabalho você irá se atualizar do que há de mais novo no desenvolviment
 % ----------------------------------------------------------
 \part{Frameworks}
 % ----------------------------------------------------------
+% ---
+% Capitulo Introdução as estruturas
+% ---
+\chapter{Introdução as estruturas}
+
+
 % ---
 % Capitulo jQuery
 % ---

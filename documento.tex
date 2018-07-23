@@ -688,12 +688,25 @@ Um banco de dados de flexível, poderoso, escalonável e de alta performance ori
 Por ser orientado à documentos JSON, podemos modelar dados de forma mais natural, de como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica de banco não-relacional.
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
- 
+
 \section{Express}
 
 \section{Angular}
 
 \section{Node.js}
+
+O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, exectuada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
+
+Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
+
+\subsection{NPM}
+
+O \textit{Node Package Manager}, mais conhecido como npm é o gerenciador de pacotes do Node.js. Com ele podemos fazer download de códigos, bibliotecas e \textit{frameworks} que nossos projetos podem usar, ou até mesmo ferramentas que exerçam alguma função em nosso sistema operacional.
+
+O arquivo "package.json" é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando "npm install" automaticamente todas as dependências listadas serão baixadas.
+
+Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando "npm install" para fazer o download. 
+
 
 % ----------------------------------------------------------
 % PARTE 5. Conclusão

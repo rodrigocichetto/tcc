@@ -71,6 +71,11 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 
+% ---
+% Pacotes adicionados por Rodrigo Cichetto
+% ---
+\usepackage{hyperref}
+
 % --- 
 % CONFIGURAÇÃO DE FIGURAS
 % --- 
@@ -686,15 +691,32 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 Um banco de dados de flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o banco de dados é gratuito e de código aberto.
 
-Por ser orientado à documentos JSON, podemos modelar dados de forma mais natural, de como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica de banco não-relacional.
+Por ser orientado à documentos JSON, podemos modelar dados de forma mais natural, utilizando a forma como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica ao MongoDB de banco não-relacional.
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
+
+\subsection{Instalação}
+
+Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/download-center} e baixar o instalador de acordo com seu sistema operacional.
+
+É necessário criar um diretório para o Mongo escrever seus arquivos, crie a pasta "data" e dentro dela a pasta "db", se você utiliza Linux ou Mac pode utilizar os seguintes comandos:
+
+\begin{itemize}
+% mkdir -p /data/db
+% chown -R $USER:$USER /data/db
+\item mkdir -p /data/db
+\item chown -R \textdollar USER:\textdollar USER /data/db 
+\end{itemize}
+
+Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal e execute o comando bin/mongod.exe se utilizar Windows ou bin/mongod se utilizar Linux ou Mac. Logo após é possível iniciar o MongoDB pelo comando bin/mongo , caso esteja em um ambiente Windows execute bin/mongo.exe .
 
 \section{Express}
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
 Com um conjunto de métodos utilitários HTTP e middleware a seu dispor, criar uma API robusta utilizando Express é rápido e fácil. 
+
+\subsection{Express Generator}
 
 \section{Angular}
 

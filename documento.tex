@@ -75,6 +75,48 @@
 % Pacotes adicionados por Rodrigo Cichetto
 % ---
 \usepackage{hyperref}
+% CODES JS
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+% ---
+% CONFIGURAÇÃO RODRIGO
+% ---
+% CODES JS
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=4,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
 
 % --- 
 % CONFIGURAÇÃO DE FIGURAS
@@ -444,7 +486,7 @@ Being part of the three main technologies that move the internet, being HTML, CS
 \cleardoublepage
 % ---
 
-
+% TODO inserir SOBRE O AUTOR
 
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
@@ -579,7 +621,7 @@ Logo a linguagem adquiriu ampla aceitação e cresceu cada vez mais, desde entã
 % ---
 \chapter{A linguagem nos dias atuais}
 
-Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em vários lugares. 
+Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o JavaScript. Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em vários lugares. 
 
 \section{JavaScript além dos navegadores}
 
@@ -605,7 +647,9 @@ Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigat
 
 \section{ECMA}
 % TODO: INSERIR PARAGRAFO EXPLICANDO COMO FUNCIONA PARA ENVIAR PROPOSTA PARA ECMA https://tableless.com.br/entendendo-o-async-e-o-await-em-javascript/
-Atualmente a linguagem se encontra na 8ª edição chamada de ECMAScript 2017 (https://www.ecma-international.org/publications/standards/Ecma-262.htm), finalizada em Junho de 2017, sua contribuição de maior expressão foi a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples.
+Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples. 
+% TODO CONTINUAR COM NOVAS FUNCIONALIDADES DA LINGUAGEM
+% TODO APONTAR NOVOS RUMOS DA LINGUAGEM, SUPORTE MOBILE... (https://www.youtube.com/watch?v=851mizGnr_Y)
 
 Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
 
@@ -615,9 +659,9 @@ Padronização que define a estrutura da linguagem, seus comportamentos e comand
 
 Com participação colaborativa de empresas que implementam o \textit{run-time} da linguagem, como Mozilla, Google, Microsoft e Apple, além da participação de desenvolvedores da comunidade, o ECMA coordena e faz o trabalho de desenvolvimento contínuo e descentralizado do JS.
 
-Em seu site (http://www.ecma-international.org/publications/standards/Ecma-262.htm) é possível encontrar informações como versão atual e a documentação da linguagem, porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript), ou também o site da W3Schools (https://www.w3schools.com/jsref/default.asp). 
+Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-262.htm}, a ECMA disponibiliza informações como versão atual e a documentação da linguagem, porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla \url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}, ou também o site da W3Schools \url{https://www.w3schools.com/jsref/default.asp}. 
 
-A 9ª edição já está em desenvolvimento, devendo chegar até o final deste ano de 2018, sendo chamada de ECMAScript 2018.
+A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
 % ----------------------------------------------------------
 % PARTE 2. TYPESCRIPT
@@ -689,11 +733,13 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 \section{MongoDB}
 
-Um banco de dados de flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o banco de dados é gratuito e de código aberto.
+Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB é gratuito e de código aberto.
 
-Por ser orientado à documentos JSON, podemos modelar dados de forma mais natural, utilizando a forma como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica ao MongoDB de banco não-relacional.
+Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de chave/valor, podemos modelar dados de forma mais natural, utilizando a forma como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica ao MongoDB de banco não-relacional.
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
+
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados.
 
 \subsection{Instalação}
 
@@ -709,6 +755,43 @@ Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/downl
 \end{itemize}
 
 Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal e execute o comando bin/mongod.exe se utilizar Windows ou bin/mongod se utilizar Linux ou Mac. Logo após é possível iniciar o MongoDB pelo comando bin/mongo , caso esteja em um ambiente Windows execute bin/mongo.exe .
+
+Através deste terminal podemos criar bancos de dados, documentos e coleções. Se em qualquer momento for preciso obter ajuda, basta dar o comando "\verb|help|" na linha de comando do terminal do Mongo.
+
+\subsection{Primeiros passos}
+
+Por padrão o terminal do Mongo inicia conectado ao banco de dados "\verb|test|". Para mudarmos para outro banco de dados utilizamos o comando "\verb|use nome_do_banco|". Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
+
+\textit{Insert}, através da função "\verb|insert()|" insere novos dados e pode receber como parâmetro um objeto JSON ou um array de objetos.
+
+\begin{lstlisting}[language=javascript]
+// Exemplo insert
+db.nome_do_banco.insert()
+\end{lstlisting}
+
+\textit{Find}, através da função "\verb|find()|", busca por objetos inseridos em uma \textit{collection}.
+ 
+\begin{lstlisting}[language=javascript]
+// Exemplo find
+db.nome_do_banco.find()
+\end{lstlisting}
+
+\textit{Update}, através da função "\verb|update()|" atualiza os dados, recebendo dois parâmetros, sendo o primeiro a condição para achar o documento, e o segundo o novo documento.
+
+\begin{lstlisting}[language=javascript]
+// Exemplo update
+db.nome_do_banco.update()
+\end{lstlisting}
+
+\textit{Remove}, através da função "\verb|remove()|" remove os dados, podendo passar um parâmetro para informar qual objeto remover ou nenhum para remover todos, caso esse seja seu objetivo, também é possível utilizar o comando "\verb|drop()|".
+
+\begin{lstlisting}[language=javascript]
+// Exemplo remove
+db.nome_do_banco.remove()
+// Exemplo drop
+db.nome_do_banco.drop()
+\end{lstlisting}
+
 
 \section{Express}
 

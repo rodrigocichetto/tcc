@@ -731,6 +731,16 @@ A 10ª edição já está em desenvolvimento, devendo chegar até o final de Jun
 
 Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja front-end, back-end ou banco de dados.
 
+\begin{figure}[h]
+	\centering
+
+	\caption{\textit{MEAN Stack} - Fluxo das ferramentas que integram o MEAN} \label{fig:MEANStackFlow}
+    \includegraphics[scale=0.5]{mean-stack-flow} \\
+    Fonte: {orangemantra \url{https://www.orangemantra.com/blog/utilize-the-simplicity-of-mean-stack-technology-for-your-next-project/}}
+	% https://www.orangemantra.com/blog/wp-content/uploads/2016/06/mean-stack.jpg
+
+\end{figure}
+
 \section{MongoDB}
 
 Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB é gratuito e de código aberto.
@@ -756,34 +766,34 @@ Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/downl
 
 Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal e execute o comando bin/mongod.exe se utilizar Windows ou bin/mongod se utilizar Linux ou Mac. Logo após é possível iniciar o MongoDB pelo comando bin/mongo , caso esteja em um ambiente Windows execute bin/mongo.exe .
 
-Através deste terminal podemos criar bancos de dados, documentos e coleções. Se em qualquer momento for preciso obter ajuda, basta dar o comando "\verb|help|" na linha de comando do terminal do Mongo.
+Através deste terminal podemos criar bancos de dados, documentos e coleções. Se em qualquer momento for preciso obter ajuda, basta dar o comando \verb|help| na linha de comando do terminal do Mongo.
 
 \subsection{Primeiros passos}
 
-Por padrão o terminal do Mongo inicia conectado ao banco de dados "\verb|test|". Para mudarmos para outro banco de dados utilizamos o comando "\verb|use nome_do_banco|". Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
+Por padrão o terminal do Mongo inicia conectado ao banco de dados \verb|test|. Para mudarmos para outro banco de dados utilizamos o comando \verb|use nome_do_banco|. Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
 
-\textit{Insert}, através da função "\verb|insert()|" insere novos dados e pode receber como parâmetro um objeto JSON ou um array de objetos.
+\textit{Insert}, através da função \verb|insert()| insere novos dados e pode receber como parâmetro um objeto JSON ou um array de objetos.
 
 \begin{lstlisting}[language=javascript]
 // Exemplo insert
 db.nome_do_banco.insert()
 \end{lstlisting}
 
-\textit{Find}, através da função "\verb|find()|", busca por objetos inseridos em uma \textit{collection}.
+\textit{Find}, através da função \verb|find()|, busca por objetos inseridos em uma \textit{collection}, podendo receber como parâmetro um objeto com os critérios de filtragem, ou nenhum para retornar todos os objetos.
  
 \begin{lstlisting}[language=javascript]
 // Exemplo find
 db.nome_do_banco.find()
 \end{lstlisting}
 
-\textit{Update}, através da função "\verb|update()|" atualiza os dados, recebendo dois parâmetros, sendo o primeiro a condição para achar o documento, e o segundo o novo documento.
+\textit{Update}, através da função \verb|update()| atualiza os dados, recebendo dois parâmetros, sendo o primeiro a condição para achar o documento, e o segundo o novo documento.
 
 \begin{lstlisting}[language=javascript]
 // Exemplo update
 db.nome_do_banco.update()
 \end{lstlisting}
 
-\textit{Remove}, através da função "\verb|remove()|" remove os dados, podendo passar um parâmetro para informar qual objeto remover ou nenhum para remover todos, caso esse seja seu objetivo, também é possível utilizar o comando "\verb|drop()|".
+\textit{Remove}, através da função \verb|remove()| remove os dados, podendo passar um parâmetro para informar qual objeto remover ou nenhum para remover todos, caso esse seja seu objetivo, também é possível utilizar o comando \verb|drop()|.
 
 \begin{lstlisting}[language=javascript]
 // Exemplo remove
@@ -795,9 +805,29 @@ db.nome_do_banco.drop()
 
 \section{Express}
 
-Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
+Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
 Com um conjunto de métodos utilitários HTTP e middleware a seu dispor, criar uma API robusta utilizando Express é rápido e fácil. 
+
+\subsection {Primeiros passos}
+
+Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados (veja como instalalos no capítulo ...) e então criar um arquivo com as seguintes linhas de código.
+
+No terminal execute o comando \verb|npm install express| dentro do diretório do seu projeto. Desta maneira conseguimos importar o express para nosso código.
+
+\begin{lstlisting}[language=javascript]
+import express from 'express';
+
+let app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+   res.send('Hello World');
+});
+
+app.listen(PORT);
+console.log(`Servidor disponivel na porta ${PORT}`);
+\end{lstlisting}
 
 \subsection{Express Generator}
 

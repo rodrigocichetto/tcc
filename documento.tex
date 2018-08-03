@@ -78,7 +78,7 @@
 % CODES JS
 \usepackage{listings}
 \usepackage{color}
-\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{lightgray}{rgb}{.95,.95,.95}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 
@@ -419,7 +419,7 @@ Orientador: Prof. \imprimirorientador}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 %  Segundo a \citeonline[3.1-3.2]{NBR6028:2003}
-Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro JavaScript, não é mais uma linguagem voltada somente para desenvolvedores front-end, mas sim uma obrigação para todo desenvolvedor, que tem como obrigação conhecer pelo menos o básico de JS. Nos últimos tempos a linguagem JavaScript ganhou muita importância em quaisquer cenários que envolvam programação, e vem sendo utilizada em sites, aplicações, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo atualizar o leitor através de um compilado de informações sobre as tendências do que mais vem sendo utilizado para a construção de aplicações utilizando a linguagem, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro o JavaScript, não é mais uma linguagem voltada somente para desenvolvedores front-end, mas sim uma obrigação para todo desenvolvedor, que tem como obrigação conhecer pelo menos o básico de JS. Nos últimos tempos a linguagem ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo atualizar o leitor através de um compilado de informações sobre as tendências do que mais vem sendo utilizado para a construção de aplicações utilizando a linguagem, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
 
  \vspace{\onelineskip}
 
@@ -562,7 +562,7 @@ Inicialmente classificada como linguagem do tipo \textit{client side}, é por si
 
 Sua tipagem é dinâmica, ou seja, tipos são associados com valores. Por exemplo, uma variável pode ser associada a um número e posteriormente associada a um texto.
 
-Baseada em objetos, no JavaScript os objetos são matrizes associativas, ou seja obj.a = 10 e obj["a"] = 10 são equivalentes, sendo a única diferença a própria sintaxe.
+Baseada em objetos, no JavaScript os objetos são matrizes associativas, ou seja \verb|obj.a = 10| e \verb|obj["a"] = 10| são equivalentes, sendo a única diferença a própria sintaxe.
 
 As funções em JS são tratadas como objetos, possuindo métodos e propriedades, podendo assim serem atríbuidas a variáveis, retornadas como objetos, ou até mesmo passadas como argumentos para outras funções, o que é chamado de aninhamento de funções.
 
@@ -581,15 +581,15 @@ No próximo capítulo abordaremos de como surgiu a linguagem, como ela evoluiu e
 
 	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
     \includegraphics[scale=0.4]{js-example-carrousel} \\
-    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/carousel/)}
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/carousel/}}
 
     \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
     \includegraphics[scale=0.45]{js-example-validation} \\
-    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/forms/)}
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/forms/}}
 	
     \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário. -- Exemplo de aplicação do JS} \label{fig:JSExampleModal}
     \includegraphics[scale=0.5]{js-example-modal} \\
-    Fonte: {Bootstrap (https://getbootstrap.com/docs/4.1/components/modal/)}
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/modal/}}
 
 \end{figure}
 
@@ -606,7 +606,7 @@ Brendan Eich, trabalhava na Netscape quando desenvolveu em apenas 10 dias uma li
     \label{fig:BrendanEich}
     \caption{\textit{Brendan Eich} - Criador do JavaScript.}
     \includegraphics[scale=0.6]{brendan-eich} \\
-    Fonte: {Wikipedia (https://pt.wikipedia.org/wiki/)}
+    Fonte: {Wikipedia \url{https://pt.wikipedia.org/wiki/}}
 	% https://pt.wikipedia.org/wiki/Brendan_Eich
 \end{figure}
 
@@ -720,14 +720,14 @@ A 10ª edição já está em desenvolvimento, devendo chegar até o final de Jun
 
 
 % ----------------------------------------------------------
-% PARTE 4. MEAN Stack
+% PARTE 4. Frameworks, bibliotecas e tecnologias
 % ----------------------------------------------------------
-\part{MEAN Stack}
+\part{Frameworks, bibliotecas e tecnologias}
 % ----------------------------------------------------------
 % ---
 % Capitulo A pilha
 % ---
-\chapter{A pilha}
+\chapter{A pilha MEAN}
 
 Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja front-end, back-end ou banco de dados.
 
@@ -759,9 +759,9 @@ Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/downl
 
 \begin{itemize}
 % mkdir -p /data/db
-% chown -R $USER:$USER /data/db
-\item mkdir -p /data/db
-\item chown -R \textdollar USER:\textdollar USER /data/db 
+% chown -R $USER:$USER /data/db     ou     chown -R \textdollar USER:\textdollar USER /data/db
+\item \verb|mkdir -p /data/db|
+\item \verb|chown -R $USER:$USER /data/db|
 \end{itemize}
 
 Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal e execute o comando bin/mongod.exe se utilizar Windows ou bin/mongod se utilizar Linux ou Mac. Logo após é possível iniciar o MongoDB pelo comando bin/mongo , caso esteja em um ambiente Windows execute bin/mongo.exe .
@@ -807,13 +807,13 @@ db.nome_do_banco.drop()
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Com um conjunto de métodos utilitários HTTP e middleware a seu dispor, criar uma API robusta utilizando Express é rápido e fácil. 
+Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
 
 \subsection {Primeiros passos}
 
 Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados (veja como instalalos no capítulo ...) e então criar um arquivo com as seguintes linhas de código.
 
-No terminal execute o comando \verb|npm install express| dentro do diretório do seu projeto. Desta maneira conseguimos importar o express para nosso código.
+No terminal execute o comando \verb|npm install express| dentro do diretório do seu projeto. Desta maneira conseguimos importar o express para nosso código. E então é só criar um arquivo \verb|app.js| com o código abaixo.
 
 \begin{lstlisting}[language=javascript]
 import express from 'express';
@@ -830,6 +830,22 @@ console.log(`Servidor disponivel na porta ${PORT}`);
 \end{lstlisting}
 
 \subsection{Express Generator}
+
+Com apenas o comando \verb|express nome_da_app| do Express Generator ele já estrutura uma aplicação Express simples. Após a execução do comando ele irá criar um novo diretório com o nome da aplicação informado anteriormente, contendo arquivos e dependências necessárias. 
+
+Antes de iniciarmos o servidor Express devemos instalar as dependências através do comando \verb|npm install| que irá baixar as dependências de acordo com o arquivo \verb|package.lock| gerado anteriormente. Enfim é hora de iniciar a aplicação executando o comando \verb|npm start| e acessá-la pelo endereço \href{http://localhost:3000}{http://localhost:3000}.
+
+\begin{figure}[h]
+	\centering
+
+	\caption{Aplicação gerada pelo Express Generator} \label{fig:ExpressGeneratorApp}
+    \includegraphics[scale=0.5]{express-generator-app} \\
+
+\end{figure}
+
+Essa página só é exibida porque no arquivo \verb|routes/index.js| está configurado a rota padrão para que renderize o arquivo \verb|views/index.jade| passando o título com o valor Express, sendo interpretado pela \textit{template engine} JADE, configurada por padrão pelo Express Generator.
+
+Para saber mais opções de geração de estruturas através do Express Generator, execute o comando \verb|express -h|.
 
 \section{Angular}
 
@@ -850,9 +866,9 @@ Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clie
 
 O \textit{Node Package Manager}, mais conhecido como npm é o gerenciador de pacotes do Node.js. Com ele podemos fazer download de códigos, bibliotecas e \textit{frameworks} que nossos projetos podem usar, ou até mesmo ferramentas que exerçam alguma função em nosso sistema operacional.
 
-O arquivo "package.json" é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando "npm install" automaticamente todas as dependências listadas serão baixadas.
+O arquivo \verb|package.json| é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando \verb|npm install| automaticamente todas as dependências listadas serão baixadas.
 
-Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando "npm install" para fazer o download. 
+Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando \verb|npm install| para fazer o download. 
 
 
 % ----------------------------------------------------------

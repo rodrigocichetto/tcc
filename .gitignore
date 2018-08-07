@@ -4,5 +4,10 @@
 *.log
 *.lot
 *.toc
+*.fls
+*.fdb_latexmk
+*.ilg
+*.ind
+*.vscodeLog
 *.synctex.gz
 materiais/

@@ -761,6 +761,12 @@ Para a execução de comandos no Mongo, existe um console que executa códigos J
 
 Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados.
 
+\subsection{Mongoose}
+
+Com o Mongo é possível inserir qualquer formato JSON nas coleções, por esse motivo não há nenhum controle sobre os dados inseridos. Isso pode causar inconsistência nos dados, inserindo informações inválidas podendo quebrar a aplicação, deixando a responsabilidade para o dev garantir a exatidão das informações.
+
+Para resolver esse problema existe o Mongoose que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquema para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
+
 \subsection{Instalação}
 
 Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/download-center} e baixar o instalador de acordo com seu sistema operacional.

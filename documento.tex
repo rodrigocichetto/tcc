@@ -461,6 +461,7 @@ Being part of the three main technologies that move the internet, being HTML, CS
 %   \item[ABNT] Associação Brasileira de Normas Técnicas
 %   \item[abnTeX] ABsurdas Normas para TeX
   \item[JS] JavaScript
+  \item[TS] TypeScript
   \item[HTML] Abreviação para \textit{HyperText Markup Language}, que em português significa Linguagem de Marcação de Hipertexto.
   \item[DOM] Abreviação para \textit{Document Object Model}, que em português significa Modelo de Objetos e Documentos.
   \item[CSS] Abreviação para \textit{Cascading Style Sheets}, que em português significa Folhas de Estilo em Cascata.
@@ -663,28 +664,58 @@ Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-2
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
-% \section{Futuro da linguagem}
-
-
 % ----------------------------------------------------------
-% PARTE 2. TYPESCRIPT
+% PARTE 3. Criando aplicações modernas
 % ----------------------------------------------------------
-\part{O TypeScript}
+\part{Criando aplicações modernas}
 % ----------------------------------------------------------
 % ---
 % Capitulo O JS com poderes
 % ---
 \chapter{O JS com poderes}
 
-O TypeScript é um \textit{superset} para o JavaScript criado pela Microsoft, que  permite ao desenvolvedor aplicar conceitos de orientação a objetos a linguagem, ou seja, é o próprio JS com algumas funcionalidades a mais. Assim, podemos afirmar que todo código JavaScript é um TypeScript válido, uma vez que o código em TypeScript, é convertido no final para código JavaScript através de um processo de transpilação.
+Na evolução que vem acontecendo no mundo web, felizmente chegamos ao ponto que podemos tratar o JavaScript como uma linguagem tipada, isso só é possível graças ao TypeScript.
 
+O TypeScript é um \textit{superset} para o JavaScript criado pela Microsoft, que  permite ao desenvolvedor aplicar conceitos de orientação a objetos a linguagem, ou seja, é o próprio JS com algumas funcionalidades a mais. Assim, podemos afirmar que todo código JavaScript é um TypeScript válido, uma vez que o código em TypeScript, é convertido no final para código JavaScript através de um processo chamado de transpilação.
 
+Atualmente o TypeScript tem sido amplamente utilizado em aplicações web modernas e também em conjunto com o Node.js, devido a seus recursos ele permite criar aplicações mais robustas. Após o TS ganhar popularidade, alguns até comparam o JavaScript com “linguagem de máquina” ou o famoso \textit{bytecode}.
 
-% ----------------------------------------------------------
-% PARTE 3. Criando aplicações modernas
-% ----------------------------------------------------------
-\part{Criando aplicações modernas}
-% ----------------------------------------------------------
+Veja um exemplo de código escrito em TypeScript:
+
+\begin{lstlisting}[language=javascript]
+interface IComponent{
+    getId() : string;
+}
+
+class Button implements IComponent{
+    id:string;
+    getId():string{
+        return this.id;
+    }
+}
+\end{lstlisting}
+
+E agora o mesmo código transformado em JavaScript:
+
+\begin{lstlisting}[language=javascript]
+var Button = (function () {
+    function Button() {
+    }
+    Button.prototype.getId = function () {
+        return this.id;
+    };
+    return Button;
+})();
+\end{lstlisting}
+% EXEMPLO RETIRADO DE https://tableless.com.br/diga-ola-ao-typescript-e-adeus-ao-javascript/
+
+No próprio site do TypeScript é disponibilizado um editor como playground para que você possa se aventurar e fazer alguns testes com a linguagem, basta acessar \href{http://www.typescriptlang.org/Playground}{http://www.typescriptlang.org/Playground}.
+
+Para instalar a última versão estável do TypeScript utilizando o NPM, basta digitar o comando \verb|npm install -g typescript|.
+
+\subsection{Transpilação}
+Após instalar o TypeScript e criar seus arquivos utilizando a extensão \verb|.ts|, você pode usar o comando \verb|tsc --out script.js script.ts| para transpilar seu código TypeScript para JavaScript.
+
 % TODO ADICIONAR PROGRAMAÇÃO REATIVA...
 % TODO por esses e outros motivos há quem classifique o navegador como um sistema operacional, o que é uma realidade no caso do Chrome OS
 % ---
@@ -746,6 +777,8 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 \end{figure}
 
+Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como Hackathon, conseguindo protótipos de forma rápida, provando assim sua produtividade.
+
 \section{MongoDB}
 
 Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB é gratuito e de código aberto.
@@ -754,7 +787,7 @@ Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de c
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
 
-Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados.
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados.
 
 \subsection{Mongoose}
 
@@ -820,6 +853,8 @@ Express é um \textit{framework} web rápido, flexível e minimalista para Node.
 
 Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
 
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints REST, que serão consumidos pela aplicação cliente.
+
 \subsection {Primeiros passos}
 
 Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados (veja como instalalos no capítulo ...) e então criar um arquivo com as seguintes linhas de código.
@@ -868,6 +903,8 @@ O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a m
 
 Assim como o React o novo Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados REST.
+
 \subsection{Angular CLI} 
 
 % TODO Adicionar introdução
@@ -883,6 +920,8 @@ Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de 
 O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, exectuada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
 
 Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
+
+Na MEAN Stack, o Node é o core...
 
 \subsection{NPM}
 

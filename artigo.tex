@@ -43,6 +43,7 @@
 \usepackage{color}              % Controle das cores
 \usepackage{graphicx}           % Inclusão de gráficos
 \usepackage{microtype}          % para melhorias de justificação
+\usepackage{graphicx}			% Inclusão de gráficos
 % ---
         
 % ---
@@ -81,7 +82,7 @@
 \titulo{Desenvolvimento de aplicações com JavaScript}
 \autor{Rodrigo Cichetto Monteiro \\ UNIP - Universidade Paulista}
 % \local{Araraquara - SP, Brasil}
-\data{24 de agosto de 2018, v-1.0.0}
+\data{26 de agosto de 2018, v-1.0.0}
 % ---
 
 % ---
@@ -114,6 +115,11 @@
 % ---
 \makeindex
 % ---
+
+% --- 
+% CONFIGURAÇÃO DE FIGURAS
+% --- 
+\graphicspath{ {imagens/} }
 
 % ---
 % Altera as margens padrões
@@ -160,12 +166,12 @@
 
 % resumo em português
 \begin{resumoumacoluna}
-Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro o JavaScript, a linguagem não é mais voltada somente para desenvolvedores front-end. Nos últimos tempos a linguagem ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo atualizar o leitor através de um compilado de informações sobre as tendências para a construção de aplicações utilizando a linguagem JavaScript, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro o JavaScript, a linguagem também conhecida pelo acrônimo JS não é mais voltada somente para desenvolvedores front-end. Nos últimos tempos a linguagem ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo apresentar ao leitor uma arquitetura que tem como base a construção de aplicações utilizando a linguagem JavaScript, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
  
  \vspace{\onelineskip}
  
  \noindent
- \textbf{Palavras-chaves}: aplicações, javascript, typescript
+ \textbf{Palavras-chaves}: aplicações, javascript, arquitetura
 \end{resumoumacoluna}
 
 % ]                 % FIM DE ARTIGO EM DUAS COLUNAS
@@ -194,172 +200,70 @@ Node.js.
 
 Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
 
-O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript até mesmo no \textit{back-end}. 
+Sempre que vamos programar web utilizamos uma ou mais linguagens de programação, PHP, Java, Python para fazer o back-end e utilizamos o HTML com CSS e o JavaScript para o front-end, além de um banco de dados para armazenar as informações.
 
-Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas áreas sendo elas desenvolvimento de jogos, realidade virtual e aumentada, internet das coisas, servidores e até mesmo controle de hardware.
+É bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript.
 
 % ----------------------------------------------------------
 % Seção de explicações
 % ----------------------------------------------------------
-\section{Exemplos de comandos}
+\section{MEAN Stack - A arquitetura}
 
-\subsection{Margens}
+É possível resolver grande parte dos problemas utilizando o princípo de que um cliente consome as informações de um serviço que fica disponível através de um servidor e persiste os dados em um banco de dados.
 
-A norma ABNT NBR 6022:2003 não estabelece uma margem específica a ser utilizada
-no artigo científico. Dessa maneira, caso deseje alterar as margens, utilize os
-comandos abaixo:
+Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja front-end, back-end ou banco de dados.
 
-\begin{verbatim}
-   \setlrmarginsandblock{3cm}{3cm}{*}
-   \setulmarginsandblock{3cm}{3cm}{*}
-   \checkandfixthelayout
-\end{verbatim}
+A onipresença da linguagem JavaScript ajuda na integração da equipe front-end e back-end, melhorando até mesmo a produtividade.
 
-\subsection{Duas colunas}
+Não devemos focar nas ferramentas em si, mas sim em suas funções que fazem a engrenagem girar, como vemos na Figura \ref{fig:MEANStackFlow}, dividimos a arquitetura em 3 partes, sendo elas o cliente, servidor e banco de dados. Perceba que podemos trocar as peças, desde que a estrutura se mantenha a mesma tudo irá funcionar.
 
-É comum que artigos científicos sejam escritos em duas colunas. Para isso,
-adicione a opção \texttt{twocolumn} à classe do documento, como no exemplo:
+\begin{figure}[h]
+	\centering
 
-\begin{verbatim}
-   \documentclass[article,11pt,oneside,a4paper,twocolumn]{abntex2}
-\end{verbatim}
+	\caption{\textit{MEAN Stack} - Fluxo das ferramentas que integram o MEAN} \label{fig:MEANStackFlow}
+    \includegraphics[scale=0.4]{mean-stack-flow} \\
+    Fonte: {orangemantra \url{https://www.orangemantra.com/blog/utilize-the-simplicity-of-mean-stack-technology-for-your-next-project/}}
+	% https://www.orangemantra.com/blog/wp-content/uploads/2016/06/mean-stack.jpg
 
-É possível indicar pontos do texto que se deseja manter em apenas uma coluna,
-geralmente o título e os resumos. Os resumos em única coluna em documentos com
-a opção \texttt{twocolumn} devem ser escritos no ambiente
-\texttt{resumoumacoluna}:
+\end{figure}
 
-\begin{verbatim}
-   \twocolumn[              % INICIO DE ARTIGO EM DUAS COLUNAS
+\subsection{MongoDB - O banco de dados}
 
-     \maketitle             % pagina de titulo
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados.
 
-     \renewcommand{\resumoname}{Nome do resumo}
-     \begin{resumoumacoluna}
-        Texto do resumo.
-      
-        \vspace{\onelineskip}
- 
-        \noindent
-        \textbf{Palavras-chaves}: latex. abntex. editoração de texto.
-     \end{resumoumacoluna}
-   
-   ]                        % FIM DE ARTIGO EM DUAS COLUNAS
-\end{verbatim}
+O Mongo é um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, é gratuito e de código aberto.
 
-\subsection{Recuo do ambiente \texttt{citacao}}
+Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de chave/valor, o que o dá a característica ao MongoDB de banco não-relacional, podemos modelar dados de forma mais natural, utilizando a forma como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas.
 
-Na produção de artigos (opção \texttt{article}), pode ser útil alterar o recuo
-do ambiente \texttt{citacao}. Nesse caso, utilize o comando:
+Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
 
-\begin{verbatim}
-   \setlength{\ABNTEXcitacaorecuo}{1.8cm}
-\end{verbatim}
+\subsection{Express - O serviço}
 
-Quando um documento é produzido com a opção \texttt{twocolumn}, a classe
-\textsf{abntex2} automaticamente altera o recuo padrão de 4 cm, definido pela
-ABNT NBR 10520:2002 seção 5.3, para 1.8 cm.
+Apesar de funcional, nosso servidor é limitado, por isso precisamos do Express, ele extende as capacidades do servidor padrão do Node.js adicionando middlewares, views, rotas e outros recursos.
 
-\section{Cabeçalhos e rodapés customizados}
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints REST, que serão consumidos pela aplicação cliente.
 
-Diferentes estilos de cabeçalhos e rodapés podem ser criados usando os
-recursos padrões do \textsf{memoir}.
+Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Um estilo próprio de cabeçalhos e rodapés pode ser diferente para páginas pares
-e ímpares. Observe que a diferenciação entre páginas pares e ímpares só é
-utilizada se a opção \texttt{twoside} da classe \textsf{abntex2} for utilizado.
-Caso contrário, apenas o cabeçalho padrão da página par (\emph{even}) é usado.
+Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
 
-Veja o exemplo abaixo cria um estilo chamado \texttt{meuestilo}. O código deve
-ser inserido no preâmbulo do documento.
+\subsection{Angular - O cliente}
 
-\begin{verbatim}
-%%criar um novo estilo de cabeçalhos e rodapés
-\makepagestyle{meuestilo}
-  %%cabeçalhos
-  \makeevenhead{meuestilo} %%pagina par
-     {topo par à esquerda}
-     {centro \thepage}
-     {direita}
-  \makeoddhead{meuestilo} %%pagina ímpar ou com oneside
-     {topo ímpar/oneside à esquerda}
-     {centro\thepage}
-     {direita}
-  \makeheadrule{meuestilo}{\textwidth}{\normalrulethickness} %linha
-  %% rodapé
-  \makeevenfoot{meuestilo}
-     {rodapé par à esquerda} %%pagina par
-     {centro \thepage}
-     {direita} 
-  \makeoddfoot{meuestilo} %%pagina ímpar ou com oneside
-     {rodapé ímpar/onside à esquerda}
-     {centro \thepage}
-     {direita}
-\end{verbatim}
+De que importa termos um servidor bem estruturado, com uma API documentada se ninguém a consome, é por isso que existe a aplicação cliente, ela consome nosso serviço para dar alguma funcionalidade a nossa lógica escrita no servidor.
 
-Para usar o estilo criado, use o comando abaixo imediatamente após um dos
-comandos de divisão do documento. Por exemplo:
+Perceba que uma vez que possuímos um serviço a linguagem ou framework da aplicação cliente é indiferente, podemos utilizar o Angular para criar nossa aplicação web e ao mesmo tempo React Native para uma aplicação mobile que consome o mesmo serviço.
 
-\begin{verbatim}
-   \begin{document}
-     %%usar o estilo criado na primeira página do artigo:
-     \pretextual
-     \pagestyle{meuestilo}
-     
-     \maketitle
-     ...
-     
-     %%usar o estilo criado nas páginas textuais
-     \textual
-     \pagestyle{meuestilo}
-     
-     \chapter{Novo capítulo}
-     ...
-   \end{document}  
-\end{verbatim}
-   
-Outras informações sobre cabeçalhos e rodapés estão disponíveis na seção 7.3 do
-manual do \textsf{memoir} \cite{memoir}.
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados REST.
 
-\section{Mais exemplos no Modelo Canônico de Trabalhos Acadêmicos}
+Angular é um framework JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis, além de guiar o desenvolvedor na organização e construção de seu código provendo serviços para isso, facilitando assim o desenvolvimento.
 
-Este modelo de artigo é limitado em número de exemplos de comandos, pois são
-apresentados exclusivamente comandos diretamente relacionados com a produção de
-artigos.
+\subsection{Node.js - O servidor}
 
-Para exemplos adicionais de \abnTeX\ e \LaTeX, como inclusão de figuras,
-fórmulas matemáticas, citações, e outros, consulte o documento
-\citeonline{abntex2modelo}.
+Para que nossa aplicação tenha disponibilidade, necessitamos de um ambiente de execução, mais conhecido como servidor.
 
-\section{Consulte o manual da classe \textsf{abntex2}}
+O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, exectuada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Com ele é possível construir aplicações escaláveis com rapidez. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
 
-Consulte o manual da classe \textsf{abntex2} \cite{abntex2classe} para uma
-referência completa das macros e ambientes disponíveis.
-
-% ---
-% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
-% ---
-\bookmarksetup{startatroot}% 
-% ---
-
-% ---
-% Conclusão
-% ---
-\section*{Considerações finais}
-\addcontentsline{toc}{section}{Considerações finais}
-
-\lipsum[1]
-
-\begin{citacao}
-\lipsum[2]
-\end{citacao}
-
-\lipsum[3]
-
-% ----------------------------------------------------------
-% ELEMENTOS PÓS-TEXTUAIS
-% ----------------------------------------------------------
-\postextual
+Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
 
 \end{document}

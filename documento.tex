@@ -535,16 +535,10 @@ evolução do JavaScript.
 
 Este trabalho tem como objetivo atualizar o leitor do que há de mais novo no desenvolvimento com a linguagem JavaScript, para melhor compreensão do conteúdo apresentado é necessário conhecimento prévio básico da linguagem. 
 
-
-% ----------------------------------------------------------
-% PARTE 1. JAVASCRIPT
-% ----------------------------------------------------------
-\part{A linguagem JavaScript}
-% ----------------------------------------------------------
 % ---
-% Capitulo O Básico sobre JS
+% O Básico sobre JS
 % ---
-\chapter{O Básico sobre JS}
+\section{O Básico sobre JS}
 
 JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
 
@@ -556,7 +550,6 @@ DOM é uma interface de programação utilizada para documentos HTML, ele fornec
 
 O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
 
-% \section{Caracteristicas}
 Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
 
 É uma linguagem interpretada, pois seus comandos são executados sem que haja necessidade de compilação, tendo como interpretador de \textit{script} o \textit{browser} do usuário. Sendo assim independente de plataformas, como os comandos são interpretados pelo navegador do usuário é irrelevante se o usuário está utilizando Windows, Linux ou Mac OS.
@@ -595,36 +588,13 @@ No próximo capítulo abordaremos de como surgiu a linguagem, como ela evoluiu e
 \end{figure}
 
 % ---
-% Capitulo JavaScript não é Java
+% A linguagem nos dias atuais
 % ---
-\chapter{JavaScript não é Java}
-Acredite JavaScript não é Java, criada em 1995 por Brendan Eich a linguagem ganhou esse nome somente por estratégia publicitária, na época a recém lançada linguagem Java tinha muita sucesso. O que causou muitas confusões que existem até hoje para aqueles que iniciam no mundo da programação, pois esses indivíduos pensam que as linguagens são iguais ou que o JavaScript é uma versão mais simples do Java, o que não é verdade. É muito importante deixar claro que Java e JavaScript são linguagens diferentes e com propósitos também distintos, a única coisa parecida entre elas é o nome.
-
-Brendan Eich, trabalhava na Netscape quando desenvolveu em apenas 10 dias uma linguagem de programação simples com o intuito de atrair novos programadores para ela.
-
-\begin{figure}[h]
-    \centering
-    \label{fig:BrendanEich}
-    \caption{\textit{Brendan Eich} - Criador do JavaScript.}
-    \includegraphics[scale=0.6]{brendan-eich} \\
-    Fonte: {Wikipedia \url{https://pt.wikipedia.org/wiki/}}
-	% https://pt.wikipedia.org/wiki/Brendan_Eich
-\end{figure}
-
-Originalmente desenvolvida com o nome Mocha (nome de um tipo de café), posteriormente teve seu nome modificado para LiveScript e, por fim, JavaScript em 4 de dezembro de 1995, nome pelo qual ficou tão conhecida.
-
-O JavaScript teve grande influencia da linguagem C, suportando elementos de sintaxe de programação estruturada do C (por exemplo while, if, switch) ambas diferem expressões e comandos, temos como exceção o escopo em blocos, que em seu lugar o JS utiliza escopos a níveis de funções. Uma diferença curiosa do C é que a quebra de linha termina automaticamente o comando, sendo assim o ponto e vírgula opcional ao fim do comando.
-
-Logo a linguagem adquiriu ampla aceitação e cresceu cada vez mais, desde então o JavaScript se tornou a linguagem de programação mais popular da web. Suportada por todos os navegadores, a linguagem é responsável por praticamente qualquer tipo de dinamismo que queiramos em nossas páginas.
-
-% ---
-% Capitulo A linguagem nos dias atuais
-% ---
-\chapter{A linguagem nos dias atuais}
+\subsection{A linguagem nos dias atuais}
 
 Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o JavaScript. Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em vários lugares. 
 
-\section{JavaScript além dos navegadores}
+\subsubsection{JavaScript além dos navegadores}
 
 Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas áreas sendo elas:
 
@@ -646,7 +616,7 @@ O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. 
 
 Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando na área de \textit{back-end} ou até mesmo de teste.
 
-\section{ECMA}
+\subsubsection{ECMA}
 % TODO: INSERIR PARAGRAFO EXPLICANDO COMO FUNCIONA PARA ENVIAR PROPOSTA PARA ECMA https://tableless.com.br/entendendo-o-async-e-o-await-em-javascript/
 Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples. 
 % TODO CONTINUAR COM NOVAS FUNCIONALIDADES DA LINGUAGEM
@@ -664,104 +634,21 @@ Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-2
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
-% ----------------------------------------------------------
-% PARTE 3. Criando aplicações modernas
-% ----------------------------------------------------------
-\part{Criando aplicações modernas}
-% ----------------------------------------------------------
-% ---
-% Capitulo O JS com poderes
-% ---
-\chapter{O JS com poderes}
+\chapter{Pesquisa bibliográfica}
 
-Na evolução que vem acontecendo no mundo web, felizmente chegamos ao ponto que podemos tratar o JavaScript como uma linguagem tipada, isso só é possível graças ao TypeScript.
+\section{Arquitetura}
 
-O TypeScript é um \textit{superset} para o JavaScript criado pela Microsoft, que  permite ao desenvolvedor aplicar conceitos de orientação a objetos a linguagem, ou seja, é o próprio JS com algumas funcionalidades a mais. Assim, podemos afirmar que todo código JavaScript é um TypeScript válido, uma vez que o código em TypeScript, é convertido no final para código JavaScript através de um processo chamado de transpilação.
+\subsection{Banco de dados}
+\subsection{Serviço}
+\subsection{Cliente}
+\subsection{Servidor}
 
-Atualmente o TypeScript tem sido amplamente utilizado em aplicações web modernas e também em conjunto com o Node.js, devido a seus recursos ele permite criar aplicações mais robustas. Após o TS ganhar popularidade, alguns até comparam o JavaScript com “linguagem de máquina” ou o famoso \textit{bytecode}.
-
-Veja um exemplo de código escrito em TypeScript:
-
-\begin{lstlisting}[language=javascript]
-interface IComponent{
-    getId() : string;
-}
-
-class Button implements IComponent{
-    id:string;
-    getId():string{
-        return this.id;
-    }
-}
-\end{lstlisting}
-
-E agora o mesmo código transformado em JavaScript:
-
-\begin{lstlisting}[language=javascript]
-var Button = (function () {
-    function Button() {
-    }
-    Button.prototype.getId = function () {
-        return this.id;
-    };
-    return Button;
-})();
-\end{lstlisting}
-% EXEMPLO RETIRADO DE https://tableless.com.br/diga-ola-ao-typescript-e-adeus-ao-javascript/
-
-No próprio site do TypeScript é disponibilizado um editor como playground para que você possa se aventurar e fazer alguns testes com a linguagem, basta acessar \href{http://www.typescriptlang.org/Playground}{http://www.typescriptlang.org/Playground}.
-
-Para instalar a última versão estável do TypeScript utilizando o NPM, basta digitar o comando \verb|npm install -g typescript|.
-
-\subsection{Transpilação}
-Após instalar o TypeScript e criar seus arquivos utilizando a extensão \verb|.ts|, você pode usar o comando \verb|tsc --out script.js script.ts| para transpilar seu código TypeScript para JavaScript.
-
-% TODO ADICIONAR PROGRAMAÇÃO REATIVA...
-% TODO por esses e outros motivos há quem classifique o navegador como um sistema operacional, o que é uma realidade no caso do Chrome OS
-% ---
-% Capitulo Web Services
-% ---
-\chapter{Web Services}
-
+\chapter{Metodologia e ferramentas}
 
 % ---
-% Capitulo Compiladores
+% A pilha MEAN
 % ---
-% \chapter{Compiladores}
-
-% \lipsum[1]
-
-% \lipsum[2-3]
-
-% ----------------------------------------------------------
-% PARTE 4. Frameworks, bibliotecas e tecnologias
-% ----------------------------------------------------------
-\part{Frameworks, bibliotecas e tecnologias}
-% ----------------------------------------------------------
-% ---
-% Capitulo A pilha
-% ---
-\chapter{Frameworks são hypes}
-
-% TODO Conceito em si de o que é um framework
-Um framework, é um conjunto de bibliotecas que tem o objetivo de facilitar o desenvolvimento ditando o fluxo da aplicação. De forma mais simples pode ser visto como o esqueleto da aplicação.
-
-O principal benefício no uso de \textit{frameworks} em empresas é a capacidade de economizar tempo, mas também inclui a facilidade de aprendizado, por normalmente obter documentações e comunidades, padronização de código, contribuindo assim para que o código seja mais legível e consequentemente tornando a manutenção mais facil, além de outras muitas vantagens.
-
-JavaScript é bem famoso na comunidade por ter muitos \textit{frameworks}, isso ajuda a linguagem crescer, então esteja aberto a novas possibilidades, pois sem acompanha-las acaba se tornando impossível criar novas soluções. Com certeza você já ouviu falar de React, Vue, Angular, são atualmente os mais famosos e facilitam muito o desenvolvimento de aplicações modernas.
-
-Mas nem tudo são flores, quando você escolhe usar um \textit{framework} para a criação do seu projeto acaba causando uma certa depêndencia, tornando mais complicado em casos de migração além de códigos desnecessários, que podem deixar seu sistema mais pesado.
-
-% TODO Passar a ideia de que o objetivo é entender como o framework funciona pois ele apenas é um conjunto de código js que alguém desenvolveu e que foi criado para facilitar o desenvolvimento (para não reiventarmos a roda).
-Muitas empresas exigem o conhecimento de \textit{frameworks} para que o funcionário se adeque ao desenvolvimento da equipe, mas uma dica é não foque somente em aprender os comandos de um \textit{framework}, pois os mesmos são \textit{hypes}, quando digo isso significa que com o tempo novos serão criados e todos irão migrar para o que há de mais novo. Tenha como objetivo entender como ele funciona, suas engrenagens e conceitos, pois nada mais é do que um conjunto de código criado por alguém visando facilitar nosso desenvolvimento, para não termos que reiventarmos a roda.
-
-Entenda, não estou dizendo que eles não são importantes, mas sim que se você sabe a linguagem em si, e como utilizá-la se dará bem com qualquer \textit{framework}, o que é o mais importante.
-
-Não desenvolva baseado no que está na moda, desenvolva baseado no que é realmente funcional. Invista seu tempo em aprender a linguagem, não se apegue muito a frameworks. 
-% ---
-% Capitulo A pilha
-% ---
-\chapter{A pilha MEAN}
+\section{A pilha MEAN}
 
 É bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript, isso é o que acontece com o MEAN.
 
@@ -779,7 +666,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como Hackathon, conseguindo protótipos de forma rápida, provando assim sua produtividade.
 
-\section{MongoDB}
+\subsection{MongoDB}
 
 Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB é gratuito e de código aberto.
 
@@ -789,13 +676,13 @@ Para a execução de comandos no Mongo, existe um console que executa códigos J
 
 Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados.
 
-\subsection{Mongoose}
+\subsubsection{Mongoose}
 
 Com o Mongo é possível inserir qualquer formato JSON nas coleções, por esse motivo não há nenhum controle sobre os dados inseridos. Isso pode causar inconsistência nos dados, inserindo informações inválidas podendo quebrar a aplicação, deixando a responsabilidade para o dev garantir a exatidão das informações.
 
 Para resolver esse problema existe o Mongoose que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquema para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
 
-\subsection{Instalação}
+\subsubsection{Instalação}
 
 Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/download-center} e baixar o instalador de acordo com seu sistema operacional.
 
@@ -812,7 +699,7 @@ Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal
 
 Através deste terminal podemos criar bancos de dados, documentos e coleções. Se em qualquer momento for preciso obter ajuda, basta dar o comando \verb|help| na linha de comando do terminal do Mongo.
 
-\subsection{Primeiros passos}
+\subsubsection{Primeiros passos}
 
 Por padrão o terminal do Mongo inicia conectado ao banco de dados \verb|test|. Para mudarmos para outro banco de dados utilizamos o comando \verb|use nome_do_banco|. Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
 
@@ -847,7 +734,7 @@ db.nome_do_banco.drop()
 \end{lstlisting}
 
 
-\section{Express}
+\subsection{Express}
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
@@ -855,7 +742,7 @@ Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar 
 
 Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints REST, que serão consumidos pela aplicação cliente.
 
-\subsection {Primeiros passos}
+\subsubsection {Primeiros passos}
 
 Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados (veja como instalalos no capítulo ...) e então criar um arquivo com as seguintes linhas de código.
 
@@ -875,7 +762,7 @@ app.listen(PORT);
 console.log(`Servidor disponivel na porta ${PORT}`);
 \end{lstlisting}
 
-\subsection{Express Generator}
+\subsubsection{Express Generator}
 
 Com apenas o comando \verb|express nome_da_app| do Express Generator ele já estrutura uma aplicação Express simples. Após a execução do comando ele irá criar um novo diretório com o nome da aplicação informado anteriormente, contendo arquivos e dependências necessárias. 
 
@@ -893,7 +780,7 @@ Essa página só é exibida porque no arquivo \verb|routes/index.js| está confi
 
 Para saber mais opções de geração de estruturas através do Express Generator, execute o comando \verb|express -h|.
 
-\section{Angular}
+\subsection{Angular}
 
 Angular é um framework JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
 
@@ -915,7 +802,7 @@ Com o Angular CLI é possível criar projetos e estruturá-los a partir do coman
 
 Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de forma rápida com o comando \verb|ng generate|.
 
-\section{Node.js}
+\subsection{Node.js}
 
 O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, exectuada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
 
@@ -923,36 +810,18 @@ Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clie
 
 Na MEAN Stack, o Node é o core...
 
-\subsection{NPM}
+\subsubsection{NPM}
 
 O \textit{Node Package Manager}, mais conhecido como npm é o gerenciador de pacotes do Node.js. Com ele podemos fazer download de códigos, bibliotecas e \textit{frameworks} que nossos projetos podem usar, ou até mesmo ferramentas que exerçam alguma função em nosso sistema operacional.
 
 O arquivo \verb|package.json| é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando \verb|npm install| automaticamente todas as dependências listadas serão baixadas.
 
-Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando \verb|npm install| para fazer o download. 
-
-
-% ----------------------------------------------------------
-% PARTE 5. Conclusão
-% ----------------------------------------------------------
-\part{Conclusão}
-% ----------------------------------------------------------
-% E solucionar problemas é nossa verdadeira profissão.
-% ----------------------------------------------------------
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ----------------------------------------------------------
-%\phantompart
+Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando \verb|npm install| para fazer o download.
 
 % ---
-% Considerações finais (outro exemplo de capítulo sem numeração e presente no sumário)
+% Conclusão
 % ---
-\chapter*[Considerações finais]{Considerações finais}
-\addcontentsline{toc}{chapter}{Considerações finais}
-% ---
-
-\lipsum[31-33]
+\chapter{Conclusão}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS

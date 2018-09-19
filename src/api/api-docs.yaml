@@ -1,0 +1,67 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "irrigacao-api"
+  contact:
+    email: ""
+host: "localhost:3000"
+basePath: "/"
+tags:
+- name: "irrigacao"
+  description: "Irrigação"
+- name: "user"
+  description: "User"
+- name: "inpe"
+  description: "Inpe"
+paths:
+  /irrigacao:
+    get:
+      tags:
+      - "irrigacao"
+      summary: "Health check"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+
+  /user/login:
+    post:
+      tags:
+      - "user"
+      summary: "Login"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  
+  /inpe/listaCidades:
+    get:
+      tags:
+      - "inpe"
+      summary: "List all"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  /inpe/listaCidades/{city}:
+    get:
+      tags:
+      - "inpe"
+      summary: "Search by city"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "path"
+          name: "city"
+          type: "string"

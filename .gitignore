@@ -11,3 +11,4 @@
 *.vscodeLog
 *.synctex.gz
 materiais/
+node_modules

@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./index -e js,json,yaml"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-load": "^1.1.16",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "~1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "swagger-ui-express": "^4.0.1",
+    "xml2js": "^0.4.19",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

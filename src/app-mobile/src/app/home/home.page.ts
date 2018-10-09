@@ -9,13 +9,15 @@ import { WeatherService } from '../services/weather.service';
 })
 export class HomePage {
 
+  weather: any;
+
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit () {
-    this.weatherService.getWeatherCity(586).subscribe((data) => {
-      console.info(`haha`, data);
+    this.weatherService.getWeatherCity(586).subscribe((data: any) => {
+      console.log(data.cidade);
+      this.weather = data.cidade;
     });
-    console.info('irineu');
   }
 
   // ionNavWillLoad () {

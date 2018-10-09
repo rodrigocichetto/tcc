@@ -1,0 +1,22 @@
+ion-content {
+    --ion-background-color: #D1F0B1;
+}
+
+ion-card {
+    --ion-item-background-color: #FFF;
+}
+
+.weather {
+    img {
+        width: 25vw;
+    }
+    &--temperatura {
+        font-size: 1.2rem;
+        .max {
+            font-size: 2rem;
+        }
+        .label {
+            font-size: 0.8rem;
+        }
+    }
+}

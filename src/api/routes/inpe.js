@@ -7,6 +7,7 @@ module.exports = (app) => {
     router.get('/listaCidades', Controller.listaCidades);
     router.get('/listaCidades/:city', Controller.listaCidades);
     router.get('/cidade/:cityCode', Controller.cidade);
+    router.get('/cidade/previsao/:cityCode', Controller.cidadePrevisao);
 
     app.use('/inpe', router);
 }

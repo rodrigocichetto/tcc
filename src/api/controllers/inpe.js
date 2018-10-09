@@ -28,6 +28,17 @@ module.exports = (app) => {
                     res.status(500).send();
                 }
             });
+        },
+        cidadePrevisao: (req, res, next) => {
+            request(`${configs.EXTERNAL.INPE}/cidade/${req.params.cityCode}/previsao.xml`, (error, response, body) => {
+                try {
+                    parser.parseString(body, (err, data) => {
+                        res.status(response.statusCode).send(data);
+                    });
+                } catch (e) {
+                    res.status(500).send();
+                }
+            });
         }
     }
 

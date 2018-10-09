@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const load = require('express-load');
+const cors = require('cors');
 // swagger
 const YAML = require('yamljs');
 const swaggerUi = require('swagger-ui-express');
@@ -17,6 +18,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(auth.initialize())
 app.use(logger('dev'));
 app.use(express.json());

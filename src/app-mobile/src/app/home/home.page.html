@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <ion-title>{{ 'HOME' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,9 +21,7 @@
     </ion-grid>
 
     <ion-card-header>
-      <ion-card-title>{{weather.nome}} - {{weather.uf}}</ion-card-title>
+      <ion-card-title text-end>{{weather.nome}} - {{weather.uf}}</ion-card-title>
     </ion-card-header>
-    <!-- <ion-card-content>
-    </ion-card-content> -->
   </ion-card>
 </ion-content>

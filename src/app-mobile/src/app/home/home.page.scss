@@ -1,9 +1,6 @@
-ion-content {
-    --ion-background-color: #D1F0B1;
-}
-
 ion-card {
-    --ion-item-background-color: #FFF;
+    --ion-item-background-color: var(--white-color);
+    margin-top: 15px;
 }
 
 .weather {

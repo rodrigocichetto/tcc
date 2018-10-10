@@ -14,7 +14,6 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
 
   public getWeatherCity(id: number) {
-    // let teste = await this.http.get(`${this.url}`, { params: new HttpParams().set('id', id.toString()) });
     return this.http.get(`${this.url+id}`);
   }
 }

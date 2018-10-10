@@ -15,7 +15,6 @@ export class HomePage {
 
   ngOnInit () {
     this.weatherService.getWeatherCity(586).subscribe((data: any) => {
-      console.log(data.cidade);
       this.weather = data.cidade;
     });
   }

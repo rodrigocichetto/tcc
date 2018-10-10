@@ -1,3 +1,7 @@
 {
-    "TEMPERATURE": "Temperatura"
+    "HOME": "Home",
+    "TEMPERATURE": "Temperatura",
+    "SETTINGS": "Configurações",
+    "ADD": "Adicionar",
+    "ADD_WATERING": "Adicionar regador"
 }

@@ -54,7 +54,22 @@ paths:
     get:
       tags:
       - "inpe"
-      summary: "Search by city"
+      summary: "Search city"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "path"
+          name: "city"
+          type: "string"
+  /inpe/cidade/previsao/{city}:
+    get:
+      tags:
+      - "inpe"
+      summary: "Weather by city for 4 days"
       description: ""
       responses:
         200:

@@ -539,6 +539,8 @@ aplicações back-end, ou seja, para o server-side (lado do servidor).
 
 O trabalho tem como principal objetivo apresentar os benefícios de se utilizar apenas uma linguagem durante todo o desenvolvimento, assim como, relatar a evolução da linguagem JavaScript e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
+Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo é apresentar informações e utilizar de tecnologias já existentes.
+
 % -----------------------------------
 % CHAPTER:
 % Pesquisa bibliográfica
@@ -549,6 +551,7 @@ O trabalho tem como principal objetivo apresentar os benefícios de se utilizar 
 % Uma linguagem em todo o desenvolvimento
 % ---
 \section{Uma linguagem para todo o desenvolvimento}
+\label{sec:UmaLinguagemDesenvolvimento}
 
 Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
 
@@ -556,7 +559,9 @@ A vantagem mais clara que temos é a padronização, por tudo ser escrito na mes
 
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de no facilitar muito o debug, por os objetos serem parecidos, se não identicos.
 
-Inclusive essa abordagem vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possivel.
+Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários frameworks e de base para o desenvolvimento em qualquer ambiente.
+
+A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possivel.
 
 % ---
 % Arquitetura
@@ -565,17 +570,23 @@ Inclusive essa abordagem vem sendo muito utilizada em hackathons e competições
 
 A arquitetura de um software consiste na definição de seus componentes, relacionamento com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
 
+Com este modelo de arquitetura isolamos funções da aplicação facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
+
 Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto.
 
 \subsection{Cliente}
 
 O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle. 
 
-Para o cliente pouco importa as regras de negócio, uma vez que ele envia informações e espera receber os dados processados.
+Para o cliente pouco importa as regras de negócio, uma vez que ele envia informações e espera receber os dados processados. Aqui está a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
 
-\subsection{Serviço}
 \subsection{Servidor}
+
+Podemos considerar o servidor como a camada de controle, onde também estão as lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou acessadas através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
+
 \subsection{Banco de dados}
+
+O banco de dados representa a camada de dados, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios.
 
 % ---
 % JavaScript
@@ -684,7 +695,7 @@ A 10ª edição já está em desenvolvimento, devendo chegar até o final de Jun
 % ---
 \section{A pilha MEAN}
 
-É bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript, isso é o que acontece com o MEAN.
+Como visto anteriormente no capítulo \ref{sec:UmaLinguagemDesenvolvimento} é bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript, isso é o que acontece com o MEAN.
 
 Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja front-end, back-end ou banco de dados.
 

@@ -532,17 +532,12 @@ levando a linguagem para um novo patamar. Criado com um modelo não bloqueante n
 entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para
 aplicações back-end, ou seja, para o server-side (lado do servidor).
 
-Com o tempo a Microsoft desenvolveu o TypeScript, que de uma forma simples é o
-JavaScript acrescido de tipagem de dados, ou seja, agora erros podem ser detectados
-durante a digitação do código, sem dúvidas podemos considerar o TypeScript como uma
-evolução do JavaScript.
-
-Este trabalho tem como objetivo atualizar o leitor do que há de mais novo no desenvolvimento com a linguagem JavaScript, para melhor compreensão do conteúdo apresentado é necessário conhecimento prévio básico da linguagem. 
-
 % ---
 % Objetivos
 % ---
 \section{Objetivos}
+
+O trabalho tem como principal objetivo apresentar os benefícios de se utilizar apenas uma linguagem durante todo o desenvolvimento, assim como, relatar a evolução da linguagem JavaScript e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
 % -----------------------------------
 % CHAPTER:
@@ -551,27 +546,51 @@ Este trabalho tem como objetivo atualizar o leitor do que há de mais novo no de
 \chapter{Pesquisa bibliográfica}
 
 % ---
+% Uma linguagem em todo o desenvolvimento
+% ---
+\section{Uma linguagem para todo o desenvolvimento}
+
+Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
+
+A vantagem mais clara que temos é a padronização, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
+
+Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de no facilitar muito o debug, por os objetos serem parecidos, se não identicos.
+
+Inclusive essa abordagem vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possivel.
+
+% ---
 % Arquitetura
 % ---
 \section{Arquitetura}
 
-\subsection{Banco de dados}
-\subsection{Serviço}
+A arquitetura de um software consiste na definição de seus componentes, relacionamento com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
+
+Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto.
+
 \subsection{Cliente}
+
+O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle. 
+
+Para o cliente pouco importa as regras de negócio, uma vez que ele envia informações e espera receber os dados processados.
+
+\subsection{Serviço}
 \subsection{Servidor}
+\subsection{Banco de dados}
 
 % ---
 % JavaScript
 % ---
 \section{JavaScript}
 
+As muitas vantagens de se utilizar o JavaScript fizeram com que ela se tornasse a linguagem de programação mais popular do mundo, desbancando até mesmo linguagens de maior expressão como Java, C\#, PHP, Phyton e outras.
+
 JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
 
-Atualmente, é praticamente impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosseis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo o \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram a aplicação da linguagem em \textit{web sites}.
+Atualmente, é impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosseis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo o \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram a aplicação da linguagem em \textit{web sites}.
 
 A web está infestada de códigos JavaScript, pode ter certeza de que diariamente muitos \textit{scripts} estão sendo executados durante uma pesquisa no Google, seu tempo no Facebook, acesso a seu banco na internet, ou até mesmo para leitura de uma notícia em um portal. Seu uso primário na web é de funções incluídas no HTML que interagem com o Modelo de Objetos e Documentos (DOM) da página.
 
-DOM é uma interface de programação utilizada para documentos HTML, ele fornece a representação e interação com objetos os estruturando em nós de uma árvore chamada de Árvore DOM. É assim que o JavaScript consegue manusear as estruturas, estilos e conteúdos dos elementos presentes no HTML. Vale ressaltar que ele não faz parte da linguagem JavaScript, pois também pode ser acessado por outras linguagens.
+% DOM é uma interface de programação utilizada para documentos HTML, ele fornece a representação e interação com objetos os estruturando em nós de uma árvore chamada de Árvore DOM. É assim que o JavaScript consegue manusear as estruturas, estilos e conteúdos dos elementos presentes no HTML. Vale ressaltar que ele não faz parte da linguagem JavaScript, pois também pode ser acessado por outras linguagens.
 
 O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
 
@@ -639,9 +658,7 @@ O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. 
 Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando na área de \textit{back-end} ou até mesmo de teste.
 
 \subsubsection{ECMA}
-% TODO: INSERIR PARAGRAFO EXPLICANDO COMO FUNCIONA PARA ENVIAR PROPOSTA PARA ECMA https://tableless.com.br/entendendo-o-async-e-o-await-em-javascript/
 Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples. 
-% TODO CONTINUAR COM NOVAS FUNCIONALIDADES DA LINGUAGEM
 % TODO APONTAR NOVOS RUMOS DA LINGUAGEM, SUPORTE MOBILE... (https://www.youtube.com/watch?v=851mizGnr_Y)
 
 Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
@@ -692,6 +709,10 @@ Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de c
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
 
 Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados.
+
+% Com o MongoDB, é possível inclusive usar o JavaScript no banco de dados. Isso faz com que realmente todo o fluxo de um objeto em uma aplicação seja realizado com o JavaScript.
+
+% É possível receber a entrada no navegador com JavaScript, transportar a demanda para o back end ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
 
 \subsubsection{Mongoose}
 

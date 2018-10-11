@@ -467,6 +467,9 @@ Being part of the three main technologies that move the internet, being HTML, CS
   \item[CSS] Abreviação para \textit{Cascading Style Sheets}, que em português significa Folhas de Estilo em Cascata.
   \item[ECMA] Abreviação para \textit{European Computer Manufacturers Association}, que em português significa Associação Européia de Fabricantes de Computadores.
   \item[API] Abreviação para \textit{Application Programming Interface}, que em português significa Interface de programação de aplicações.
+  \item[REST] Abreviação para \textit{Representational State Transfer}, que em português significa Transferência de Estado Representacional.
+  \item[HTTP] Abreviação para \textit{Hypertext Transfer Protocol}, que em português significa Protocolo de Transferência de Hipertexto.
+  \item[URI] Abreviação para \textit{Uniform Resource Identifier}, que em português significa Identificador Uniforme de Recurso.
 \end{siglas}
 % ---
 
@@ -513,11 +516,11 @@ se fala de tecnologias web, das quais HTML e CSS também fazem parte.
 
 Com navegadores cada vez mais modernos a tendência é que nossos sites também fiquem cada vez mais sofisticados.
 
-Todo projeto que iniciamos existe uma origem, uma necessidade e um 
-problema a ser resolvido. Há algum tempo, um grande problema ganhou 
-atenção: a reutilização de trechos de código. São módulos de código 
-(trechos em HTML, CSS, JavaScript, etc) que juntos criam padronizações 
-e organizações, mas sobretudo flexibilidade. São os chamados frameworks.
+% Todo projeto que iniciamos existe uma origem, uma necessidade e um 
+% problema a ser resolvido. Há algum tempo, um grande problema ganhou 
+% atenção: a reutilização de trechos de código. São módulos de código 
+% (trechos em HTML, CSS, JavaScript, etc) que juntos criam padronizações 
+% e organizações, mas sobretudo flexibilidade. São os chamados frameworks.
 
 Nos últimos anos a linguagem JavaScript ganhou maior importância, com o
 surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não
@@ -531,6 +534,8 @@ O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores,
 levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na
 entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para
 aplicações back-end, ou seja, para o server-side (lado do servidor).
+
+Trabalhar com uma mesma linguagem em ambientes \textit{client-side} e \textit{server-side} podem trazer muitos benefícios, como reaproveitamento de recursos humanos e também de código. O JavaScript possibilita isso graças a seu crescimento nos permitindo a execução da linguagem nos mais diversos ambientes.
 
 % ---
 % Objetivos
@@ -574,15 +579,36 @@ Com este modelo de arquitetura isolamos funções da aplicação facilitando sua
 
 Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto.
 
+\begin{figure}[h]
+	\centering
+
+	\caption{Exemplo de arquitetura multicamadas} \label{fig:MultilayerArchitecture}
+    \includegraphics[scale=0.5]{multilayer-architecture} \\
+    Fonte: {Blog Helios Solutions \url{https://blog.heliossolutions.in/mobile-app-architecture-vital-mobile-app-development/}}
+
+\end{figure}
+
+Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de algum protocolo de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
+
 \subsection{Cliente}
 
 O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle. 
 
 Para o cliente pouco importa as regras de negócio, uma vez que ele envia informações e espera receber os dados processados. Aqui está a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
 
+\subsection{Serviço}
+
+O serviço serve como camada de controle, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. 
+
+Uma das formas de fazer essa comunicação é através de protocólos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
+
+\textit{REST} é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo \textit{HTTP}, em sua tese de doutorado e que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo \textit{HTTP}, porém muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
+
+O modelo \textit{REST} utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como \textit{URI}.
+
 \subsection{Servidor}
 
-Podemos considerar o servidor como a camada de controle, onde também estão as lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou acessadas através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
+Podemos considerar o servidor como a camada de lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
 
 \subsection{Banco de dados}
 
@@ -601,8 +627,6 @@ Atualmente, é impossível imaginar a internet sem a existência do JavaScript, 
 
 A web está infestada de códigos JavaScript, pode ter certeza de que diariamente muitos \textit{scripts} estão sendo executados durante uma pesquisa no Google, seu tempo no Facebook, acesso a seu banco na internet, ou até mesmo para leitura de uma notícia em um portal. Seu uso primário na web é de funções incluídas no HTML que interagem com o Modelo de Objetos e Documentos (DOM) da página.
 
-% DOM é uma interface de programação utilizada para documentos HTML, ele fornece a representação e interação com objetos os estruturando em nós de uma árvore chamada de Árvore DOM. É assim que o JavaScript consegue manusear as estruturas, estilos e conteúdos dos elementos presentes no HTML. Vale ressaltar que ele não faz parte da linguagem JavaScript, pois também pode ser acessado por outras linguagens.
-
 O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
 
 Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
@@ -611,10 +635,6 @@ Inicialmente classificada como linguagem do tipo \textit{client side}, é por si
 
 Sua tipagem é dinâmica, ou seja, tipos são associados com valores. Por exemplo, uma variável pode ser associada a um número e posteriormente associada a um texto.
 
-Baseada em objetos, no JavaScript os objetos são matrizes associativas, ou seja \verb|obj.a = 10| e \verb|obj["a"] = 10| são equivalentes, sendo a única diferença a própria sintaxe.
-
-As funções em JS são tratadas como objetos, possuindo métodos e propriedades, podendo assim serem atríbuidas a variáveis, retornadas como objetos, ou até mesmo passadas como argumentos para outras funções, o que é chamado de aninhamento de funções.
-
 Com JavaScript também é possível a detecção de eventos, sempre que algo de importante acontece é disparado um evento, o clique de um botão, o preenchimento de um campo de formulário, a movimentação do mouse, são alguns exemplos dos eventos que são disparados. Isso nos permite reagir a estes eventos deixando assim que nossa aplicação deixe de ser estática.
 
 A linguagem possui grande tolerância a erros, uma vez que conversões automáticas são realizadas durante suas operações.
@@ -622,8 +642,6 @@ A linguagem possui grande tolerância a erros, uma vez que conversões automáti
 Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador pressionando as teclas F12, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
 
 No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador e só. O JavaScript revolucionou o que podemos fazer, hoje não só na web, mas praticamente em todas as áreas que se possa programar. 
-
-No próximo capítulo abordaremos de como surgiu a linguagem, como ela evoluiu e atua no presente e a necessidade de padronizações.
 
 \begin{figure}[h]
 	\centering

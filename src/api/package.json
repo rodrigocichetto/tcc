@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./index -e js,json,yaml"
+    "start": "npm i && nodemon ./index -e js,json,yaml"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",

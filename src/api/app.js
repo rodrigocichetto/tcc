@@ -6,6 +6,8 @@ const logger = require('morgan');
 const load = require('express-load');
 const cors = require('cors');
 // swagger
+const os = require('os');
+const ifaces = os.networkInterfaces();
 const YAML = require('yamljs');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = YAML.load(`${__dirname}/api-docs.yaml`);
@@ -31,6 +33,7 @@ load('controllers')
   .into(app);
     
 // swagger
+swaggerDocument.host = `${(ifaces.eth0)? ifaces.eth0[0].address:'localhost'}:${process.env.PORT || 3000}`;
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler

@@ -470,6 +470,7 @@ Being part of the three main technologies that move the internet, being HTML, CS
   \item[REST] Abreviação para \textit{Representational State Transfer}, que em português significa Transferência de Estado Representacional.
   \item[HTTP] Abreviação para \textit{Hypertext Transfer Protocol}, que em português significa Protocolo de Transferência de Hipertexto.
   \item[URI] Abreviação para \textit{Uniform Resource Identifier}, que em português significa Identificador Uniforme de Recurso.
+  \item[SQL] Abreviação para \textit{Structured Query Language}, que em português significa Linguagem de Consulta Estruturada.
 \end{siglas}
 % ---
 
@@ -525,15 +526,14 @@ Com navegadores cada vez mais modernos a tendência é que nossos sites também 
 Nos últimos anos a linguagem JavaScript ganhou maior importância, com o
 surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não
 somente web sites mas também aplicativos, single page applications, programas desktop,
-progressive web apps e muito mais. Sendo alguns deles Angular, React, Vue, jQuery e
-Node.js.
+progressive web apps e muito mais.
 
 Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
 
 O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores,
 levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na
 entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para
-aplicações back-end, ou seja, para o server-side (lado do servidor).
+aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor).
 
 Trabalhar com uma mesma linguagem em ambientes \textit{client-side} e \textit{server-side} podem trazer muitos benefícios, como reaproveitamento de recursos humanos e também de código. O JavaScript possibilita isso graças a seu crescimento nos permitindo a execução da linguagem nos mais diversos ambientes.
 
@@ -560,7 +560,9 @@ Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo �
 
 Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
 
-A vantagem mais clara que temos é a padronização, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
+A vantagem mais clara que temos é a padronização, o ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
+
+Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo benefícios até mesmo a empresa em suas contratações.
 
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de no facilitar muito o debug, por os objetos serem parecidos, se não identicos.
 
@@ -572,12 +574,15 @@ A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo 
 % Arquitetura
 % ---
 \section{Arquitetura}
+\label{sec:Arquitetura}
 
 A arquitetura de um software consiste na definição de seus componentes, relacionamento com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
 
-Com este modelo de arquitetura isolamos funções da aplicação facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
+Com este modelo de arquitetura isolamos funções da aplicação de forma modular, facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
 
-Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto.
+Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto. 
+
+A modularização refere-se a separar a lógica do negócio e regras de acesso ao banco de dados da camada de apresentação.
 
 \begin{figure}[h]
 	\centering
@@ -588,17 +593,21 @@ Também conhecidas como stacks, as camadas de uma aplicação são basicamente o
 
 \end{figure}
 
-Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de algum protocolo de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
+Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de protocolos de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
 
 \subsection{Cliente}
 
-O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle. 
+O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle, além de ter o dever de garantir a consistência entre o dado e sua apresentação.
 
-Para o cliente pouco importa as regras de negócio, uma vez que ele envia informações e espera receber os dados processados. Aqui está a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
+Para o cliente pouco importa as regras de negócio, uma vez que seu papel é enviar informações e espera receber os dados processados, além de ser responsável por executar lógica no lado do cliente. Aqui encontramos a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
+
+Um benefício da modularização da arquitetura multicamadas nos possibilita é a criação de várias aplicações clientes que podem compartilhar as mesmas regras, pois ficam encapsuladas em uma camada de acesso comum. Por exemplo, posso ter um aplicativo e um web-site consumindo um mesmo serviço, compartilhando assim das mesmas regras.
+
+Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente da modular, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
 
 \subsection{Serviço}
 
-O serviço serve como camada de controle, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. 
+O serviço serve como camada de controle, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
 
 Uma das formas de fazer essa comunicação é através de protocólos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
 
@@ -610,9 +619,15 @@ O modelo \textit{REST} utiliza como gerenciamento de informações os chamados r
 
 Podemos considerar o servidor como a camada de lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
 
+Modularizar a lógica de negócios também traz benefícios, por os clientes acessarem uma mesma camada em comum (servidor), qualquer alteração realizada nas regras de negócios serão vistas por todas as aplicações clientes.
+
+Também nos possibilita escalabilidade, com a utilização de outras arquiteturas, é comum que ocorra uma queda de desempenho quando um grande número de máquinas clientes simultâneas se conectam ao servidor. Sendo isso evitado com a arquitetura modularizada, uma vez que é possível ter a mesma regra de negócio dividida entre vários servidores através do balanceamento de carga, ou seja, quando algum deles ficar sobrecarregado o outro entra em ação para ajudá-lo. 
+
 \subsection{Banco de dados}
 
-O banco de dados representa a camada de dados, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios.
+O banco de dados representa a camada de dados, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
+
+Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
 % ---
 % JavaScript
@@ -642,23 +657,6 @@ A linguagem possui grande tolerância a erros, uma vez que conversões automáti
 Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador pressionando as teclas F12, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
 
 No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador e só. O JavaScript revolucionou o que podemos fazer, hoje não só na web, mas praticamente em todas as áreas que se possa programar. 
-
-\begin{figure}[h]
-	\centering
-
-	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
-    \includegraphics[scale=0.4]{js-example-carrousel} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/carousel/}}
-
-    \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
-    \includegraphics[scale=0.45]{js-example-validation} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/forms/}}
-	
-    \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário. -- Exemplo de aplicação do JS} \label{fig:JSExampleModal}
-    \includegraphics[scale=0.5]{js-example-modal} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/modal/}}
-
-\end{figure}
 
 \subsection{A linguagem nos dias atuais}
 
@@ -702,6 +700,24 @@ Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-2
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
+\pagebreak
+\begin{figure}[h]
+	\centering
+
+	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
+    \includegraphics[scale=0.4]{js-example-carrousel} \\
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/carousel/}}
+
+    \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
+    \includegraphics[scale=0.45]{js-example-validation} \\
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/forms/}}
+	
+    \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário. -- Exemplo de aplicação do JS} \label{fig:JSExampleModal}
+    \includegraphics[scale=0.5]{js-example-modal} \\
+    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/modal/}}
+
+\end{figure}
+
 % -----------------------------------
 % CHAPTER:
 % Metodologia e ferramentas
@@ -726,6 +742,8 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 	% https://www.orangemantra.com/blog/wp-content/uploads/2016/06/mean-stack.jpg
 
 \end{figure}
+
+A figura \ref{fig:MEANStackFlow} nos mostra bem como a MEAN Stack segue o modelo de arquitetura em multicamadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na figura \ref{fig:MultilayerArchitecture}.
 
 Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como Hackathon, conseguindo protótipos de forma rápida, provando assim sua produtividade.
 

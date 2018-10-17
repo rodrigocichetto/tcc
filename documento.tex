@@ -152,7 +152,7 @@
 \local{Brasil}
 \data{2018, v-1.0.0}
 \orientador{Leandro Carlos Fernandez}
-\coorientador{Danielle Colturato}
+% \coorientador{Danielle Colturato}
 \instituicao{%
   Universidade Paulista -- UNIP
   \par
@@ -510,30 +510,15 @@ Being part of the three main technologies that move the internet, being HTML, CS
 % -----------------------------------
 \chapter{Introdução}
 
-Inicialmente implementada com o objetivo no desenvolvimento web para o lado do
-cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape se tornou
-uma das linguagens mais populares da atualidade, sendo a terceira camada do bolo quando
-se fala de tecnologias web, das quais HTML e CSS também fazem parte. 
+Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape se tornou uma das linguagens mais populares da atualidade, sendo a terceira camada do bolo quando se fala de tecnologias web, das quais HTML e CSS também fazem parte. 
 
 Com navegadores cada vez mais modernos a tendência é que nossos sites também fiquem cada vez mais sofisticados.
 
-% Todo projeto que iniciamos existe uma origem, uma necessidade e um 
-% problema a ser resolvido. Há algum tempo, um grande problema ganhou 
-% atenção: a reutilização de trechos de código. São módulos de código 
-% (trechos em HTML, CSS, JavaScript, etc) que juntos criam padronizações 
-% e organizações, mas sobretudo flexibilidade. São os chamados frameworks.
-
-Nos últimos anos a linguagem JavaScript ganhou maior importância, com o
-surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não
-somente web sites mas também aplicativos, single page applications, programas desktop,
-progressive web apps e muito mais.
+Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, single page applications, programas desktop, progressive web apps e muito mais.
 
 Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
 
-O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores,
-levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na
-entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para
-aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor).
+O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores, levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor).
 
 Trabalhar com uma mesma linguagem em ambientes \textit{client-side} e \textit{server-side} podem trazer muitos benefícios, como reaproveitamento de recursos humanos e também de código. O JavaScript possibilita isso graças a seu crescimento nos permitindo a execução da linguagem nos mais diversos ambientes.
 
@@ -544,7 +529,7 @@ Trabalhar com uma mesma linguagem em ambientes \textit{client-side} e \textit{se
 
 O trabalho tem como principal objetivo apresentar os benefícios de se utilizar apenas uma linguagem durante todo o desenvolvimento, assim como, relatar a evolução da linguagem JavaScript e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
-Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo é apresentar informações e utilizar de tecnologias já existentes.
+Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo é apresentar informações e utilizar de tecnologias já existentes, que se encaixem com a arquitetura multicamadas apresentada e que compartilhem da mesma linguagem.
 
 % -----------------------------------
 % CHAPTER:
@@ -567,6 +552,8 @@ Se um programador compreende bem a linguagem ele será capaz também de desenvol
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de no facilitar muito o debug, por os objetos serem parecidos, se não identicos.
 
 Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários frameworks e de base para o desenvolvimento em qualquer ambiente.
+
+Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
 
 A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possivel.
 
@@ -596,6 +583,7 @@ A modularização refere-se a separar a lógica do negócio e regras de acesso a
 Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de protocolos de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
 
 \subsection{Cliente}
+\label{subsec:Cliente}
 
 O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle, além de ter o dever de garantir a consistência entre o dado e sua apresentação.
 
@@ -606,8 +594,11 @@ Um benefício da modularização da arquitetura multicamadas nos possibilita é 
 Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente da modular, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
 
 \subsection{Serviço}
+\label{subsec:Servico}
 
 O serviço serve como camada de controle, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
+
+Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
 
 Uma das formas de fazer essa comunicação é através de protocólos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
 
@@ -616,6 +607,7 @@ Uma das formas de fazer essa comunicação é através de protocólos, como o \t
 O modelo \textit{REST} utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como \textit{URI}.
 
 \subsection{Servidor}
+\label{subsec:Servidor}
 
 Podemos considerar o servidor como a camada de lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
 
@@ -624,6 +616,7 @@ Modularizar a lógica de negócios também traz benefícios, por os clientes ace
 Também nos possibilita escalabilidade, com a utilização de outras arquiteturas, é comum que ocorra uma queda de desempenho quando um grande número de máquinas clientes simultâneas se conectam ao servidor. Sendo isso evitado com a arquitetura modularizada, uma vez que é possível ter a mesma regra de negócio dividida entre vários servidores através do balanceamento de carga, ou seja, quando algum deles ficar sobrecarregado o outro entra em ação para ajudá-lo. 
 
 \subsection{Banco de dados}
+\label{subsec:BancoDeDados}
 
 O banco de dados representa a camada de dados, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
 
@@ -664,7 +657,7 @@ Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o 
 
 \subsubsection{JavaScript além dos navegadores}
 
-Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas áreas sendo elas:
+Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas áreas sendo algumas delas:
 
 \begin{enumerate}[label=\alph*)]
 \item Aplicações web
@@ -678,15 +671,14 @@ Inicialmente tratada como um extra para os navegadores, podemos dizer que a ling
 \item Servidores 
 \end{enumerate}
 
-Praticamente tudo que envolve programação o JavaScript está presente, para criar um software desktop existe por exemplo o \textit{framework} Electron (https://electronjs.org), desenvolvido pelo GitHub ele possibilita criar aplicativos desktop multiplataforma através do JavaScript. No desenvolvimento de jogos a \textit{engine} Unity (https://unity3d.com/pt) é uma das plataformas que oferecem suporte a linguagem.
+Praticamente tudo que envolve programação o JavaScript está presente, para criar um software desktop existe por exemplo o \textit{framework} Electron (\href{https://electronjs.org}{https://electronjs.org}), desenvolvido pelo GitHub ele possibilita criar aplicativos desktop multiplataforma através do JavaScript. No desenvolvimento de jogos a \textit{engine} Unity (\href{https://unity3d.com/pt}{https://unity3d.com/pt}) é uma das plataformas que oferecem suporte a linguagem.
 
 O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript até mesmo no \textit{back-end}. 
 
 Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando na área de \textit{back-end} ou até mesmo de teste.
 
 \subsubsection{ECMA}
-Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples. 
-% TODO APONTAR NOVOS RUMOS DA LINGUAGEM, SUPORTE MOBILE... (https://www.youtube.com/watch?v=851mizGnr_Y)
+Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples.
 
 Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
 
@@ -743,7 +735,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 \end{figure}
 
-A figura \ref{fig:MEANStackFlow} nos mostra bem como a MEAN Stack segue o modelo de arquitetura em multicamadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na figura \ref{fig:MultilayerArchitecture}.
+A figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue o modelo de arquitetura em multicamadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na figura \ref{fig:MultilayerArchitecture}.
 
 Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como Hackathon, conseguindo protótipos de forma rápida, provando assim sua produtividade.
 
@@ -755,11 +747,9 @@ Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de c
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
 
-Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados.
+Com ele é possível receber a entrada no navegador com JavaScript, transportar a demanda para o back end ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
 
-% Com o MongoDB, é possível inclusive usar o JavaScript no banco de dados. Isso faz com que realmente todo o fluxo de um objeto em uma aplicação seja realizado com o JavaScript.
-
-% É possível receber a entrada no navegador com JavaScript, transportar a demanda para o back end ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura multicamadas a camada de dados, como visto anteriormente no capítulo \ref{subsec:BancoDeDados}.
 
 \subsubsection{Mongoose}
 
@@ -821,31 +811,37 @@ db.nome_do_banco.drop()
 
 \subsection{Express}
 
-Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
+Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e \textit{APIs}, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
+Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma \textit{API} robusta utilizando Express é rápido e fácil.
 
-Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints REST, que serão consumidos pela aplicação cliente.
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints \textit{REST}, que serão consumidos pela aplicação cliente. Ele representa na arquitetura multicamadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
+
+Através da figura \ref{fig:MEANStackFlow} percebemos que o Express e Node.js fazem parte da mesma camada, o servidor.
+
+Com o Express podemos criar nossa \textit{REST API}, configurando funções a serem executadas após o recebimento de chamadas em rotas, também conhecidas como URI's, pelos métodos \textit{HTTP} \textit{GET}, \textit{POST}, \textit{PUT}, \textit{PATH} e \textit{DELETE}.
 
 \subsubsection {Primeiros passos}
 
-Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados (veja como instalalos no capítulo ...) e então criar um arquivo com as seguintes linhas de código.
+Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados, caso não saiba como instalá-los veja a explicação no capítulo \ref{subsec:NodePrimeirosPassos}.
 
-No terminal execute o comando \verb|npm install express| dentro do diretório do seu projeto. Desta maneira conseguimos importar o express para nosso código. E então é só criar um arquivo \verb|app.js| com o código abaixo.
+No terminal inicie um projeto node a partir do comando \verb|npm init|, preencha as informações e então execute o comando \verb|npm install express| dentro do diretório do seu projeto para instalar o express. Desta maneira conseguimos importar o express para nosso código. Finalmente é só criar um arquivo \verb|app.js| com o código abaixo.
 
 \begin{lstlisting}[language=javascript]
-import express from 'express';
-
-let app = express();
+const express = require('express');
+const app = express();
 const PORT = 3000;
 
 app.get('/', (req, res) => {
    res.send('Hello World');
 });
 
-app.listen(PORT);
-console.log(`Servidor disponivel na porta ${PORT}`);
+app.listen(PORT, () => {
+    console.log('Servidor disponivel na porta ' + PORT);
+});
 \end{lstlisting}
+
+Para iniciar o servidor basta executar o comando \verb|node app.js|, enfim abra seu navegador no endereço \href{http://localhost:3000}{http://localhost:3000} ele deve retornar nosso \textit{Hello World}.
 
 \subsubsection{Express Generator}
 
@@ -871,21 +867,30 @@ Angular é um framework JavaScript de código aberto, mantido pela Google. E tem
 
 O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a sempre utilizar uma váriavel ou objeto do mesmo tipo, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado.
 
-% TODO Adicionar paragrafo evolução do Angular
-
 Assim como o React o novo Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
-Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados REST.
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no capítulo \ref{subsec:Cliente}.
+
+Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exmeplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
 
 \subsection{Angular CLI} 
 
-% TODO Adicionar introdução
+Instalado a partir do comando do node \verb|npm install -g @angular/cli|, o Angular CLI é uma interface de linha de comando para o Angular, que nos permite trabalhar de forma mais amistosa com a tecnologia.
 
-Com o Angular CLI é possível criar projetos e estruturá-los a partir do comando \verb|ng|. Por exemplo, para criar um novo projeto, basta executar o comando \verb|ng new app-name|, assim não precisamos nos preocupar com a estrutura inicial do projeto e suas dependências cruciais para o funcionamento do Angular. Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}.
+Com o Angular CLI é possível criar projetos e estruturá-los a partir do comando \verb|ng|. Por exemplo, para criar um novo projeto, basta executar o comando \verb|ng new app-name|, assim não precisamos nos preocupar com a estrutura inicial do projeto e suas dependências cruciais para o funcionamento do Angular. 
 
-% TODO Adicionar print
+Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}.
 
 Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de forma rápida com o comando \verb|ng generate|.
+
+\pagebreak
+\begin{figure}[h]
+	\centering
+
+	\caption{Aplicação gerada pelo Angular Cli} \label{fig:AngularCliApp}
+    \includegraphics[scale=0.4]{angular-cli-app} \\
+
+\end{figure}
 
 \subsection{Node.js}
 
@@ -893,15 +898,31 @@ O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem Jav
 
 Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
-Na MEAN Stack, o Node é o core...
+Na MEAN Stack, o Node é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura multicamadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
 
 \subsubsection{NPM}
 
 O \textit{Node Package Manager}, mais conhecido como npm é o gerenciador de pacotes do Node.js. Com ele podemos fazer download de códigos, bibliotecas e \textit{frameworks} que nossos projetos podem usar, ou até mesmo ferramentas que exerçam alguma função em nosso sistema operacional.
 
-O arquivo \verb|package.json| é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando \verb|npm install| automaticamente todas as dependências listadas serão baixadas.
+O arquivo \verb|package.json| é responsável por gerenciar os pacotes cujo nosso projeto depende. Ele basicamente serve como uma lista para as dependências que nosso projeto necessita. Executando o comando do node \verb|npm install| automaticamente todas as dependências listadas serão baixadas.
 
-Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando \verb|npm install| para fazer o download.
+Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando do node \verb|npm install| para fazer o download.
+
+\subsubsection {Primeiros passos}
+\label{subsec:NodePrimeirosPassos}
+
+Instalar o Node.js é muito simples, basta acessar o link \href{https://nodejs.org/en/download/}{https://nodejs.org/en/download/} e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
+
+Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
+
+% \pagebreak
+\begin{figure}[h]
+	\centering
+
+  \caption{Exemplo de configurações preenchidas no comando npm init} \label{fig:NpmInitExample}
+    \includegraphics[scale=0.5]{npm-init-example} \\
+
+\end{figure}
 
 % -----------------------------------
 % CHAPTER:

@@ -11,6 +11,11 @@ const ifaces = os.networkInterfaces();
 const YAML = require('yamljs');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = YAML.load(`${__dirname}/api-docs.yaml`);
+// database
+require('./config/database')(
+  process.env.DB_DATABASE && process.env.DB_IPV4_ADDRESS ?
+    'mongodb://' + process.env.DB_IPV4_ADDRESS + ':27017/' + process.env.DB_DATABASE : 
+    'mongodb://localhost:27017/tcc');
 
 var auth = require('./config/authentication').auth;
 
@@ -31,9 +36,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 load('controllers')
   .then('routes')
   .into(app);
-    
+
 // swagger
-swaggerDocument.host = `${(ifaces.eth0)? ifaces.eth0[0].address:'localhost'}:${process.env.PORT || 3000}`;
+swaggerDocument.host = `${(ifaces.eth0) ? ifaces.eth0[0].address : 'localhost'}:${process.env.PORT || 3000}`;
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler

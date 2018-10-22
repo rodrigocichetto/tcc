@@ -14,7 +14,7 @@ const swaggerDocument = YAML.load(`${__dirname}/api-docs.yaml`);
 // database
 require('./config/database')(
   process.env.DB_DATABASE && process.env.DB_IPV4_ADDRESS ?
-    'mongodb://' + process.env.DB_IPV4_ADDRESS + ':27017/' + process.env.DB_DATABASE : 
+    'mongodb://' + process.env.DB_IPV4_ADDRESS + ':27017/' + process.env.DB_DATABASE :
     'mongodb://localhost:27017/tcc');
 
 var auth = require('./config/authentication').auth;
@@ -33,7 +33,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-load('controllers')
+load('models')
+  .then('controllers')
   .then('routes')
   .into(app);
 

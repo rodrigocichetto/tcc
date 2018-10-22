@@ -38,6 +38,60 @@ paths:
           description: "OK"
         500:
           description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/AuthLogin"
+  /user/new:
+    post:
+      tags:
+      - "user"
+      summary: "Create new user"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/User"
+  /user/all:
+    get:
+      tags:
+      - "user"
+      summary: "List all users"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  /user/auth:
+    post:
+      tags:
+      - "user"
+      summary: "Authenticate token"
+      description: ""
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/AuthToken"
   
   /inpe/listaCidades:
     get:
@@ -80,3 +134,38 @@ paths:
         - in: "path"
           name: "city"
           type: "string"
+  
+definitions:
+  AuthLogin:
+    type: "object"
+    required:
+      - "username"
+      - "password"    
+    properties:
+      username:
+        type: "string"
+      password:
+        type: "string"
+  AuthToken:
+    type: "object"
+    required:
+      - "token"
+    properties:
+      token:
+        type: "string"
+  User:
+    type: "object"
+    required:
+      - "username"
+      - "password"
+    properties:
+      name:
+        type: "string"
+      username:
+        type: "string"
+      password:
+        type: "string"
+      mail:
+        type: "string"
+      city:
+        type: "integer"

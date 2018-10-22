@@ -1,7 +1,7 @@
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const passportJWT = require('passport-jwt');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const ExtractJwt = passportJWT.ExtractJwt;
 const JwtStrategy = passportJWT.Strategy;
@@ -14,10 +14,16 @@ const jwtOptions = {
 module.exports = {
     get auth() {
 
-        let strategy = new JwtStrategy(jwtOptions, function (jwt_payload, next) {
-            if (jwt_payload) {
-                next(null, jwt_payload);
-            }
+        const User = mongoose.models.User;
+
+        const strategy = new JwtStrategy(jwtOptions, (jwt_payload, next) => {
+            User.findById(jwt_payload._id).exec().then(user => {
+                if (user) {
+                    next(null, user);
+                } else {
+                    next(null, false);
+                }
+            })
         });
 
         passport.use(strategy);
@@ -28,11 +34,30 @@ module.exports = {
             },
             get authenticate() {
                 return passport.authenticate('jwt', { session: false });
-            }
+            },
         }
     },
-    login: (callback) => {
-        let token = jwt.sign('irrigacao-api', jwtOptions.secretOrKey);
-        callback({token});
+    login: (username, password, callback) => {
+
+        const User = mongoose.models.User;
+
+        User.findOne({ username, password }).exec().then(user => {
+            if (user) {
+                user.password = undefined;
+                const token = jwt.sign({ user }, jwtOptions.secretOrKey, { algorithm: 'HS256' });
+
+                callback({ token });
+            } else {
+                callback(false);
+            }
+        })
+    },
+    authByToken: (token) => {
+        try {
+            jwt.verify(token, jwtOptions.secretOrKey);
+            return true;
+        } catch(e) {
+            return false;
+        }
     }
 }

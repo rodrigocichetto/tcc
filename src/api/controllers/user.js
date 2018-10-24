@@ -55,6 +55,9 @@ module.exports = (app) => {
                     }));
                 });
         },
+        me: (req, res) => {
+            res.send(authentication.decode(req.headers.authorization).user);
+        },
     }
 
     return Controller;

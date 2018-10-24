@@ -74,6 +74,19 @@ paths:
           description: "OK"
         500:
           description: "Internal Server Error"
+  /user/me:
+    get:
+      tags:
+      - "user"
+      summary: "Return me user"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
   /user/auth:
     post:
       tags:
@@ -134,6 +147,12 @@ paths:
         - in: "path"
           name: "city"
           type: "string"
+
+securityDefinitions:
+  jwt:
+    in: "header"
+    type: "apiKey"
+    name: "Authorization"
   
 definitions:
   AuthLogin:

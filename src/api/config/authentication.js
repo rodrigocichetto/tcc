@@ -17,7 +17,7 @@ module.exports = {
         const User = mongoose.models.User;
 
         const strategy = new JwtStrategy(jwtOptions, (jwt_payload, next) => {
-            User.findById(jwt_payload._id).exec().then(user => {
+            User.findById(jwt_payload.user._id).exec().then(user => {
                 if (user) {
                     next(null, user);
                 } else {
@@ -59,5 +59,8 @@ module.exports = {
         } catch(e) {
             return false;
         }
+    },
+    decode: (token) => {
+        return jwt.decode(token.split('jwt ')[1]);
     }
 }

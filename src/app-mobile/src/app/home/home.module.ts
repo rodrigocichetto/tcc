@@ -6,13 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { HomePage } from './home.page';
 
+import { WeatherComponentModule } from '../components/weather/weather.module';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild([{ path: '', component: HomePage }]),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    WeatherComponentModule,
   ],
   declarations: [HomePage]
 })

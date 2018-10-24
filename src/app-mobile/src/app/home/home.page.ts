@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { WeatherService } from '../services/weather.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,18 +7,9 @@ import { WeatherService } from '../services/weather.service';
 })
 export class HomePage {
 
-  weather: any;
-
-  constructor(private weatherService: WeatherService) { }
+  constructor() { }
 
   ngOnInit () {
-    this.weatherService.getWeatherCity(586).subscribe((data: any) => {
-      this.weather = data.cidade;
-    });
   }
-
-  // ionNavWillLoad () {
-    
-  // }
 
 }

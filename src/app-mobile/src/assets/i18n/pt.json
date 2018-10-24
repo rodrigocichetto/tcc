@@ -3,5 +3,7 @@
     "TEMPERATURE": "Temperatura",
     "SETTINGS": "Configurações",
     "ADD": "Adicionar",
-    "ADD_WATERING": "Adicionar regador"
+    "ADD_WATERING": "Adicionar regador",
+    "USERNAME": "Usuário",
+    "PASSWORD": "Senha"
 }

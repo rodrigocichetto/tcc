@@ -1,0 +1,22 @@
+:root {
+    --placeholder-color: var(--white-color);
+}
+
+ion-content {
+    --ion-background-color: var(--base-color);
+    --color: var(--white-color);
+    height: 100%;
+    display: block;
+    vertical-align: middle;
+}
+
+.center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 4rem;
+}

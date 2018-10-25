@@ -5,5 +5,10 @@
     "ADD": "Adicionar",
     "ADD_WATERING": "Adicionar regador",
     "USERNAME": "Usuário",
-    "PASSWORD": "Senha"
+    "PASSWORD": "Senha",
+    "LOGIN": "Entrar",
+    "REGISTER": "Cadastrar-se",
+    "ERROR": "Erro",
+    "LOGIN_INVALID": "Por favor preencha os campos",
+    "OK": "Ok"
 }

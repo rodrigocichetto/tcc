@@ -1,5 +1,19 @@
-:root {
-    --placeholder-color: var(--white-color);
+ion-item {
+    --ion-item-text-color: var(--white-color);
+    --ion-item-border-color: var(--white-color);
+    --border-color: var(--white-color);
+}
+
+ion-input {
+    --placeholder-opacity: 1;
+}
+
+ion-button {
+    --background-activated: var(--base-light-color);
+}
+
+ion-button.login {
+    --background: var(--base-dark-color);
 }
 
 ion-content {

@@ -18,3 +18,7 @@ ion-header {
 ion-content {
     --ion-background-color: var(--base-light-color);
 }
+
+.color--dark {
+    color: var(--ion-color-dark) !important;
+}

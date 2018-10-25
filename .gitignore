@@ -12,3 +12,4 @@
 *.synctex.gz
 materiais/
 node_modules
+src/db/data

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 // import { HTTP } from '@ionic-native/http';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
-import { CONFIGS } from '../config';
+import { CONFIGS } from '../app.constants';
 
 @Injectable({
   providedIn: 'root'

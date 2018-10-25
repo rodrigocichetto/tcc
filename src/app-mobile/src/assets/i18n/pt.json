@@ -7,8 +7,10 @@
     "USERNAME": "Usuário",
     "PASSWORD": "Senha",
     "LOGIN": "Entrar",
-    "REGISTER": "Cadastrar-se",
+    "REGISTER": "Cadastro",
+    "REGISTER_BTN": "Cadastrar-se",
     "ERROR": "Erro",
     "LOGIN_INVALID": "Por favor preencha os campos",
-    "OK": "Ok"
+    "OK": "Ok",
+    "BACK": "Voltar"
 }

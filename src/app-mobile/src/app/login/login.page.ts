@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AlertController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { AlertController, NavController } from '@ionic/angular';
 
 import { UserOptions } from '../interfaces/user-options';
+import { PAGES } from '../app.constants';
 
 @Component({
   selector: 'app-login',
@@ -19,19 +20,24 @@ export class LoginPage implements OnInit {
 
   constructor(
     private alertController: AlertController,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private nav: NavController
   ) { }
 
   login(form: NgForm) {
     if (form.valid) {
       console.info('valid', this.user);
     } else {
-      this.presentAlert();
+      this.presentAlert('ERROR', 'LOGIN_INVALID', 'OK');
     }
   }
 
-  private async presentAlert() {
-    const translated: any = await this.translate.get(['ERROR', 'LOGIN_INVALID', 'OK']);
+  openRegisterPage() {
+    this.nav.navigateForward(PAGES.REGISTER);
+  }
+
+  private async presentAlert(headerMsg: string, contentMsg: string, buttonTxt: string) {
+    const translated: any = await this.translate.get([headerMsg, contentMsg, buttonTxt]);
     
     const alert = await this.alertController.create({
       header: translated.value.ERROR,

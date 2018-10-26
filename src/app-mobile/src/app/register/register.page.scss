@@ -1,0 +1,15 @@
+ion-button {
+    --background-focused: var(--base-light-color);
+    --background-activated: var(--base-light-color);
+    --background: var(--base-dark-color);
+}
+
+ion-item {
+    width: 100%;
+}
+
+.error-message {
+    width: 100%;
+    border-radius: 0.5rem;
+    background: var(--ion-color-danger);
+}

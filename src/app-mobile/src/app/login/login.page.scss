@@ -1,14 +1,5 @@
-ion-item {
-    --ion-item-text-color: var(--white-color);
-    --ion-item-border-color: var(--white-color);
-    --border-color: var(--white-color);
-}
-
-ion-input {
-    --placeholder-opacity: 1;
-}
-
 ion-button {
+    --background-focused: var(--base-light-color);
     --background-activated: var(--base-light-color);
 }
 

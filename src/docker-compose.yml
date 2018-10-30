@@ -22,6 +22,7 @@ services:
       - DB_USER=${DB_USER} 
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_DATABASE=${DB_DATABASE}
+      - DUMP_DEMO=${DUMP_DEMO}
     command: ["npm", "start"]
   tcc-app-mobile:
     image: "node:8.10"

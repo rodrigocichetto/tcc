@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, LoadingController } from '@ionic/angular';
 
 import { User } from '../interfaces/user';
 import { UserService } from '../services/user.service';
@@ -27,49 +27,65 @@ export class RegisterPage implements OnInit {
   };
   searchCity: string;
 
+  private loading;
+
   constructor(
     private alertController: AlertController,
     private userService: UserService,
     private translate: TranslateService,
     private nav: NavController,
+    private loadingController: LoadingController,
   ) { }
 
-  async register(form: NgForm) {
+  register(form: NgForm) {
     if (form.valid) {
-      try {
-        const response = await this.userService.register(this.user);
 
-        const translated: any = await this.translate.get(['SUCCESS', 'USER_REGISTERED_MSG', 'OK']);
+      this.loadingController.create()
+        .then(loading => {
+          loading.present();
 
-        const alert = await this.alertController.create({
-          header: translated.value.SUCCESS,
-          message: translated.value.USER_REGISTERED_MSG,
-          buttons: [{
-            text: translated.value.OK,
-            cssClass: 'color--dark',
-            handler: () => {
-              this.nav.navigateBack(PAGES.LOGIN);
-            }
-          }]
+          this.userService.register(this.user).subscribe(response => {
+
+            this.translate.get(['SUCCESS', 'USER_REGISTERED_MSG', 'OK']).subscribe((translated: any) => {
+
+              loading.dismiss();
+
+              this.alertController.create({
+                header: translated.SUCCESS,
+                message: translated.USER_REGISTERED_MSG,
+                buttons: [{
+                  text: translated.OK,
+                  cssClass: 'color--dark',
+                  handler: () => {
+                    this.nav.navigateBack(PAGES.LOGIN);
+                  }
+                }]
+              }).then(alert => alert.present());
+
+            });
+
+          }, error => {
+
+            loading.dismiss();
+
+            this.translate.get(['ERROR', 'USER_REGISTERED_ERR', 'OK']).subscribe((translated: any) => {
+
+              this.alertController.create({
+                header: translated.ERROR,
+                message: translated.USER_REGISTERED_ERR,
+                buttons: [{
+                  text: translated.OK,
+                  cssClass: 'color--dark'
+                }]
+              }).then(alert => alert.present());
+
+            });
+          }, () => {
+            loading.dismiss();
+          });
+
         });
 
-        alert.present();
-      } catch (e) {
-
-        const translated: any = await this.translate.get(['ERROR', 'USER_REGISTERED_ERR', 'OK']);
-
-        const alert = await this.alertController.create({
-          header: translated.value.SUCCESS,
-          message: translated.value.USER_REGISTERED_MSG,
-          buttons: [{
-            text: translated.value.OK,
-            cssClass: 'color--dark'
-          }]
-        });
-
-        alert.present();
-
-      }
     }
   }
 

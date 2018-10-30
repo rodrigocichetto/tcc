@@ -5,15 +5,16 @@ import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
 import { AddPage } from '../add/add.page';
 import { SettingsPage } from '../settings/settings.page';
+import { PAGES } from '../app.constants';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: PAGES.TABS,
     component: TabsPage,
     children: [
       {
         path: '',
-        redirectTo: '/tabs/(home:home)',
+        redirectTo: `/${PAGES.TABS}/(home:home)`,
         pathMatch: 'full',
       },
       {
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: `/${PAGES.TABS}/(home:home)`,
     pathMatch: 'full'
   }
 ];

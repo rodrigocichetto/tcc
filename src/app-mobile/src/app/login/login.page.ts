@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, NavController, LoadingController } from '@ionic/angular';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 
 import { UserOptions } from '../interfaces/user-options';
+import { UserService } from '../services/user.service';
 import { PAGES } from '../app.constants';
 
 @Component({
@@ -21,14 +23,62 @@ export class LoginPage implements OnInit {
   constructor(
     private alertController: AlertController,
     private translate: TranslateService,
-    private nav: NavController
+    private nav: NavController,
+    private userService: UserService,
+    private loadingController: LoadingController,
+    private nativeStorage: NativeStorage,
   ) { }
 
-  login(form: NgForm) {
+  async login(form: NgForm) {
     if (form.valid) {
-      console.info('valid', this.user);
+
+      this.loadingController.create()
+        .then(loading => {
+
+          loading.present();
+
+          this.userService.login(this.user).subscribe((response: any) => {
+
+            loading.dismiss();
+            this.userService.setToken(response.token);
+            this.nav.navigateForward(PAGES.TABS);
+
+          }, error => {
+
+            loading.dismiss();
+
+            this.translate.get(['ERROR', 'LOGIN_INVALID', 'OK']).subscribe(translated => {
+
+              this.alertController.create({
+                header: translated.ERROR,
+                message: translated.LOGIN_INVALID,
+                buttons: [{
+                  text: translated.OK,
+                  cssClass: 'color--dark'
+                }]
+              }).then(alert => alert.present());
+
+            });
+
+          });
+
+        });
+
     } else {
-      this.presentAlert('ERROR', 'LOGIN_INVALID', 'OK');
+
+      this.translate.get(['ERROR', 'LOGIN_NULL', 'OK']).subscribe(translated => {
+
+        this.alertController.create({
+          header: translated.ERROR,
+          message: translated.LOGIN_INVALID,
+          buttons: [{
+            text: translated.OK,
+            cssClass: 'color--dark'
+          }]
+        }).then(alert => alert.present());
+
+      });
+
     }
   }
 
@@ -36,22 +86,14 @@ export class LoginPage implements OnInit {
     this.nav.navigateForward(PAGES.REGISTER);
   }
 
-  private async presentAlert(headerMsg: string, contentMsg: string, buttonTxt: string) {
-    const translated: any = await this.translate.get([headerMsg, contentMsg, buttonTxt]);
-    
-    const alert = await this.alertController.create({
-      header: translated.value.ERROR,
-      message: translated.value.LOGIN_INVALID,
-      buttons: [{
-        text: translated.value.OK,
-        cssClass: 'color--dark'
-      }]
-    });
-
-    alert.present();
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  ionViewWillEnter() {
+    this.user = {
+      username: '',
+      password: ''
+    };
   }
 
 }

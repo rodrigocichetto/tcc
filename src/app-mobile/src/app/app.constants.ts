@@ -1,5 +1,5 @@
 let CONFIGS = {
-    BASE_SERVICE: `http://localhost:3000`,
+    BASE_SERVICE: `http://10.5.0.5:3000`,
 };
 
 let PAGES = {

@@ -22,6 +22,7 @@ services:
       - DB_USER=${DB_USER} 
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_DATABASE=${DB_DATABASE}
+      - DUMP_DEMO=${DUMP_DEMO}
     command: ["npm", "start"]
   tcc-app-mobile:
     image: "node:8.10"
@@ -37,6 +38,8 @@ services:
         ipv4_address: ${APP_MOBILE_IPV4_ADDRESS}
     environment:
       - PORT=${APP_MOBILE_PORT}
+      - API_IPV4_ADDRESS=${API_IPV4_ADDRESS}
+      - API_PORT=${API_PORT}
     command: ["npm", "run", "lab"]
   tcc-mongodb:
     image: mongo:latest

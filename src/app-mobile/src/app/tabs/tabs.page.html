@@ -5,7 +5,7 @@
   <ion-tab label="{{ 'ADD' | translate }}" icon="add-circle" href="/tabs/(add:add)">
     <ion-router-outlet name="add"></ion-router-outlet>
   </ion-tab>
-  <ion-tab label="{{ 'SETTINGS' | translate }}" icon="settings" href="/tabs/(settings:settings)">
+  <ion-tab (ionSelect)="ionSelectSettings()" label="{{ 'SETTINGS' | translate }}" icon="settings" href="/tabs/(settings:settings)">
     <ion-router-outlet name="settings"></ion-router-outlet>
   </ion-tab>
 </ion-tabs>

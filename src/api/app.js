@@ -16,6 +16,7 @@ require('./config/database')(
   process.env.DB_DATABASE && process.env.DB_IPV4_ADDRESS ?
     'mongodb://' + process.env.DB_IPV4_ADDRESS + ':27017/' + process.env.DB_DATABASE :
     'mongodb://localhost:27017/tcc');
+const initData = require('./config/init-data');
 
 var auth = require('./config/authentication').auth;
 
@@ -57,5 +58,10 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// DUMP Initial
+if (process.env.DUMP_DEMO === 'true') {
+  initData(app);
+}
 
 module.exports = app;

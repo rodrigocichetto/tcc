@@ -3,12 +3,15 @@ const jwt = require('jsonwebtoken');
 const passportJWT = require('passport-jwt');
 const mongoose = require('mongoose');
 
+const CryptoJS = require('crypto-js');
+const CONFIGS = require('../config/configs');
+
 const ExtractJwt = passportJWT.ExtractJwt;
 const JwtStrategy = passportJWT.Strategy;
 
 const jwtOptions = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme('jwt'),
-    secretOrKey: 'minhaChaveSecreta'
+    secretOrKey: 'CichettoTccKeyJWT'
 }
 
 module.exports = {
@@ -41,8 +44,8 @@ module.exports = {
 
         const User = mongoose.models.User;
 
-        User.findOne({ username, password }).exec().then(user => {
-            if (user) {
+        User.findOne({ username }).exec().then(user => {
+            if (user && (CryptoJS.AES.decrypt(user.password, CONFIGS.KEY_ENCRYPT).toString(CryptoJS.enc.Utf8) === password)) {
                 user.password = undefined;
                 const token = jwt.sign({ user }, jwtOptions.secretOrKey, { algorithm: 'HS256' });
 

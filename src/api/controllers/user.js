@@ -1,5 +1,8 @@
 const authentication = require('../config/authentication');
 
+const CryptoJS = require('crypto-js');
+const CONFIGS = require('../config/configs');
+
 module.exports = (app) => {
     const User = app.models.users;
 
@@ -36,6 +39,7 @@ module.exports = (app) => {
         },
         create: (req, res) => {
             var newUser = new User(req.body);
+            newUser.password = CryptoJS.AES.encrypt(req.body.password, CONFIGS.KEY_ENCRYPT).toString();
             newUser.save((err, resp) => {
                 if (err) {
                     res.status(500).end();

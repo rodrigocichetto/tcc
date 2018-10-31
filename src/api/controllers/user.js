@@ -50,11 +50,10 @@ module.exports = (app) => {
             })
         },
         listAll: (req, res) => {
-            User.find({}, [], { sort: { name: 1 } })
+            User.find({}, ['-password'], { sort: { name: 1 } })
                 .exec()
                 .then(users => {
                     res.json(users.map(user => {
-                        user.password = undefined;
                         return user;
                     }));
                 });

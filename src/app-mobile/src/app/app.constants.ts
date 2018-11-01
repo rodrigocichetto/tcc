@@ -5,7 +5,8 @@ let CONFIGS = {
 let PAGES = {
     LOGIN: 'login',
     REGISTER: 'register',
-    TABS: 'tabs'
+    TABS: 'tabs',
+    IRRIGATION: 'irrigation'
 };
 
 export {

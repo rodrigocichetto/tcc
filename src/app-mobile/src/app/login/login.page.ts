@@ -70,7 +70,7 @@ export class LoginPage implements OnInit {
 
         this.alertController.create({
           header: translated.ERROR,
-          message: translated.LOGIN_INVALID,
+          message: translated.LOGIN_NULL,
           buttons: [{
             text: translated.OK,
             cssClass: 'color--dark'

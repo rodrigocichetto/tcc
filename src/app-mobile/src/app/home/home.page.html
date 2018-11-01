@@ -5,5 +5,27 @@
 </ion-header>
 
 <ion-content padding>
-  <app-weather></app-weather>
+  <app-weather [city]="user.city"></app-weather>
+
+  <ion-card class="weather" (click)="openIrrigation(i)" *ngFor="let i of irrigations">
+    <ion-grid>
+      <ion-row justify-content-center text-center>
+        <ion-col size="3" align-self-center>
+          <ion-icon [ngClass]="{'irrigation--status-active' : i.status, 'irrigation--status-disabled' : !i.status}"
+            class="irrigation--status-icon" name="ios-water"></ion-icon>
+        </ion-col>
+        <ion-col class="" size="9" align-self-center text-end>
+          <div class="irrigation--content" padding>
+            <p class="irrigation--status" no-padding no-margin>
+              <span *ngIf="i.status">{{ 'ACTIVED' | translate }}</span>
+              <span *ngIf="!i.status">{{ 'DISABLED' | translate }}</span>
+            </p>
+            <p class="irrigation--name" no-padding no-margin>{{i.name}}</p>
+            <p class="irrigation--city" no-padding no-margin>{{i.city}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
 </ion-content>

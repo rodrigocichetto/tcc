@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="" icon="arrow-back" text="{{ 'BACK' | translate }}"></ion-back-button>
+      <ion-back-button defaultHref="" class="text--white" icon="arrow-back" text="{{ 'BACK' | translate }}"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ 'REGISTER' | translate }}</ion-title>
   </ion-toolbar>
@@ -16,7 +16,7 @@
         {{fieldInvalid.msg}}
       </div> -->
 
-      <div class="error-message" padding margin-bottom text-start *ngIf="loginForm.submitted && !loginForm.valid">
+      <div class="error-message text--white" padding margin-bottom text-start *ngIf="loginForm.submitted && !loginForm.valid">
         <span *ngIf="!loginForm.controls.name.valid">{{'NAME' | translate}}</span> 
         <span *ngIf="!loginForm.controls.username.valid && loginForm.controls.name.valid">{{'USERNAME' | translate}}</span>  
         <span *ngIf="!loginForm.controls.password.valid && loginForm.controls.username.valid">{{'PASSWORD' | translate}}</span>  

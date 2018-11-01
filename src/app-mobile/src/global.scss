@@ -32,3 +32,20 @@ ion-item {
 ion-input {
     --placeholder-opacity: 1;
 }
+
+.irrigation--status-active {
+    color: var(--ion-color-success);
+}
+
+.irrigation--status-disabled {
+    color: var(--ion-color-danger);
+}
+
+.text--white {
+    color: var(--white-color);
+}
+
+.border--white {
+    border-color: var(--white-color);
+    --border-color: var(--white-color);
+}

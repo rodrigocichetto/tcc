@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpParams } from '@angular/common/http';
 
 import { User } from '../interfaces/user';
-import { CONFIGS } from '../app.constants';
 import { UserOptions } from '../interfaces/user-options';
+import { CONFIGS } from '../app.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,14 @@ export class UserService {
 
   public login(user: UserOptions) {
     return this.http.post(`${this.url}login`, user);
+  }
+
+  public getMe() {
+    return this.http.get(`${this.url}me`, {
+      headers: new HttpHeaders({
+        Authorization: `jwt ${this.token}`
+      })
+    });
   }
 
   public setToken(token: string) {

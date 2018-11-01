@@ -11,6 +11,7 @@ module.exports = (app) => {
     router.post('/new', Controller.create);
     router.get('/all', Controller.listAll);
     router.get('/me', auth.authenticate, Controller.me);
+    router.put('/update', auth.authenticate, Controller.update);
 
     app.use('/user', router);
 }

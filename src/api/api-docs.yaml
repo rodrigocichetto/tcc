@@ -26,6 +26,59 @@ paths:
           description: "OK"
         500:
           description: "Internal Server Error"
+  /irrigacao/all:
+    get:
+      tags:
+      - "irrigacao"
+      summary: "Return me irrigations"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  /irrigacao/new:
+    post:
+      tags:
+      - "irrigacao"
+      summary: "Add irrigation to me"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/Irrigation"
+  /irrigacao/update:
+    put:
+      tags:
+      - "irrigacao"
+      summary: "Update irrigation"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/IrrigationUpdate"
 
   /user/login:
     post:
@@ -63,17 +116,26 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/User"
-  /user/all:
-    get:
+  /user/update:
+    put:
       tags:
       - "user"
-      summary: "List all users"
+      summary: "Update me"
       description: ""
+      security:
+        - jwt: []
       responses:
         200:
           description: "OK"
         500:
           description: "Internal Server Error"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: ""
+          required: true
+          schema:
+            $ref: "#/definitions/User"
   /user/me:
     get:
       tags:
@@ -82,6 +144,17 @@ paths:
       description: ""
       security:
         - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  /user/all:
+    get:
+      tags:
+      - "user"
+      summary: "List all users"
+      description: ""
       responses:
         200:
           description: "OK"
@@ -185,6 +258,39 @@ definitions:
       password:
         type: "string"
       mail:
+        type: "string"
+      city:
+        type: "integer"
+  Irrigation:
+    type: "object"
+    required:
+      - "name"
+      - "city"
+    properties:
+      status:
+        type: "string"
+      name:
+        type: "string"
+      address:
+        type: "string"
+      cep:
+        type: "string"
+      city:
+        type: "integer"
+  IrrigationUpdate:
+    type: "object"
+    required:
+      - "_id"
+    properties:
+      _id:
+        type: "string"
+      status:
+        type: "string"
+      name:
+        type: "string"
+      address:
+        type: "string"
+      cep:
         type: "string"
       city:
         type: "integer"

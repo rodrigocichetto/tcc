@@ -49,6 +49,23 @@ module.exports = (app) => {
                 }
             })
         },
+        update: (req, res) => {
+            let u = authentication.decode(req.headers.authorization).user;
+            if (req.body.password) {
+                req.body.password = CryptoJS.AES.encrypt(req.body.password, CONFIGS.KEY_ENCRYPT).toString();
+            }
+			User.update({ _id: u._id }, {
+				$set: req.body
+			})
+				.exec()
+				.then(response => {
+					if (response.ok === 1) {
+						res.status(200).send();
+					} else {
+						res.status(400).send();
+					}
+				});
+		},
         listAll: (req, res) => {
             User.find({}, ['-password'], { sort: { name: 1 } })
                 .exec()

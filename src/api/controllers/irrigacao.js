@@ -20,14 +20,28 @@ module.exports = (app) => {
 				}
 			})
 				.exec()
-				.then(res => {
-					if (res.n === 1) {
+				.then(response => {
+					if (response.ok === 1) {
 						res.status(200).send();
+					} else {
+						res.status(400).send();
 					}
 				});
 		},
 		update: (req, res) => {
-			
+			User.update({ 'irrigations._id': req.body._id }, {
+				$set: {
+					'irrigations.$': req.body
+				}
+			})
+				.exec()
+				.then(response => {
+					if (response.ok === 1) {
+						res.status(200).send();
+					} else {
+						res.status(400).send();
+					}
+				});
 		},
 		listMe: (req, res) => {
 			let u = authentication.decode(req.headers.authorization).user;

@@ -2,6 +2,9 @@
 
 Trabalho apresentado a **UNIVERSIDADE PAULISTA** como pré-requisito para obtenção da **Certificação de Conclusão de Curso de Bacharelado em Ciência da Computação**.
 
+- Aluno: [Rodrigo Cichetto](https://github.com/rodrigocichetto) 
+- Profº Orientador: [Leandro Carlos Fernandes](https://github.com/leandro-carlos-fernandes)
+
 ## Resumo
 
 Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. 

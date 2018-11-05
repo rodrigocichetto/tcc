@@ -419,23 +419,23 @@ Orientador: Prof. \imprimirorientador}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 %  Segundo a \citeonline[3.1-3.2]{NBR6028:2003}
-Fazendo parte das três principais tecnologias que movem a internet, sendo elas HTML, CSS e claro o JavaScript, não é mais uma linguagem voltada somente para desenvolvedores front-end, mas sim uma obrigação para todo desenvolvedor, que tem como obrigação conhecer pelo menos o básico de JS. Nos últimos tempos a linguagem ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo atualizar o leitor através de um compilado de informações sobre as tendências do que mais vem sendo utilizado para a construção de aplicações utilizando a linguagem, mostrando os frameworks mais recentes e mais famosos. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, \textit{mobile}, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo apresentar benefícios de utilizar a linguagem JavaScript em todas as camadas do desenvolvimento, destacando ferramentas já existentes aplicadas à arquitetura multicamadas. Mas lembre-se com grandes poderes vem grandes responsabilidades.
 
  \vspace{\onelineskip}
 
- \textbf{Palavras-chaves}: javascript, typescript, frameworks
+ \textbf{Palavras-chaves}: javascript, arquitetura multicamadas, frameworks
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
 
-Being part of the three main technologies that move the internet, being HTML, CSS and clear JavaScript, is no longer a language aimed only at front-end developers, but rather an obligation for every developer, who has to know at least the basics of JS. In recent times the JavaScript language has gained a lot of importance in any scenarios involving programming, and has been used in websites, applications, servers, automation of tests, automation of tasks, internet of things, among others. This work has as main objective to update the reader through a compilation of information about the trends of what is being used to build applications using the language, showing the latest and most famous frameworks. But remember with great powers comes great responsibilities.
+Have you thought about creating a rapid prototyping of software or developing scalable applications quickly and using only one programming language? This is possible and brings benefits to the company, developers and even the customer. In recent times JavaScript has gained a lot of importance in any scenario, and has been used in websites, applications, mobile, servers, automation of tests, automation of tasks, internet of things, among others. This work has as main objective to present benefits of using the JavaScript language in all layers of development, highlighting existing tools applied to multilayer architecture. But remember with great powers comes great responsibilities.
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Key-words}: javascript, typescript, frameworks
+   \textbf{Key-words}: javascript, multilayer architecture, frameworks
  \end{otherlanguage*}
 \end{resumo}
 % ---
@@ -461,7 +461,6 @@ Being part of the three main technologies that move the internet, being HTML, CS
 %   \item[ABNT] Associação Brasileira de Normas Técnicas
 %   \item[abnTeX] ABsurdas Normas para TeX
   \item[JS] JavaScript
-  \item[TS] TypeScript
   \item[HTML] Abreviação para \textit{HyperText Markup Language}, que em português significa Linguagem de Marcação de Hipertexto.
   \item[DOM] Abreviação para \textit{Document Object Model}, que em português significa Modelo de Objetos e Documentos.
   \item[CSS] Abreviação para \textit{Cascading Style Sheets}, que em português significa Folhas de Estilo em Cascata.
@@ -549,7 +548,7 @@ A vantagem mais clara que temos é a padronização, o ser humano tem uma enorme
 
 Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo benefícios até mesmo a empresa em suas contratações.
 
-Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de facilitar muito o debug, por os objetos serem parecidos, se não idênticos.
+Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de facilitar muito o debug, por os objetos serem bem parecidos, se não idênticos.
 
 Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários frameworks e de base para o desenvolvimento em qualquer ambiente.
 
@@ -656,6 +655,7 @@ No início da internet as páginas não eram nada interativas, documentos aprese
 Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o JavaScript. Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em vários lugares. 
 
 \subsubsection{JavaScript além dos navegadores}
+\label{subsec:JavaScriptAlemNavegadores}
 
 Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas áreas sendo algumas delas:
 
@@ -678,6 +678,9 @@ O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. 
 Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando na área de \textit{back-end} ou até mesmo de teste.
 
 \subsubsection{ECMA}
+
+Como vimos as vantagens do JavaScript vão muito além de ser a linguagem mais popular da web, ou de até mesmo possuir a maior comunidade de programadores. Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passa-se por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
+
 Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples.
 
 Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
@@ -691,6 +694,13 @@ Com participação colaborativa de empresas que implementam o \textit{run-time} 
 Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-262.htm}, a ECMA disponibiliza informações como versão atual e a documentação da linguagem, porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla \url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}, ou também o site da W3Schools \url{https://www.w3schools.com/jsref/default.asp}. 
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
+
+\subsection{Por que o JavaScript?}
+Mas por que escolher o JavaScript e não outra linguagem? É possível utilizar sim outras linguagens para desenvolver uma aplicação \textit{client} e \textit{server-side} que compartilhem da mesma linguagem, como por exemplo o Java, onde podemos criar uma aplicação Android como cliente e desenvolver a aplicação servidor também utilizando a mesma linguagem.
+
+Porém quando o cenário for a web e necessitarmos executar lógica diretamente no navegador do cliente, o JavaScript se sobressaí, pois todo código final interpretado por um navegador é um HTML, CSS e JS, mesmo que o HTML tenha sido gerado por um servidor que roda PHP, por exemplo. Além de que a ferramenta com o papel de banco de dados apresentada neste trabalho, executa um shell que roda JavaScript, ou seja, a linguagem será utilizada até mesmo no banco de dados.
+
+E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma linguagem nativa? Como vimos anteriormente no capítulo \ref{subsec:JavaScriptAlemNavegadores}, graças ao crescimento da linguagem nos últimos tempos, ela nos permite a execução nos mais diversos ambientes. 
 
 \pagebreak
 \begin{figure}[h]
@@ -929,6 +939,9 @@ Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em segu
 % Conclusão
 % -----------------------------------
 \chapter{Conclusão}
+Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no caso o JavaScript, em todas as camadas do desenvolvimento. Através da arquitetura multicamadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
+
+
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS

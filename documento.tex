@@ -74,6 +74,7 @@
 % ---
 % Pacotes adicionados por Rodrigo Cichetto
 % ---
+\usepackage{breakurl}
 \usepackage{hyperref}
 % CODES JS
 \usepackage{listings}
@@ -367,6 +368,13 @@ Orientador: Prof. \imprimirorientador}
 % ---
 % Dedicatória
 % ---
+\begin{dedicatoria}
+    \vspace*{\fill}
+    \centering
+    \noindent
+    \textit{ Este trabalho é dedicado aos meus pais,\\
+    pelo apoio em todos os momentos.} \vspace*{\fill}
+ \end{dedicatoria}
 % \begin{dedicatoria}
 %    \vspace*{\fill}
 %    \centering
@@ -387,7 +395,6 @@ Orientador: Prof. \imprimirorientador}
 % \url{http://codigolivre.org.br/projects/abntex/}} e todos aqueles que
 % contribuíram para que a produção de trabalhos acadêmicos conforme
 % as normas ABNT com \LaTeX\ fosse possível.
-
 % Agradecimentos especiais são direcionados ao Centro de Pesquisa em Arquitetura
 % da Informação\footnote{\url{http://www.cpai.unb.br/}} da Universidade de
 % Brasília (CPAI), ao grupo de usuários
@@ -405,9 +412,9 @@ Orientador: Prof. \imprimirorientador}
 \begin{epigrafe}
     \vspace*{\fill}
 	\begin{flushright}
-		\textit{``Cada sonho que você deixa pra trás,\\
-		é um pedaço do seu futuro que deixa de existir. \\
-		(Steve Jobs)}
+		\textit{``Ser o homem mais rico do cemitério não me interessa.\\
+		Ir para a cama à noite dizendo que fizemos algo maravilhoso, \\ isso importa para mim. \\
+		(Steve Jobs; The Wall Street Journal, 1993.)}
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -581,6 +588,8 @@ A modularização refere-se a separar a lógica do negócio e regras de acesso a
 \end{figure}
 
 Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de protocolos de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
+
+A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles.
 
 \subsection{Cliente}
 \label{subsec:Cliente}
@@ -926,6 +935,8 @@ Instalar o Node.js é muito simples, basta acessar o link \href{https://nodejs.o
 
 Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
 
+Agora é só começar a desenvolver e instalar suas dependências, que devem ficar salvas no arquivo gerado anteriormente.
+
 % \pagebreak
 \begin{figure}[h]
 	\centering
@@ -942,7 +953,9 @@ Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em segu
 \chapter{Conclusão}
 Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no caso o JavaScript, em todas as camadas do desenvolvimento. Através da arquitetura multicamadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
 
+O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente escolheria o JS. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua  ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
+Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub pela licença MIT, através do link \href{https://github.com/rodrigocichetto/tcc}{https://github.com/rodrigocichetto/tcc}.
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS

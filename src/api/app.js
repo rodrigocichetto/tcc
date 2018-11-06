@@ -43,6 +43,10 @@ load('models')
 swaggerDocument.host = `${(ifaces.eth0) ? ifaces.eth0[0].address : 'localhost'}:${process.env.PORT || 3000}`;
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// scripts
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'));
+app.use('/fontawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
@@ -55,8 +59,10 @@ app.use(function (err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  // res.status(err.status || 500);
+  // res.render('error');
+
+  res.status(err.status || 500).send();
 });
 
 // DUMP Initial

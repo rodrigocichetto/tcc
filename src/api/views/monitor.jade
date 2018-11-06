@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    body.bg-dark.text-white
+        .container
+            h1.mb-5
+                i.fas.fa-leaf
+            .row
+                if irrigators
+                    each irrigator in irrigators
+                        .col-3
+                            .border.border-light.rounded.px-3.py-4
+                                p.text-center.text-big 
+                                    if #{irrigator.status} == true
+                                        i.fas.fa-tint.text-center.text-success
+                                    else
+                                        i.fas.fa-tint.text-center.text-warning
+                                p.text-center.text-medium #{irrigator.name}
+                else
+                    p Nenhum irrigador cadastrado!

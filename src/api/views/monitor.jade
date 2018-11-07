@@ -5,16 +5,35 @@ block content
         .container
             h1.mb-5
                 i.fas.fa-leaf
-            .row
+            .row.eq-height
                 if irrigators
                     each irrigator in irrigators
-                        .col-3
+                        div(class="col-3 #{irrigator._id}")
                             .border.border-light.rounded.px-3.py-4
                                 p.text-center.text-big 
-                                    if #{irrigator.status} == true
-                                        i.fas.fa-tint.text-center.text-success
+                                    if irrigator.status
+                                        i.fas.fa-tint.text-center.text-success.status-icon
                                     else
-                                        i.fas.fa-tint.text-center.text-warning
-                                p.text-center.text-medium #{irrigator.name}
+                                        i.fas.fa-tint.text-center.text-warning.status-icon
+                                p.text-center.name #{irrigator.name}
+                                p Status: 
+                                    span.status
+                                        if irrigator.status 
+                                            | Ativado
+                                        else
+                                            | Desativado
+                                    br
+                                    | Cidade: 
+                                    span.city #{irrigator.city}
+                                    br
+                                    | CEP: 
+                                    span.cep #{irrigator.cep}
+                                    br
+                                    | Endereço: 
+                                    span.address #{irrigator.address}
+
                 else
                     p Nenhum irrigador cadastrado!
+        script(src="/jquery/jquery.min.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="/scripts/index.js")

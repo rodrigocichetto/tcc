@@ -3,6 +3,8 @@ const configs = require('../config/configs');
 
 module.exports = (app) => {
 
+	// const http = require('http').Server(app);
+	
 	const User = app.models.users;
 
 	let Controller = {
@@ -36,6 +38,8 @@ module.exports = (app) => {
 			})
 				.exec()
 				.then(response => {
+					const io = require('../socket').getIo();
+					io.emit('irrigation:updated', req.body);
 					if (response.ok === 1) {
 						res.status(200).send();
 					} else {

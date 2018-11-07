@@ -46,6 +46,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // scripts
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use('/fontawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
+app.use('/socket.io', express.static(__dirname + '/node_modules/socket.io-client/dist/'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

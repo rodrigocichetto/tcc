@@ -25,6 +25,8 @@
     "LOGIN_INVALID": "Login e senha inválidos",
     "STATUS_UPDATED": "Status atualizado",
     "STATUS_ERR_UPDATE": "Erro ao atualizar status",
+    "PULL_REFRESH": "Puxe para atualizar",
+    "REFRESHING": "Atualizando",
     "OK": "Ok",
     "BACK": "Voltar",
     "CITY": "Cidade",

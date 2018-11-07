@@ -10,3 +10,8 @@ ion-card {
 .irrigation--name {
     font-weight: bold;
 }
+
+ion-refresher {
+    --color: var(--white-color);
+    --ion-text-color: var(--white-color);
+}

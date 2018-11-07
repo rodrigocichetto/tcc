@@ -28,13 +28,38 @@ export class HomePage implements OnInit {
     this.nav.navigateForward(PAGES.IRRIGATION);
   }
 
-  ngOnInit() {
+  getIrrigations(event?) {
     this.irrigationService.getAll().subscribe((data: any) => {
+      console.log(data);
       this.irrigations = data;
-    });
+    }, (err) => { }
+      , () => {
+        if (event) {
+          event.target.complete();
+        }
+      });
+  }
+
+  getUserInfo(event?) {
     this.userService.getMe().subscribe((data: any) => {
+      console.log(data);
       this.user = data;
-    });
+    }, (err) => { }
+      , () => {
+        if (event) {
+          event.target.complete();
+        }
+      });
+  }
+
+  doRefresh(event) {
+    this.getIrrigations(event);
+    this.getUserInfo(event);
+  }
+
+  ngOnInit() {
+    this.getIrrigations();
+    this.getUserInfo();
   }
 
 }

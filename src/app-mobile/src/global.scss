@@ -17,6 +17,7 @@ ion-header {
 
 ion-content {
     --ion-background-color: var(--base-light-color);
+    background: var(--base-light-color);
 }
 
 .color--dark {
@@ -38,7 +39,17 @@ ion-input {
 }
 
 .irrigation--status-disabled {
-    color: var(--ion-color-danger);
+    color: var(--ion-color-warning);
+}
+
+.irrigation--bg-status-active {
+    --background: var(--ion-color-success);
+    --background-activated: var(--ion-color-success);
+}
+
+.irrigation--bg-status-disabled {
+    --background: var(--ion-color-warning);
+    --background-activated: var(--ion-color-warning);
 }
 
 .text--white {

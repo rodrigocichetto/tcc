@@ -13,6 +13,8 @@ Este trabalho tem como principal objetivo apresentar benefícios de utilizar a l
 
 ## Código
 
+Foi criado uma aplicação para mostrar na prática os conceitos apresentados no trabalho, todo o código está disponível na pasta [src](/src).
+
 ## Docker
 
 Para iniciar a aplicação com apenas um comando, suba os containers indo até a pasta `src` e executando o comando:

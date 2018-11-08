@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { IonicModule } from '@ionic/angular';
 
 import { IrrigationPage } from './irrigation.page';
+import { PopoverComponent } from './popover/popover.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     TranslateModule.forChild()
   ],
-  declarations: [IrrigationPage]
+  entryComponents:[PopoverComponent],
+  declarations: [IrrigationPage, PopoverComponent],
+  // exports: [PopoverComponent]
 })
 export class IrrigationPageModule {}

@@ -76,7 +76,12 @@ module.exports = (app) => {
                 });
         },
         me: (req, res) => {
-            res.send(authentication.decode(req.headers.authorization).user);
+            let u = authentication.decode(req.headers.authorization).user;
+            User.find({_id: u._id}, ['-password'], { sort: { name: 1 } })
+                .exec()
+                .then(user => {
+                    res.json(user[0]);
+                });
         },
     }
 

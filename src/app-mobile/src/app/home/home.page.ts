@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Events } from '@ionic/angular';
 
 import { IrrigationService } from '../services/irrigation.service';
 import { UserService } from '../services/user.service';
@@ -21,7 +21,12 @@ export class HomePage implements OnInit {
     private irrigationService: IrrigationService,
     private userService: UserService,
     private nav: NavController,
-  ) { }
+    public events: Events
+  ) {
+    events.subscribe('add:irrigation', (data) => {
+      this.irrigations.push(data);
+    });
+  }
 
   openIrrigation(irrigation: Irrigation) {
     this.irrigationService.setSelected(irrigation);
@@ -30,20 +35,21 @@ export class HomePage implements OnInit {
 
   getIrrigations(event?) {
     this.irrigationService.getAll().subscribe((data: any) => {
-      console.log(data);
       this.irrigations = data;
     }, (err) => { }
-      , () => {
-        if (event) {
-          event.target.complete();
-        }
-      });
+    , () => {
+      if (event) {
+        event.target.complete();
+      }
+    });
   }
 
   getUserInfo(event?) {
     this.userService.getMe().subscribe((data: any) => {
-      console.log(data);
       this.user = data;
+      if (event) {
+        this.events.publish('refresh:weather', data);
+      }
     }, (err) => { }
       , () => {
         if (event) {
@@ -52,7 +58,7 @@ export class HomePage implements OnInit {
       });
   }
 
-  doRefresh(event) {
+  async doRefresh(event) {
     this.getIrrigations(event);
     this.getUserInfo(event);
   }

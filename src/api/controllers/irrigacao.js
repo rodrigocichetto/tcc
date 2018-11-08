@@ -62,6 +62,25 @@ module.exports = (app) => {
 					res.send(users.map(u => u.irrigations).reduce((p, n) => p.concat(n)));
 				});
 		},
+		delete: (req, res) => {
+			User.update({ 'irrigations._id': req.param('id') }, {
+				$pull: {
+					irrigations: {
+						'_id': req.param('id')
+					}
+				}
+			})
+				.exec()
+				.then(response => {
+					// const io = require('../socket').getIo();
+					// io.emit('irrigation:updated', req.body);
+					if (response.ok === 1) {
+						res.status(200).send();
+					} else {
+						res.status(400).send();
+					}
+				});
+		}
 	}
 
 	return Controller;

@@ -21,10 +21,6 @@ export class RegisterPage implements OnInit {
     mail: '',
     city: 0
   };
-  fieldInvalid = {
-    value: '',
-    msg: ''
-  };
   searchCity: string;
 
   private loading;

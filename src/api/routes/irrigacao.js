@@ -10,6 +10,7 @@ module.exports = (app) => {
     router.get('/all', auth.authenticate, Controller.listMe);
     router.post('/new', auth.authenticate, Controller.create);
     router.put('/update', auth.authenticate, Controller.update);
+    router.delete('/delete/:id', auth.authenticate, Controller.delete);
 
     app.use('/irrigacao', router);
 }

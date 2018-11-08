@@ -3,7 +3,13 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="" class="text--white" icon="arrow-back" text="{{ 'BACK' | translate }}"></ion-back-button>
     </ion-buttons>
+
     <ion-title *ngIf="i">{{i.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon color="light" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 

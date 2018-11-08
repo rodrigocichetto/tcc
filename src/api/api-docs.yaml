@@ -79,6 +79,25 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/IrrigationUpdate"
+  /irrigacao/delete/{id}:
+    delete:
+      tags:
+      - "irrigacao"
+      summary: "Remove irrigation"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
 
   /user/login:
     post:

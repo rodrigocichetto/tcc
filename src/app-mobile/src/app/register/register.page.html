@@ -12,18 +12,15 @@
   <form #loginForm="ngForm" (ngSubmit)="register(loginForm)">
     <ion-row justify-content-center text-center>
 
-      <!-- <div class="error-message" padding margin-bottom text-start *ngIf="fieldInvalid.msg !== '' && loginForm.submitted && !loginForm.valid">
-        {{fieldInvalid.msg}}
-      </div> -->
-
       <div class="error-message text--white" padding margin-bottom text-start *ngIf="loginForm.submitted && !loginForm.valid">
-        <span *ngIf="!loginForm.controls.name.valid">{{'NAME' | translate}}</span> 
-        <span *ngIf="!loginForm.controls.username.valid && loginForm.controls.name.valid">{{'USERNAME' | translate}}</span>  
-        <span *ngIf="!loginForm.controls.password.valid && loginForm.controls.username.valid">{{'PASSWORD' | translate}}</span>  
+        <span *ngIf="!loginForm.controls.name.valid">{{'NAME' | translate}}</span>
+        <span *ngIf="!loginForm.controls.username.valid && loginForm.controls.name.valid">{{'USERNAME' | translate}}</span>
+        <span *ngIf="!loginForm.controls.password.valid && loginForm.controls.username.valid">{{'PASSWORD' |
+          translate}}</span>
         <span *ngIf="!loginForm.controls.mail.valid && loginForm.controls.password.valid">{{'MAIL' | translate}}</span>
-        <span *ngIf="!loginForm.controls.city.valid && loginForm.controls.mail.valid">{{'CITY' | translate}}</span>  
-         {{'INVALID_FIELD_MSG_COMP' | translate}}
-        </div>
+        <span *ngIf="!loginForm.controls.city.valid && loginForm.controls.mail.valid">{{'CITY' | translate}}</span>
+        {{'INVALID_FIELD_MSG_COMP' | translate}}
+      </div>
 
       <ion-item padding-bottom>
         <ion-input required type="text" [(ngModel)]="user.name" name="name" #name="ngModel" placeholder="{{ 'NAME' | translate }} (*)"></ion-input>

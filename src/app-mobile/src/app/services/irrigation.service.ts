@@ -34,6 +34,14 @@ export class IrrigationService {
     });
   }
 
+  public delete(id: string) {
+    return this.http.delete(`${this.url}delete/${id}`, {
+      headers: new HttpHeaders({
+        Authorization: `jwt ${this.userService.getToken()}`
+      })
+    });
+  }
+
   public getAll() {
     return this.http.get(`${this.url}all`, {
       headers: new HttpHeaders({

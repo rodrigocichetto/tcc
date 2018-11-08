@@ -2,8 +2,10 @@
     "HOME": "Home",
     "TEMPERATURE": "Temperatura",
     "SETTINGS": "Configurações",
+    "ACTIONS": "Ações",
     "ADD": "Adicionar",
     "ADD_WATERING": "Adicionar regador",
+    "DELETE": "Excluir",
     "NAME": "Nome",
     "USERNAME": "Usuário",
     "PASSWORD": "Senha",
@@ -32,5 +34,7 @@
     "CITY": "Cidade",
     "INVALID_FIELD_MSG_COMP": "é inválido ou nulo.",
     "USER_REGISTERED_MSG": "Usuário cadastrado com sucesso",
-    "USER_REGISTERED_ERR": "Erro ao cadastrar usuário"
+    "USER_REGISTERED_ERR": "Erro ao cadastrar usuário",
+    "IRRIGATION_REGISTERED_MSG": "Irrigação cadastrada com sucesso",
+    "IRRIGATION_REGISTERED_ERR": "Erro ao cadastrar irrigação"
 }

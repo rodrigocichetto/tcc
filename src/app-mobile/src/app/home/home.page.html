@@ -12,7 +12,7 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <app-weather *ngIf="user" [city]="user.city"></app-weather>
+  <app-weather *ngIf="user" [(city)]="user.city"></app-weather>
 
   <div *ngIf="irrigations">
     <ion-card class="weather" (click)="openIrrigation(i)" *ngFor="let i of irrigations">

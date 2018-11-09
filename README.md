@@ -38,7 +38,7 @@ Segue abaixo os pré-requisitos informados pelo professor.
 
     Se a previsão para o dia seguinte for `nv`, `cm` ou `pt` não ativar a irrigação.
 
-3. **Adicionar um item na Queue do MQTT com o estado da aplicação**
+3. **Adicionar um item na Queue do MQTT com o estado da irrigação**
 
 ## Código
 

@@ -1,18 +1,25 @@
 const authentication = require('../config/authentication');
 const configs = require('../config/configs');
+const request = require('request');
 
 module.exports = (app) => {
-
-	// const http = require('http').Server(app);
 	
 	const User = app.models.users;
 
 	let Controller = {
 		healthCheck: (req, res) => {
-			res.status(200).send({
+			let response = {
 				version: configs.VERSION,
-				date: new Date()
-			})
+				date: new Date(),
+				inpe: ''
+			}
+			request(`${configs.EXTERNAL.INPE}/capitais/condicoesAtuais.xml`, (err, resp, body) => {
+				response.inpe = 'off';
+				if (!err) {
+					response.inpe = 'on';
+				}
+				res.status(200).send(response);
+			});
 		},
 		create: (req, res) => {
 			let u = authentication.decode(req.headers.authorization).user;

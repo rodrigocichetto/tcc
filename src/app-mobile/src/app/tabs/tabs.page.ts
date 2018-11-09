@@ -17,13 +17,13 @@ export class TabsPage {
   ) {}
 
   ionViewWillEnter() {
+    this.validateLogin()
+  }
+  
+  validateLogin() {
     if (!this.userService.getToken().length) {
       this.userService.setToken('');
       this.nav.navigateRoot(PAGES.LOGIN);
     }
-  }
-  
-  ionSelectSettings() {
-    
   }
 }

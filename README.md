@@ -22,23 +22,23 @@ Segue abaixo os pré-requisitos informados pelo professor.
 | verifica_irrigacao | GET    | /irrigacao/verifica/ | *token                 | 200/401/500     |
 | healf_check        | GET    | /irrigacao           | -                      | 200             |
 
-<small>* Parâmetros no header</small>
+[*] Parâmetros no header
 
-<small>*Os serviços descritos na documentação (http://10.5.0.5:3000/api-docs/) com a palavra-chave [APS] são os requisitados pelo professor, ou seja, os listados na tabela acima.</small>
+*Os serviços descritos na documentação (http://10.5.0.5:3000/api-docs/) com a palavra-chave [APS] são os requisitados pelo professor, ou seja, os listados na tabela acima.
 
 ### Ativar/Desativar irrigação
 
-1. Solicitação para ativar/desativar irrigação
+1. **Solicitação para ativar/desativar irrigação**
 
     Enviar uma requisição para o middleware com um token no header da requisição, assim como o estado a ser alterado.
 
-2. Consultar previsão INPE
+2. **Consultar previsão INPE**
 
     Consultar previsão para os próximos 4 dias.
 
     Se a previsão para o dia seguinte for `nv`, `cm` ou `pt` não ativar a irrigação.
 
-3. Adicionar um item na Queue do MQTT com o estado da aplicação
+3. **Adicionar um item na Queue do MQTT com o estado da aplicação**
 
 ## Código
 

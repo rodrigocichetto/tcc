@@ -11,6 +11,9 @@ module.exports = (app) => {
     router.post('/new', auth.authenticate, Controller.create);
     router.put('/update', auth.authenticate, Controller.update);
     router.delete('/delete/:id', auth.authenticate, Controller.delete);
+    router.put('/controla/:estado', auth.authenticate, Controller.controla);
+    router.get('/verifica', auth.authenticate, Controller.verifica);
+
 
     app.use('/irrigacao', router);
 }

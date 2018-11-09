@@ -1,19 +1,48 @@
-# TCC
+# APS
 
-Trabalho apresentado a **UNIVERSIDADE PAULISTA** como pré-requisito para obtenção da **Certificação de Conclusão de Curso de Bacharelado em Ciência da Computação**.
+APS UNIP - 8º Semestre Trabalho desenvolvido como Atividades Praticas Supervisionadas do curso de Ciência da Computação na UNIP.
 
-- Aluno: [Rodrigo Cichetto](https://github.com/rodrigocichetto) 
-- Profº Orientador: [Leandro Carlos Fernandes](https://github.com/leandro-carlos-fernandes)
+- Alunos:
+    - [Rodrigo Cichetto](https://github.com/rodrigocichetto) 
+    - Leticia Gibelli
 
-## Resumo
+## Proposta do trabalho
 
-Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, mobile, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. 
+Pede-se aos alunos que desenvolvam uma aplicação baseada em Web Services. A escolha de serviço que a ser implementado será de escolha do grupo, desde que aprovado pelo professor responsável pelo acompanhamento das atividades.
 
-Este trabalho tem como principal objetivo apresentar benefícios de utilizar a linguagem JavaScript em todas as camadas do desenvolvimento, destacando ferramentas já existentes aplicadas a arquitetura multicamadas. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+## Observações
+
+Segue abaixo os pré-requisitos informados pelo professor.
+
+### Serviços do Middleware
+
+|        Nome        | Método |         Path         |       Parâmetros       |     Resposta    |
+|:------------------:|:------:|:--------------------:|:----------------------:|:---------------:|
+| controla_irrigacao | PUT    | /irrigacao/controla/ | *token, estado(on/off) | 200/401/400/500 |
+| verifica_irrigacao | GET    | /irrigacao/verifica/ | *token                 | 200/401/500     |
+| healf_check        | GET    | /irrigacao           | -                      | 200             |
+
+<small>* Parâmetros no header</small>
+
+<small>*Os serviços descritos na documentação (http://10.5.0.5:3000/api-docs/) com a palavra-chave [APS] são os requisitados pelo professor, ou seja, os listados na tabela acima.</small>
+
+### Ativar/Desativar irrigação
+
+1. Solicitação para ativar/desativar irrigação
+
+    Enviar uma requisição para o middleware com um token no header da requisição, assim como o estado a ser alterado.
+
+2. Consultar previsão INPE
+
+    Consultar previsão para os próximos 4 dias.
+
+    Se a previsão para o dia seguinte for `nv`, `cm` ou `pt` não ativar a irrigação.
+
+3. Adicionar um item na Queue do MQTT com o estado da aplicação
 
 ## Código
 
-Foi criado uma aplicação para mostrar na prática os conceitos apresentados no trabalho, todo o código está disponível na pasta [src](/src).
+Código disponível na pasta [src](/src), siga as instruções abaixo para executar o projeto.
 
 ## Docker
 

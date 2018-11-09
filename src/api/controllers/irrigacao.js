@@ -4,7 +4,7 @@ const mqtt = require('mqtt');
 const request = require('request');
 const xml2js = require('xml2js');
 
-const parser = new xml2js.Parser({explicitArray : false});
+const parser = new xml2js.Parser({ explicitArray: false });
 
 module.exports = (app) => {
 
@@ -27,11 +27,11 @@ module.exports = (app) => {
 			client.on('error', () => {
 				response.unip_aps_broker = 'error';
 				client.end();
-			});	
+			});
 			client.on('offline', () => {
 				response.unip_aps_broker = 'off';
 				client.end();
-			});			
+			});
 			client.on('end', () => {
 				request(`${configs.EXTERNAL.INPE}/capitais/condicoesAtuais.xml`, (err, resp, body) => {
 					response.inpe = 'off';
@@ -111,53 +111,57 @@ module.exports = (app) => {
 				});
 		},
 		controla: (req, res) => {
+
 			if (req.params.estado == 'on' || req.params.estado == 'off') {
 
 				let u = authentication.decode(req.headers.authorization).user;
 
-				User.find({_id: u._id}, ['-password'], { sort: { name: 1 } })
-                .exec()
-                .then(user => {
+				User.find({ _id: u._id }, ['-password'], { sort: { name: 1 } })
+					.exec()
+					.then(user => {
 
-					request(`${configs.EXTERNAL.INPE}/cidade/${user[0].city}/previsao.xml`, (error, response, body) => {
-						try {
-							parser.parseString(body, (err, data) => {
-	
-								if (!['nv', 'cm', 'pt'].filter((el) => el == data.cidade.previsao[1].tempo).length) {
-									let client = mqtt.connect(configs.MQTT);
-									client.on('connect', () => {
-										client.subscribe(`topic/status/irrigation/${configs.APS_GROUP}`);
-										client.publish('topic/control/irrigation', `G:${configs.APS_GROUP},S:${(req.params.estado == 'on') ? 1 : 0}`);
-										client.on('message', (topic, payload) => {
-											let message = [topic, payload].join(": ").split(': ')[1];
-											res.status(200).send({
-												topic,
-												message,
-												cidade: data.cidade
+						request(`${configs.EXTERNAL.INPE}/cidade/${user[0].city}/previsao.xml`, (error, response, body) => {
+							try {
+								parser.parseString(body, (err, data) => {
+
+									if (['nv', 'cm', 'pt'].filter((el) => el == data.cidade.previsao[1].tempo).length && 
+									req.params.estado == 'on') {
+										res.status(200).send({ cidade: data.cidade });
+									} else {
+										let client = mqtt.connect(configs.MQTT);
+										client.on('connect', () => {
+											client.subscribe(`topic/status/irrigation/${configs.APS_GROUP}`);
+											client.publish('topic/control/irrigation', `G:${configs.APS_GROUP},S:${(req.params.estado == 'on') ? 1 : 0}`);
+											client.on('message', (topic, payload) => {
+												let message = [topic, payload].join(": ").split(': ')[1];
+												res.status(200).send({
+													topic,
+													message,
+													cidade: data.cidade
+												});
+												client.end();
 											});
+										});
+										client.on('error', () => {
+											res.status(500).send();
 											client.end();
 										});
-									});
-									client.on('error', () => {
-										res.status(500).send();
-										client.end();
-									});	
-									client.on('offline', () => {
-										res.status(500).send();
-										client.end();
-									});	
-								} else {
-									res.status(200).send({cidade: data.cidade});
-								}
-	
-	
-							});
-						} catch (e) {
-							res.status(500).send();
-						}
-					});
+										client.on('offline', () => {
+											res.status(500).send();
+											client.end();
+										});
+									}
 
-                });
+
+
+
+								});
+							} catch (e) {
+								res.status(500).send();
+							}
+						});
+
+					});
 
 			} else {
 				res.send(400);
@@ -180,11 +184,11 @@ module.exports = (app) => {
 			client.on('error', () => {
 				res.status(500).send();
 				client.end();
-			});	
+			});
 			client.on('offline', () => {
 				res.status(500).send();
 				client.end();
-			});	
+			});
 		}
 	}
 

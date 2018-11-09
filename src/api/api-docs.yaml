@@ -19,13 +19,48 @@ paths:
     get:
       tags:
       - "irrigacao"
-      summary: "Health check"
+      summary: "[APS] Health check"
       description: ""
       responses:
         200:
           description: "OK"
         500:
           description: "Internal Server Error"
+  /irrigacao/verifica:
+    get:
+      tags:
+      - "irrigacao"
+      summary: "[APS] Verify status irrigation"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Internal Server Error"
+  /irrigacao/controla/{estado}:
+    put:
+      tags:
+      - "irrigacao"
+      summary: "[APS] Update status irrigation"
+      description: ""
+      security:
+        - jwt: []
+      responses:
+        200:
+          description: "OK"
+        400:
+          description: "Bad Request"
+        500:
+          description: "Internal Server Error"
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Send "on" to activate or "off" to deactivate
   /irrigacao/all:
     get:
       tags:

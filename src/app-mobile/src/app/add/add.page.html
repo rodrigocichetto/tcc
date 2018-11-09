@@ -6,12 +6,12 @@
 
 <ion-content padding>
 
-    <form #loginForm="ngForm" (ngSubmit)="register(loginForm)">
+    <form #addIrrigationForm="ngForm" (ngSubmit)="register(addIrrigationForm)">
         <ion-row justify-content-center text-center>
     
-          <div class="error-message text--white" padding margin-bottom text-start *ngIf="loginForm.submitted && !loginForm.valid">
-            <span *ngIf="!loginForm.controls.name.valid">{{'NAME' | translate}}</span>
-            <span *ngIf="!loginForm.controls.city.valid && loginForm.controls.name.valid">{{'CITY' | translate}}</span>
+          <div class="error-message text--white" padding margin-bottom text-start *ngIf="addIrrigationForm.submitted && !addIrrigationForm.valid && enableValidate">
+            <span *ngIf="!addIrrigationForm.controls.name.valid">{{'NAME' | translate}}</span>
+            <span *ngIf="!addIrrigationForm.controls.city.valid && addIrrigationForm.controls.name.valid">{{'CITY' | translate}}</span>
             {{'INVALID_FIELD_MSG_COMP' | translate}}
           </div>
     
@@ -20,7 +20,7 @@
           </ion-item>
     
           <ion-item padding-bottom>
-            <ion-input type="text" [(ngModel)]="irrigation.address" name="address" #username="ngModel" placeholder="{{ 'ADDRESS' | translate }} (*)"></ion-input>
+            <ion-input type="text" [(ngModel)]="irrigation.address" name="address" #username="ngModel" placeholder="{{ 'ADDRESS' | translate }}"></ion-input>
           </ion-item>
     
           <ion-item padding-bottom>

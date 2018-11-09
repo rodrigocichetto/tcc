@@ -19,7 +19,7 @@ export class RegisterPage implements OnInit {
     username: '',
     password: '',
     mail: '',
-    city: 0
+    city: null
   };
   searchCity: string;
 

@@ -19,8 +19,10 @@ export class AddPage {
     name: '',
     address: '',
     cep: '',
-    city: 0
+    city: null
   };
+
+  enableValidate: boolean = true;
 
   private loading;
 
@@ -30,11 +32,15 @@ export class AddPage {
     private translate: TranslateService,
     private nav: NavController,
     private loadingController: LoadingController,
-    public events: Events
+    private events: Events
   ) { }
 
   register(form: NgForm) {
+    this.enableValidate = true;
+    
     if (form.valid) {
+
+      this.enableValidate = false;
 
       this.loadingController.create()
         .then(loading => {
@@ -53,7 +59,7 @@ export class AddPage {
                 name: '',
                 address: '',
                 cep: '',
-                city: 0
+                city: null
               };
 
               this.alertController.create({

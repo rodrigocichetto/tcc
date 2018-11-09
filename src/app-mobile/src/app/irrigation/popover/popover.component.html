@@ -1,6 +1,8 @@
 <ion-list no-margin>
   <ion-list-header>{{ 'ACTIONS' | translate }}</ion-list-header>
-  <ion-item class="delete">
-    <ion-icon name="md-trash" (click)="deleteIrrigation()"></ion-icon> {{ 'DELETE' | translate }}
+  <ion-item (click)="deleteIrrigation()"  class="delete">
+    
+      <ion-icon name="md-trash"></ion-icon> {{ 'DELETE' | translate }}
+    
   </ion-item>
 </ion-list>

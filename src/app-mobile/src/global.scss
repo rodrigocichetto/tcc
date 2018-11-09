@@ -60,3 +60,9 @@ ion-input {
     border-color: var(--white-color);
     --border-color: var(--white-color);
 }
+
+.error-message {
+    width: 100%;
+    border-radius: 0.5rem;
+    background: var(--ion-color-danger);
+}

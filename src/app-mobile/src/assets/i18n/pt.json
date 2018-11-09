@@ -36,5 +36,7 @@
     "USER_REGISTERED_MSG": "Usuário cadastrado com sucesso",
     "USER_REGISTERED_ERR": "Erro ao cadastrar usuário",
     "IRRIGATION_REGISTERED_MSG": "Irrigação cadastrada com sucesso",
-    "IRRIGATION_REGISTERED_ERR": "Erro ao cadastrar irrigação"
+    "IRRIGATION_REGISTERED_ERR": "Erro ao cadastrar irrigação",
+    "SUCCESS_DELETE": "Deletado com sucesso",
+    "ERR_DELETE": "Erro ao deletar"
 }

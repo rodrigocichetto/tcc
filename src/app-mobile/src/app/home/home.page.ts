@@ -21,11 +21,10 @@ export class HomePage implements OnInit {
     private irrigationService: IrrigationService,
     private userService: UserService,
     private nav: NavController,
-    public events: Events
+    private events: Events
   ) {
-    events.subscribe('add:irrigation', (data) => {
-      this.irrigations.push(data);
-    });
+    events.subscribe('add:irrigation', this.getIrrigations.bind(this));
+    events.subscribe('remove:irrigation', this.getIrrigations.bind(this));
   }
 
   openIrrigation(irrigation: Irrigation) {

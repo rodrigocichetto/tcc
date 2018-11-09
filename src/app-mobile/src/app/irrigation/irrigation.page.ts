@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, LoadingController, AlertController, PopoverController } from '@ionic/angular';
+import { NavController, LoadingController, AlertController, PopoverController, Events } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 
 import { PopoverComponent } from './popover/popover.component';
@@ -16,6 +16,7 @@ import { PAGES } from '../app.constants';
 export class IrrigationPage implements OnInit {
 
   i: Irrigation;
+  popover;
 
   constructor(
     private irrigationService: IrrigationService,
@@ -24,16 +25,21 @@ export class IrrigationPage implements OnInit {
     private loadingController: LoadingController,
     private alertController: AlertController,
     private translate: TranslateService,
-    private popoverController: PopoverController
-  ) { }
+    private popoverController: PopoverController,
+    private events: Events,
+  ) { 
+    events.subscribe('remove:irrigation', () => {
+      this.popover.dismiss();
+    });
+  }
 
   async presentPopover(ev: any) {
-    const popover = await this.popoverController.create({
+    this.popover = await this.popoverController.create({
       component: PopoverComponent,
       event: ev,
       translucent: true
     });
-    return await popover.present();
+    return await this.popover.present();
   }
 
   updateStatus() {

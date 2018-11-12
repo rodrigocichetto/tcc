@@ -18,7 +18,7 @@
         <span *ngIf="!loginForm.controls.password.valid && loginForm.controls.username.valid">{{'PASSWORD' |
           translate}}</span>
         <span *ngIf="!loginForm.controls.mail.valid && loginForm.controls.password.valid">{{'MAIL' | translate}}</span>
-        <span *ngIf="!loginForm.controls.city.valid && loginForm.controls.mail.valid">{{'CITY' | translate}}</span>
+        <span *ngIf="loginForm.controls.password.valid && !loginForm.controls.city.valid">{{'CITY' | translate}}</span>
         {{'INVALID_FIELD_MSG_COMP' | translate}}
       </div>
 
@@ -38,14 +38,14 @@
         <ion-input type="mail" [(ngModel)]="user.mail" name="mail" #mail="ngModel" placeholder="{{ 'MAIL' | translate }}"></ion-input>
       </ion-item>
 
-      <ion-input required type="hidden" [(ngModel)]="user.city" name="city" #city="ngModel"></ion-input>
+      <ion-input required type="hidden" [(ngModel)]="user.city.id" name="city" #city="ngModel"></ion-input>
 
       <ion-label text-left margin-horizontal>{{ 'CITY' | translate }} (*)</ion-label>
 
       <ion-item margin-bottom>
 
-        <ionic-selectable #citySelectable [(ngModel)]="user.city" [items]="searchedCities" closeButtonText="{{ 'CLOSE' | translate }}"
-          searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
+        <ionic-selectable #citySelectable [(ngModel)]="user.city.id" [items]="searchedCities" closeButtonText="{{ 'CLOSE' | translate }}"
+        searchPlaceholder="{{ 'SEARCH' | translate }}" searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
           (onChange)="cityChange($event)" (onSearch)="searchCity($event)">
         </ionic-selectable>
 

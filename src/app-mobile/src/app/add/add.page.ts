@@ -50,7 +50,7 @@ export class AddPage {
 
   cityChange(event: {
     component: IonicSelectableComponent,
-    value: any 
+    value: any
   }) {
     this.irrigation.city = event.value;
   }
@@ -77,16 +77,16 @@ export class AddPage {
     }, err => {
       event.component.endSearch();
     },
-    () => {
-      event.component.endSearch();
-    });
+      () => {
+        event.component.endSearch();
+      });
   }
 
   register() {
     this.submitted = true;
     this.enableValidate = true;
-    
-    if (this.addIrrigationForm.valid) {
+
+    if (this.addIrrigationForm.valid && this.irrigation.city.id) {
 
       this.enableValidate = false;
 

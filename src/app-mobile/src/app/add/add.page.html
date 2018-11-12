@@ -28,14 +28,14 @@
         <ion-input type="text" [(ngModel)]="irrigation.cep" name="cep" #mail="ngModel" placeholder="{{ 'ZIP_CODE' | translate }}"></ion-input>
       </ion-item>
 
-      <ion-input required type="hidden" [(ngModel)]="irrigation.city" name="city" #city="ngModel"></ion-input>
+      <ion-input required type="hidden" [(ngModel)]="irrigation.city.id" name="city" #city="ngModel"></ion-input>
 
       <ion-label text-left margin-horizontal>{{ 'CITY' | translate }} (*)</ion-label>
 
       <ion-item margin-bottom>
 
         <ionic-selectable #citySelectable [(ngModel)]="irrigation.city" [items]="searchedCities" closeButtonText="{{ 'CLOSE' | translate }}"
-          searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
+        searchPlaceholder="{{ 'SEARCH' | translate }}" searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
           (onChange)="cityChange($event)" (onSearch)="searchCity($event)">
         </ionic-selectable>
 

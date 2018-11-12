@@ -82,8 +82,8 @@ export class RegisterPage implements OnInit {
 
   register() {
     this.submitted = true;
-    
-    if (this.loginForm.valid) {
+
+    if (this.loginForm.valid && this.user.city.id) {
 
       this.loadingController.create()
         .then(loading => {

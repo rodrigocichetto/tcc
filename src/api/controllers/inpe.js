@@ -14,6 +14,7 @@ module.exports = (app) => {
             }, (error, response, body) => {
                 try {
                     parser.parseString(body, (err, data) => {
+                        data.cidades.cidade = [].concat(data.cidades.cidade)
                         res.status(response.statusCode).send(data.cidades);
                     });
                 } catch (e) {

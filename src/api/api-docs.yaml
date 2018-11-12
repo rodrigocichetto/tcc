@@ -287,7 +287,8 @@ definitions:
       - "city"
     properties:
       status:
-        type: "string"
+        type: "boolean"
+        default: false
       name:
         type: "string"
       address:
@@ -304,7 +305,8 @@ definitions:
       _id:
         type: "string"
       status:
-        type: "string"
+        type: "boolean"
+        default: false
       name:
         type: "string"
       address:

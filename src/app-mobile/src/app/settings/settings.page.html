@@ -6,20 +6,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <!-- <ion-list>
+<ion-content padding>
+  <p text-center>
+    <ion-icon name="contact"></ion-icon>
+  </p>
+  <ion-list>
     <ion-list-header>
-      <ion-label>
-        Follow us on Twitter
-      </ion-label>
+      {{ 'USER_INFO' | translate }}
     </ion-list-header>
     <ion-item>
-      <ion-label>
-        <ion-icon name="logo-ionic" slot="start"></ion-icon>
-        @ionicframework
-      </ion-label>
+      {{user.name}} ({{user.username}})
     </ion-item>
-  </ion-list> -->
+    <ion-item>
+      {{user.mail}}
+    </ion-item>
+    <ion-item>
+      {{ 'CITY' | translate }}: {{user.city}}
+    </ion-item>
+  </ion-list>
 
   <ion-button margin-horizontal (click)="logout()" color="danger" expand="full">{{ 'LOGOUT' | translate }}</ion-button>
 </ion-content>

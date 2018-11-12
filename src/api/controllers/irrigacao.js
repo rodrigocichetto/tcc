@@ -30,6 +30,8 @@ module.exports = (app) => {
 			})
 				.exec()
 				.then(response => {
+					const io = require('../socket').getIo();
+					io.emit('irrigation:created', req.body);
 					if (response.ok === 1) {
 						res.status(200).send();
 					} else {
@@ -70,17 +72,17 @@ module.exports = (app) => {
 				});
 		},
 		delete: (req, res) => {
-			User.update({ 'irrigations._id': req.param('id') }, {
+			User.update({ 'irrigations._id': req.params.id }, {
 				$pull: {
 					irrigations: {
-						'_id': req.param('id')
+						'_id': req.params.id
 					}
 				}
 			})
 				.exec()
 				.then(response => {
-					// const io = require('../socket').getIo();
-					// io.emit('irrigation:updated', req.body);
+					const io = require('../socket').getIo();
+					io.emit('irrigation:deleted', req.params.id);
 					if (response.ok === 1) {
 						res.status(200).send();
 					} else {

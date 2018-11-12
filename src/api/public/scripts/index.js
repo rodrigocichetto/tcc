@@ -15,4 +15,12 @@
         });
     });
 
+    socket.on('irrigation:deleted', (data) => {
+        $(`.${data}`).remove();
+    });
+
+    socket.on('irrigation:created', (data) => {
+        location.reload();
+    });
+
 })()

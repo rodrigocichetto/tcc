@@ -21,7 +21,7 @@
       {{user.mail}}
     </ion-item>
     <ion-item>
-      {{ 'CITY' | translate }}: {{user.city}}
+      {{ 'CITY' | translate }}: {{user.city.nome}} {{(user.city.uf) ? ' - ' + user.city.uf : '' }} ({{user.city.id}})
     </ion-item>
   </ion-list>
 

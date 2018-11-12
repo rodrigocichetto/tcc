@@ -6,36 +6,46 @@
 
 <ion-content padding>
 
-    <form #addIrrigationForm="ngForm" (ngSubmit)="register(addIrrigationForm)">
-        <ion-row justify-content-center text-center>
-    
-          <div class="error-message text--white" padding margin-bottom text-start *ngIf="addIrrigationForm.submitted && !addIrrigationForm.valid && enableValidate">
-            <span *ngIf="!addIrrigationForm.controls.name.valid">{{'NAME' | translate}}</span>
-            <span *ngIf="!addIrrigationForm.controls.city.valid && addIrrigationForm.controls.name.valid">{{'CITY' | translate}}</span>
-            {{'INVALID_FIELD_MSG_COMP' | translate}}
-          </div>
-    
-          <ion-item padding-bottom>
-            <ion-input required type="text" [(ngModel)]="irrigation.name" name="name" #name="ngModel" placeholder="{{ 'NAME' | translate }} (*)"></ion-input>
-          </ion-item>
-    
-          <ion-item padding-bottom>
-            <ion-input type="text" [(ngModel)]="irrigation.address" name="address" #username="ngModel" placeholder="{{ 'ADDRESS' | translate }}"></ion-input>
-          </ion-item>
-    
-          <ion-item padding-bottom>
-            <ion-input type="text" [(ngModel)]="irrigation.cep" name="cep" #mail="ngModel" placeholder="{{ 'ZIP_CODE' | translate }}"></ion-input>
-          </ion-item>
-    
-          <ion-item>
-            <ion-input required type="number" [(ngModel)]="irrigation.city" name="city" #city="ngModel" placeholder="{{ 'CITY' | translate }} (*)"></ion-input>
-          </ion-item>
-    
-          <ion-col margin-top size-xs="12">
-            <ion-button color="success" type="submit" expand="block">{{ 'REGISTER_BTN' | translate }}</ion-button>
-          </ion-col>
-    
-        </ion-row>
-      </form>
+  <form #addIrrigationForm="ngForm">
+    <ion-row justify-content-center text-center>
+
+      <div class="error-message text--white" padding margin-bottom text-start *ngIf="submitted && !addIrrigationForm.valid && enableValidate">
+        <span *ngIf="!addIrrigationForm.controls.name.valid">{{'NAME' | translate}}</span>
+        <span *ngIf="addIrrigationForm.controls.name.valid && !addIrrigationForm.controls.city.valid">{{'CITY' |
+          translate}}</span>
+        {{'INVALID_FIELD_MSG_COMP' | translate}}
+      </div>
+
+      <ion-item padding-bottom>
+        <ion-input required type="text" [(ngModel)]="irrigation.name" name="name" #name="ngModel" placeholder="{{ 'NAME' | translate }} (*)"></ion-input>
+      </ion-item>
+
+      <ion-item padding-bottom>
+        <ion-input type="text" [(ngModel)]="irrigation.address" name="address" #username="ngModel" placeholder="{{ 'ADDRESS' | translate }}"></ion-input>
+      </ion-item>
+
+      <ion-item padding-bottom>
+        <ion-input type="text" [(ngModel)]="irrigation.cep" name="cep" #mail="ngModel" placeholder="{{ 'ZIP_CODE' | translate }}"></ion-input>
+      </ion-item>
+
+      <ion-input required type="hidden" [(ngModel)]="irrigation.city" name="city" #city="ngModel"></ion-input>
+
+      <ion-label text-left margin-horizontal>{{ 'CITY' | translate }} (*)</ion-label>
+
+      <ion-item margin-bottom>
+
+        <ionic-selectable #citySelectable [(ngModel)]="irrigation.city" [items]="searchedCities" closeButtonText="{{ 'CLOSE' | translate }}"
+          searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
+          (onChange)="cityChange($event)" (onSearch)="searchCity($event)">
+        </ionic-selectable>
+
+      </ion-item>
+
+      <ion-col margin-top size-xs="12">
+        <ion-button color="success" (click)="register()" expand="block">{{ 'REGISTER_BTN' | translate }}</ion-button>
+      </ion-col>
+
+    </ion-row>
+  </form>
 
 </ion-content>

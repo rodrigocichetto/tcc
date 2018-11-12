@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-    
+
     let schema = mongoose.Schema({
         name: {
             type: String
@@ -11,17 +11,19 @@ module.exports = () => {
             required: true,
             index: {
                 unique: true
-            }    
+            }
         },
         password: {
             type: String,
-            required: true 
+            required: true
         },
         mail: {
             type: String
         },
         city: {
-            type: Number
+            id: { type: Number, required: true },
+            nome: String,
+            uf: String
         },
         irrigations: [new mongoose.Schema({
             status: {
@@ -39,8 +41,9 @@ module.exports = () => {
                 type: String
             },
             city: {
-                type: Number,
-                required: true
+                id: { type: Number, required: true },
+                nome: String,
+                uf: String
             }
         })]
     });

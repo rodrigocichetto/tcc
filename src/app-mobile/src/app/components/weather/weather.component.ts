@@ -11,6 +11,7 @@ import { Events } from '@ionic/angular';
 export class WeatherComponent implements OnInit {
 
   @Input() city: number;
+  @Input() transparent?: boolean = false;
   weather: any;
 
   constructor(

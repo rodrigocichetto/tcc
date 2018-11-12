@@ -13,11 +13,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding-horizontal>
 
   <div *ngIf="i">
 
-    <div text-center margin>
+    <div text-center margin-horizontal margin-bottom>
       <ion-icon margin-top class="irrigation--status-icon" name="ios-water" [ngClass]="{'irrigation--status-active' : i.status, 'irrigation--status-disabled' : !i.status}"></ion-icon>
       <p no-margin class="irrigation--status">
         <span *ngIf="i.status">{{ 'ACTIVED' | translate }}</span>
@@ -25,12 +25,14 @@
       </p>
     </div>
 
-    <ion-list>
+    <app-weather *ngIf="i" transparent="true" [(city)]="i.city.id"></app-weather>
+
+    <ion-list no-margin>
       <ion-item>
         <strong>{{ 'NAME' | translate}}: </strong> {{i.name}}
       </ion-item>
       <ion-item>
-        <strong>{{ 'CITY' | translate}}: </strong> {{i.city}}
+        <strong>{{ 'CITY' | translate}}: </strong> {{i.city.nome}} {{(i.city.uf) ? ' - ' + i.city.uf : '' }} ({{i.city.id}})
       </ion-item>
       <ion-item>
         <strong>{{ 'ADDRESS' | translate}}: </strong> {{i.address}}

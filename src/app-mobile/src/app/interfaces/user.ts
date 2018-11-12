@@ -3,5 +3,9 @@ export interface User {
     username: string,
     password: string,
     mail: string,
-    city: number
+    city: {
+        id: number,
+        nome?: string,
+        uf?: string
+    }
 }

@@ -66,3 +66,9 @@ ion-input {
     border-radius: 0.5rem;
     background: var(--ion-color-danger);
 }
+
+ion-modal .ionic-selectable-page {
+    --ion-text-color: var(--white-color);
+    --color: var(--white-color);
+    --ion-color-primary: var(--white-color);
+}

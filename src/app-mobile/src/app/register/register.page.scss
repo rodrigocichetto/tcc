@@ -7,3 +7,18 @@ ion-button {
 ion-item {
     width: 100%;
 }
+
+ionic-selectable {
+    color: var(--white-color);
+    --ion-color: var(--white-color);
+    --icon-color: var(--white-color);
+}
+
+ion-label {
+    color: var(--white-color);
+}
+
+.ionic-selectable {
+    width: 100%;
+    max-width: 100%;
+}

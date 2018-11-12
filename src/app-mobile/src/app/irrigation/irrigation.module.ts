@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { IrrigationPage } from './irrigation.page';
 import { PopoverComponent } from './popover/popover.component';
+import { WeatherComponentModule } from '../components/weather/weather.module';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    TranslateModule.forChild()
+    TranslateModule.forChild(),
+    WeatherComponentModule
   ],
   entryComponents:[PopoverComponent],
   declarations: [IrrigationPage, PopoverComponent],

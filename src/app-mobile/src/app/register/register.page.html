@@ -9,10 +9,10 @@
 
 <ion-content padding>
 
-  <form #loginForm="ngForm" (ngSubmit)="register(loginForm)">
+  <form #loginForm="ngForm">
     <ion-row justify-content-center text-center>
 
-      <div class="error-message text--white" padding margin-bottom text-start *ngIf="loginForm.submitted && !loginForm.valid">
+      <div class="error-message text--white" padding margin-bottom text-start *ngIf="submitted && !loginForm.valid">
         <span *ngIf="!loginForm.controls.name.valid">{{'NAME' | translate}}</span>
         <span *ngIf="!loginForm.controls.username.valid && loginForm.controls.name.valid">{{'USERNAME' | translate}}</span>
         <span *ngIf="!loginForm.controls.password.valid && loginForm.controls.username.valid">{{'PASSWORD' |
@@ -38,13 +38,21 @@
         <ion-input type="mail" [(ngModel)]="user.mail" name="mail" #mail="ngModel" placeholder="{{ 'MAIL' | translate }}"></ion-input>
       </ion-item>
 
-      <ion-item>
-        <!-- <ion-input required type="text" (ionInput)="searchCityNumber()" [(ngModel)]="searchCity" name="city" #city="ngModel" placeholder="{{ 'CITY' | translate }} (*)"></ion-input> -->
-        <ion-input required type="number" [(ngModel)]="user.city" name="city" #city="ngModel" placeholder="{{ 'CITY' | translate }} (*)"></ion-input>
+      <ion-input required type="hidden" [(ngModel)]="user.city" name="city" #city="ngModel"></ion-input>
+
+      <ion-label text-left margin-horizontal>{{ 'CITY' | translate }} (*)</ion-label>
+
+      <ion-item margin-bottom>
+
+        <ionic-selectable #citySelectable [(ngModel)]="user.city" [items]="searchedCities" closeButtonText="{{ 'CLOSE' | translate }}"
+          searchFailText="{{ 'NO_ITEMS_FOUND' | translate }}" itemValueField="id" itemTextField="nome" [canSearch]="true"
+          (onChange)="cityChange($event)" (onSearch)="searchCity($event)">
+        </ionic-selectable>
+
       </ion-item>
 
       <ion-col margin-top size-xs="12">
-        <ion-button type="submit" class="login" expand="block">{{ 'REGISTER_BTN' | translate }}</ion-button>
+        <ion-button (click)="register()" class="login" expand="block">{{ 'REGISTER_BTN' | translate }}</ion-button>
       </ion-col>
 
     </ion-row>

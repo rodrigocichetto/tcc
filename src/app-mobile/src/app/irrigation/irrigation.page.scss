@@ -19,3 +19,8 @@ ion-item, .irrigation--status {
 .irrigation--status {
     color: var(--base-dark-color);
 }
+
+ion-card {
+    --ion-item-background-color: transparent !important;
+    box-shadow: none;
+}

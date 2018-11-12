@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AlertController, NavController, LoadingController, Events } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { IonicSelectableComponent } from 'ionic-selectable';
 
 import { IrrigationService } from '../services/irrigation.service';
 import { Irrigation } from '../interfaces/irrigation';
 import { PAGES } from '../app.constants';
 import { NgForm } from '@angular/forms';
+import { InpeService } from '../services/inpe.service';
 
 @Component({
   selector: 'app-add',
@@ -14,14 +16,24 @@ import { NgForm } from '@angular/forms';
 })
 export class AddPage {
 
+  @ViewChild('citySelectable') citySelectable: IonicSelectableComponent;
+  @ViewChild('addIrrigationForm') addIrrigationForm: NgForm;
+
   irrigation: Irrigation = {
     status: false,
     name: '',
     address: '',
     cep: '',
-    city: null
+    city: {
+      id: null,
+      nome: null,
+      uf: null
+    }
   };
 
+  searchedCities;
+
+  submitted: boolean = false;
   enableValidate: boolean = true;
 
   private loading;
@@ -29,16 +41,52 @@ export class AddPage {
   constructor(
     private alertController: AlertController,
     private irrigationService: IrrigationService,
+    private inpeService: InpeService,
     private translate: TranslateService,
     private nav: NavController,
     private loadingController: LoadingController,
     private events: Events
   ) { }
 
-  register(form: NgForm) {
+  cityChange(event: {
+    component: IonicSelectableComponent,
+    value: any 
+  }) {
+    this.irrigation.city = event.value;
+  }
+
+  searchCity(event: {
+    component: IonicSelectableComponent,
+    text: string
+  }) {
+
+    const text = (event.text || '').trim().toLowerCase();
+
+    if (!text) {
+      event.component.items = [];
+      return;
+    } else if (event.text.length < 1) {
+      return;
+    }
+
+    event.component.startSearch();
+
+    this.inpeService.searchCity(text).subscribe((data: any) => {
+      this.searchedCities = data.cidade;
+      event.component.items = data.cidade;
+    }, err => {
+      event.component.endSearch();
+    },
+    () => {
+      event.component.endSearch();
+    });
+  }
+
+  register() {
+    this.submitted = true;
     this.enableValidate = true;
     
-    if (form.valid) {
+    if (this.addIrrigationForm.valid) {
 
       this.enableValidate = false;
 
@@ -59,8 +107,16 @@ export class AddPage {
                 name: '',
                 address: '',
                 cep: '',
-                city: null
+                city: {
+                  id: null,
+                  nome: null,
+                  uf: null
+                }
               };
+
+              this.submitted = false;
+
+              this.citySelectable.clear();
 
               this.alertController.create({
                 header: translated.SUCCESS,

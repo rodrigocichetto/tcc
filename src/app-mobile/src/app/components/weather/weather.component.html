@@ -1,4 +1,4 @@
-<ion-card class="weather" *ngIf="weather">
+<ion-card class="weather" [ngClass]="{'irrigation': transparent}" *ngIf="weather">
   <ion-grid>
     <ion-row justify-content-start>
       <ion-col class="weather--image" size="4" align-self-center>

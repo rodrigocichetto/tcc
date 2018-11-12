@@ -8,10 +8,13 @@ module.exports = (app) => {
 
     let Controller = {
         listaCidades: (req, res, next) => {
-            request(`${configs.EXTERNAL.INPE}/listaCidades${req.params.city?`?city=${req.params.city}`:''}`, (error, response, body) => {
+            request({
+                uri: `${configs.EXTERNAL.INPE}/listaCidades${req.params.city?`?city=${req.params.city}`:''}`,
+                encoding: 'latin1'
+            }, (error, response, body) => {
                 try {
                     parser.parseString(body, (err, data) => {
-                        res.status(response.statusCode).send(data);
+                        res.status(response.statusCode).send(data.cidades);
                     });
                 } catch (e) {
                     res.status(500).send();
@@ -19,7 +22,10 @@ module.exports = (app) => {
             });
         },
         cidade: (req, res, next) => {
-            request(`${configs.EXTERNAL.INPE}/cidade/${req.params.cityCode}/estendida.xml`, (error, response, body) => {
+            request({
+                uri: `${configs.EXTERNAL.INPE}/cidade/${req.params.cityCode}/estendida.xml`,
+                encoding: 'latin1'
+            }, (error, response, body) => {
                 try {
                     parser.parseString(body, (err, data) => {
                         res.status(response.statusCode).send(data);
@@ -30,7 +36,10 @@ module.exports = (app) => {
             });
         },
         cidadePrevisao: (req, res, next) => {
-            request(`${configs.EXTERNAL.INPE}/cidade/${req.params.cityCode}/previsao.xml`, (error, response, body) => {
+            request({
+                uri: `${configs.EXTERNAL.INPE}/cidade/${req.params.cityCode}/previsao.xml`,
+                encoding: 'latin1'
+            }, (error, response, body) => {
                 try {
                     parser.parseString(body, (err, data) => {
                         res.status(response.statusCode).send(data);

@@ -4,5 +4,9 @@ export interface Irrigation {
     name: string,
     address: string,
     cep: string,
-    city: number
+    city: {
+        id: number,
+        nome?: string,
+        uf?: string
+    }
 }

@@ -3,6 +3,11 @@ ion-card {
     margin-top: 15px;
 }
 
+ion-card.irrigation {
+    --ion-item-background-color: transparent;
+    box-shadow: none;
+}
+
 .weather {
     img {
         width: 25vw;

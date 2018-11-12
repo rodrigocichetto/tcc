@@ -12,7 +12,7 @@
     </ion-refresher-content>
   </ion-refresher>
 
-  <app-weather *ngIf="user" [(city)]="user.city"></app-weather>
+  <app-weather *ngIf="user" [(city)]="user.city.id"></app-weather>
 
   <div *ngIf="irrigations">
     <ion-card class="weather" (click)="openIrrigation(i)" *ngFor="let i of irrigations">
@@ -29,7 +29,7 @@
                 <span *ngIf="!i.status">{{ 'DISABLED' | translate }}</span>
               </p>
               <p class="irrigation--name" no-padding no-margin>{{i.name}}</p>
-              <p class="irrigation--city" no-padding no-margin>{{i.city}}</p>
+              <p class="irrigation--city" no-padding no-margin>{{i.city.nome}} {{(i.city.uf) ? ' - ' + i.city.uf : '' }} ({{i.city.id}})</p>
             </div>
           </ion-col>
         </ion-row>

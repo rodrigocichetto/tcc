@@ -45,6 +45,7 @@ module.exports = (app) => {
                     res.status(400).end();
                     console.log(err);
                 } else {
+                    resp.password = undefined;
                     res.json(resp);
                 }
             })

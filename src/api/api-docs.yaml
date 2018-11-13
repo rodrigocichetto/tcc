@@ -37,6 +37,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
   /irrigacao/new:
@@ -50,6 +52,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
       parameters:
@@ -70,6 +74,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
       parameters:
@@ -90,6 +96,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
       parameters:
@@ -146,6 +154,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
       parameters:
@@ -166,6 +176,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
   /user/all:
@@ -198,17 +210,6 @@ paths:
           schema:
             $ref: "#/definitions/AuthToken"
   
-  /inpe/listaCidades:
-    get:
-      tags:
-      - "inpe"
-      summary: "List all"
-      description: ""
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
   /inpe/listaCidades/{city}:
     get:
       tags:
@@ -279,7 +280,16 @@ definitions:
       mail:
         type: "string"
       city:
-        type: "integer"
+        type: "object"
+        required:
+          - "id"
+        properties:
+          id:
+            type: "integer"
+          nome:
+            type: "string"
+          uf:
+            type: "string"
   Irrigation:
     type: "object"
     required:
@@ -296,7 +306,16 @@ definitions:
       cep:
         type: "string"
       city:
-        type: "integer"
+        type: "object"
+        required:
+          - "id"
+        properties:
+          id:
+            type: "integer"
+          nome:
+            type: "string"
+          uf:
+            type: "string"
   IrrigationUpdate:
     type: "object"
     required:

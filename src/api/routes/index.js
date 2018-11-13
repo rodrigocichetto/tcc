@@ -16,6 +16,7 @@ module.exports = (app) => {
       .then(users => {
 
         res.render('monitor', {
+          title: 'Monitor',
           irrigators: users.map(u => u.irrigations).reduce((p, n) => p.concat(n))
         });
 

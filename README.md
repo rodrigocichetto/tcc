@@ -25,21 +25,25 @@ docker-compose up -d
 ### Containers
 - **tcc-api**
 
-Ip: 10.5.0.6:8200 (Abrir no navegador)
+    Ip: 10.5.0.6:8200 (Abrir no navegador)
 
-Logs: `docker logs -f tcc-api`
+    Logs: `docker logs -f tcc-api`
+
+    ![Container: tcc-api](imagens/server-app.jpg)
 
 - **tcc-app-mobile**
 
-Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
+    Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
 
-Logs: `docker logs -f tcc-app-mobile`
+    Logs: `docker logs -f tcc-app-mobile`
+
+    ![Container: tcc-app-mobile](imagens/client-app.jpg)
 
 - **tcc-mongodb**
 
-Ip: 10.5.0.7:27017
+    Ip: 10.5.0.7:27017
 
-Logs: `docker logs -f tcc-mongodb`
+    Logs: `docker logs -f tcc-mongodb`
 
 ### .env configs
 

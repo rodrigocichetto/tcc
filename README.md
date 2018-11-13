@@ -25,7 +25,7 @@ docker-compose up -d
 ### Containers
 - **tcc-api**
 
-    Ip: 10.5.0.6:8200 (Abrir no navegador)
+    Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
 
     Logs: `docker logs -f tcc-api`
 
@@ -33,7 +33,7 @@ docker-compose up -d
 
 - **tcc-app-mobile**
 
-    Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
+    Ip: 10.5.0.6:8200 (Abrir no navegador)
 
     Logs: `docker logs -f tcc-app-mobile`
 

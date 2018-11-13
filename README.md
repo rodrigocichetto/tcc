@@ -29,8 +29,6 @@ Segue abaixo os pré-requisitos informados pelo professor.
 
 [*] Parâmetros no header
 
-*Os serviços descritos na documentação (http://10.5.0.5:3000/api-docs/) com a palavra-chave [APS] são os requisitados pelo professor, ou seja, os listados na tabela acima.
-
 ### Ativar/Desativar irrigação
 
 1. **Solicitação para ativar/desativar irrigação**
@@ -44,6 +42,10 @@ Segue abaixo os pré-requisitos informados pelo professor.
     Se a previsão para o dia seguinte for `nv`, `cm` ou `pt` não ativar a irrigação.
 
 3. **Adicionar um item na Queue do MQTT com o estado da irrigação**
+
+### Fluxo
+
+![Fluxo da aplicação](flow.jpg)
 
 ## Código
 
@@ -62,6 +64,8 @@ docker-compose up -d
     Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
 
     Logs: `docker logs -f aps-api`
+
+    ![Container: aps-api](aps-api.png)
 
 - **aps-mongodb**
 

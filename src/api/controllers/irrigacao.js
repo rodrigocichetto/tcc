@@ -43,73 +43,6 @@ module.exports = (app) => {
 			});
 
 		},
-		create: (req, res) => {
-			let u = authentication.decode(req.headers.authorization).user;
-			User.update({ _id: u._id }, {
-				$push: {
-					irrigations: req.body
-				}
-			})
-				.exec()
-				.then(response => {
-					if (response.ok === 1) {
-						res.status(200).send();
-					} else {
-						res.status(400).send();
-					}
-				});
-		},
-		update: (req, res) => {
-			User.update({ 'irrigations._id': req.body._id }, {
-				$set: {
-					'irrigations.$': req.body
-				}
-			})
-				.exec()
-				.then(response => {
-					const io = require('../socket').getIo();
-					io.emit('irrigation:updated', req.body);
-					if (response.ok === 1) {
-						res.status(200).send();
-					} else {
-						res.status(400).send();
-					}
-				});
-		},
-		listMe: (req, res) => {
-			let u = authentication.decode(req.headers.authorization).user;
-			User.find({ _id: u._id }, ['irrigations'], { sort: { name: 1 } })
-				.exec()
-				.then(user => {
-					res.send(user.map(u => u.irrigations)[0]);
-				});
-		},
-		listAll: (req, res) => {
-			User.find({}, ['irrigations'], { sort: { name: 1 } })
-				.exec()
-				.then(users => {
-					res.send(users.map(u => u.irrigations).reduce((p, n) => p.concat(n)));
-				});
-		},
-		delete: (req, res) => {
-			User.update({ 'irrigations._id': req.param('id') }, {
-				$pull: {
-					irrigations: {
-						'_id': req.param('id')
-					}
-				}
-			})
-				.exec()
-				.then(response => {
-					// const io = require('../socket').getIo();
-					// io.emit('irrigation:updated', req.body);
-					if (response.ok === 1) {
-						res.status(200).send();
-					} else {
-						res.status(400).send();
-					}
-				});
-		},
 		controla: (req, res) => {
 
 			if (req.params.estado == 'on' || req.params.estado == 'off') {
@@ -120,7 +53,7 @@ module.exports = (app) => {
 					.exec()
 					.then(user => {
 
-						request(`${configs.EXTERNAL.INPE}/cidade/${user[0].city}/previsao.xml`, (error, response, body) => {
+						request(`${configs.EXTERNAL.INPE}/cidade/${user[0].city.id}/previsao.xml`, (error, response, body) => {
 							try {
 								parser.parseString(body, (err, data) => {
 
@@ -133,6 +66,7 @@ module.exports = (app) => {
 											client.subscribe(`topic/status/irrigation/${configs.APS_GROUP}`);
 											client.publish('topic/control/irrigation', `G:${configs.APS_GROUP},S:${(req.params.estado == 'on') ? 1 : 0}`);
 											client.on('message', (topic, payload) => {
+												console.log('message');
 												let message = [topic, payload].join(": ").split(': ')[1];
 												res.status(200).send({
 													topic,

@@ -6,6 +6,11 @@ APS UNIP - 8º Semestre Trabalho desenvolvido como Atividades Praticas Supervisi
     - [Rodrigo Cichetto](https://github.com/rodrigocichetto) 
     - Leticia Gibelli
 
+## Objetivo
+
+O trabalho tem como objetivo abordar o assunto sobre informações ambientais e desenvolvimento de uma aplicação baseada em Web Services,
+que facilite o dia a dia de uma pessoa com os cuidados de uma plantação, podendo ser uma plantação grande, ou apenas a grama de um jardim de uma forma sustentável.
+
 ## Proposta do trabalho
 
 Pede-se aos alunos que desenvolvam uma aplicação baseada em Web Services. A escolha de serviço que a ser implementado será de escolha do grupo, desde que aprovado pelo professor responsável pelo acompanhamento das atividades.
@@ -52,23 +57,17 @@ docker-compose up -d
 ```
 
 ### Containers
-- **tcc-api**
+- **aps-api**
 
-Ip: 10.5.0.6:8200 (Abrir no navegador)
+    Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
 
-Logs: `docker logs -f tcc-api`
+    Logs: `docker logs -f aps-api`
 
-- **tcc-app-mobile**
+- **aps-mongodb**
 
-Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
+    Ip: 10.5.0.7:27017
 
-Logs: `docker logs -f tcc-app-mobile`
-
-- **tcc-mongodb**
-
-Ip: 10.5.0.7:27017
-
-Logs: `docker logs -f tcc-mongodb`
+    Logs: `docker logs -f aps-mongodb`
 
 ### .env configs
 
@@ -77,8 +76,6 @@ NODE_VERSION=alpine                 # (Versão do node a ser executada no contai
 NETWORK_SUBNET=10.5.0.0/16          # (Máscara de rede a ser utilizada)
 API_PORT=3000                       # (Porta API)
 API_IPV4_ADDRESS=10.5.0.5           # (IP da API)      
-APP_MOBILE_PORT=8200                # (Porta aplicação cliente)
-APP_MOBILE_IPV4_ADDRESS=10.5.0.6    # (Ip aplicação cliente)
 DB_PORT=27017                       # (Porta banco de dados)
 DB_IPV4_ADDRESS=10.5.0.7            # (Ip banco de dados)
 DB_USER=user                        # (Usuário banco de dados)

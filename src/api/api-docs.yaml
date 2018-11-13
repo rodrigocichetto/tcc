@@ -37,6 +37,8 @@ paths:
       responses:
         200:
           description: "OK"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
   /irrigacao/controla/{estado}:
@@ -52,87 +54,17 @@ paths:
           description: "OK"
         400:
           description: "Bad Request"
+        401:
+          description: "Unauthorized"
         500:
           description: "Internal Server Error"
       parameters:
         - in: path
-          name: id
+          name: estado
           schema:
             type: string
           required: true
           description: Send "on" to activate or "off" to deactivate
-  /irrigacao/all:
-    get:
-      tags:
-      - "irrigacao"
-      summary: "Return me irrigations"
-      description: ""
-      security:
-        - jwt: []
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
-  /irrigacao/new:
-    post:
-      tags:
-      - "irrigacao"
-      summary: "Add irrigation to me"
-      description: ""
-      security:
-        - jwt: []
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
-      parameters:
-        - in: "body"
-          name: "body"
-          description: ""
-          required: true
-          schema:
-            $ref: "#/definitions/Irrigation"
-  /irrigacao/update:
-    put:
-      tags:
-      - "irrigacao"
-      summary: "Update irrigation"
-      description: ""
-      security:
-        - jwt: []
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
-      parameters:
-        - in: "body"
-          name: "body"
-          description: ""
-          required: true
-          schema:
-            $ref: "#/definitions/IrrigationUpdate"
-  /irrigacao/delete/{id}:
-    delete:
-      tags:
-      - "irrigacao"
-      summary: "Remove irrigation"
-      description: ""
-      security:
-        - jwt: []
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
-      parameters:
-        - in: path
-          name: id
-          schema:
-            type: string
-          required: true
 
   /user/login:
     post:
@@ -232,18 +164,7 @@ paths:
           required: true
           schema:
             $ref: "#/definitions/AuthToken"
-  
-  /inpe/listaCidades:
-    get:
-      tags:
-      - "inpe"
-      summary: "List all"
-      description: ""
-      responses:
-        200:
-          description: "OK"
-        500:
-          description: "Internal Server Error"
+            
   /inpe/listaCidades/{city}:
     get:
       tags:
@@ -314,37 +235,13 @@ definitions:
       mail:
         type: "string"
       city:
-        type: "integer"
-  Irrigation:
-    type: "object"
-    required:
-      - "name"
-      - "city"
-    properties:
-      status:
-        type: "string"
-      name:
-        type: "string"
-      address:
-        type: "string"
-      cep:
-        type: "string"
-      city:
-        type: "integer"
-  IrrigationUpdate:
-    type: "object"
-    required:
-      - "_id"
-    properties:
-      _id:
-        type: "string"
-      status:
-        type: "string"
-      name:
-        type: "string"
-      address:
-        type: "string"
-      cep:
-        type: "string"
-      city:
-        type: "integer"
+        type: "object"
+        required:
+          - "id"
+        properties:
+          id:
+            type: "integer"
+          nome:
+            type: "string"
+          uf:
+            type: "string"

@@ -42,9 +42,10 @@ module.exports = (app) => {
             newUser.password = CryptoJS.AES.encrypt(req.body.password, CONFIGS.KEY_ENCRYPT).toString();
             newUser.save((err, resp) => {
                 if (err) {
-                    res.status(500).end();
+                    res.status(400).end();
                     console.log(err);
                 } else {
+                    resp.password = undefined;
                     res.json(resp);
                 }
             })

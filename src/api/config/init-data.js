@@ -15,14 +15,11 @@ module.exports = (app) => {
                     username: 'demo',
                     password: CryptoJS.AES.encrypt('demo', CONFIGS.KEY_ENCRYPT).toString(),
                     mail: 'demo@demo.com',
-                    city: 587,
-                    irrigations: [
-                        {
-                            status: false,
-                            name: 'Demonstração de irrigação',
-                            city: 587
-                        }
-                    ]
+                    city: {
+                        id: 586,
+                        nome: "Araraquara",
+                        uf: "SP" 
+                    }
                 }).save();
 
             }

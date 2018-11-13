@@ -1,20 +1,20 @@
 version: '3'
 
 services:
-  tcc-api:
+  aps-api:
     image: "node:${NODE_VERSION}"
-    container_name: "tcc-api"
+    container_name: "aps-api"
     working_dir: /usr/src/api
     volumes:
       - ./api:/usr/src/api
     ports:
       - "${API_PORT}:${API_PORT}"
     links:
-      - tcc-mongodb
+      - aps-mongodb
     depends_on:
-      - tcc-mongodb
+      - aps-mongodb
     networks:
-      tcc:
+      aps:
         ipv4_address: ${API_IPV4_ADDRESS}
     environment:
       - PORT=${API_PORT}
@@ -24,41 +24,23 @@ services:
       - DB_DATABASE=${DB_DATABASE}
       - DUMP_DEMO=${DUMP_DEMO}
     command: ["npm", "start"]
-  tcc-app-mobile:
-    image: "node:8.10"
-    container_name: "tcc-app-mobile"
-    working_dir: /usr/src/app-mobile
-    volumes:
-      - ./app-mobile:/usr/src/app-mobile
-    ports:
-      - "${APP_MOBILE_PORT}:${APP_MOBILE_PORT}"
-      - "8100:8100"
-    networks:
-      tcc:
-        ipv4_address: ${APP_MOBILE_IPV4_ADDRESS}
-    environment:
-      - PORT=${APP_MOBILE_PORT}
-      - API_IPV4_ADDRESS=${API_IPV4_ADDRESS}
-      - API_PORT=${API_PORT}
-    command: ["npm", "run", "lab"]
-  tcc-mongodb:
+  aps-mongodb:
     image: 'bitnami/mongodb:latest'
-    container_name: "tcc-mongodb"
+    container_name: "aps-mongodb"
     volumes:
       - ./db/data:/data/db
     ports:
       - "${DB_PORT}:${DB_PORT}"
     networks:
-      tcc:
+      aps:
         ipv4_address: ${DB_IPV4_ADDRESS}
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
       - MONGODB_USER="${DB_USER}" 
       - MONGODB_PASS="${DB_PASSWORD}"
-    # command: mongod --smallfiles --logpath=/dev/null
 networks:
-  tcc:
+  aps:
     driver: bridge
     ipam:
       config:

@@ -608,7 +608,7 @@ O serviço serve como camada de controle, onde recebe as requisições e comanda
 
 Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
 
-Uma das formas de fazer essa comunicação é através de protocólos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
+Uma das formas de fazer essa comunicação é através de protocolos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
 
 \textit{REST} é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo \textit{HTTP}, em sua tese de doutorado e que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo \textit{HTTP}, porém muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
 
@@ -639,7 +639,7 @@ As muitas vantagens de se utilizar o JavaScript fizeram com que ela se tornasse 
 
 JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
 
-Atualmente, é impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosseis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo o \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram a aplicação da linguagem em \textit{web sites}.
+Atualmente, é impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosséis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo o \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram a aplicação da linguagem em \textit{web sites}.
 
 A web está infestada de códigos JavaScript, pode ter certeza de que diariamente muitos \textit{scripts} estão sendo executados durante uma pesquisa no Google, seu tempo no Facebook, acesso a seu banco na internet, ou até mesmo para leitura de uma notícia em um portal. Seu uso primário na web é de funções incluídas no HTML que interagem com o Modelo de Objetos e Documentos (DOM) da página.
 
@@ -694,7 +694,7 @@ Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, f
 
 Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
 
-Já em 1996 a Netscape, detentora do JavaScript, anúnciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript.
+Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript.
 
 Padronização que define a estrutura da linguagem, seus comportamentos e comandos, dando assim um padrão aos interpretadores da linguagem. 
 
@@ -716,7 +716,7 @@ E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma l
 	\centering
 
 	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
-    \includegraphics[scale=0.4]{js-example-carrousel} \\
+    \includegraphics[scale=0.4]{js-example-carousel} \\
     Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/carousel/}}
 
     \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
@@ -882,13 +882,13 @@ Para saber mais opções de geração de estruturas através do Express Generato
 
 Angular é um framework JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
 
-O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a sempre utilizar uma váriavel ou objeto do mesmo tipo, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado.
+O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a sempre utilizar uma variável ou objeto do mesmo tipo, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado.
 
 Assim como o React o novo Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
 Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no capítulo \ref{subsec:Cliente}.
 
-Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exmeplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
+Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exemplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
 
 \subsection{Angular CLI} 
 
@@ -911,7 +911,7 @@ Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de 
 
 \subsection{Node.js}
 
-O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, exectuada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
+O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, executada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
 
 Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
@@ -953,6 +953,10 @@ Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no
 O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente escolheria o JS. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua  ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
 Também foi criado uma aplicação (Figuras \ref{fig:ClientAppExample} e \ref{fig:ServerAppExample}) para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, com todas as informações de licença e de como executar, através do link \href{https://github.com/rodrigocichetto/tcc}{https://github.com/rodrigocichetto/tcc}.
+
+A aplicação desenvolvida teve também como objetivo abordar o assunto ambiental, visando facilitar o dia a dia de uma pessoa com os cuidados de uma plantação, ou apenas a grama de um jardim, de uma forma mais sustentável.
+
+A solução dos problemas ambientais tem sido considerada cada vez mais urgente para garantir o futuro da humanidade, e como hoje temos meios que facilitem o cuidado com o meio ambiente e a diminuição de desperdício, uma das formas de unirmos o cuidado com a diminuição de desperdício é desenvolvendo uma aplicação que tenha tais funcionalidades.
 
 \begin{figure}[h]
 	\centering

@@ -15,6 +15,12 @@ Este trabalho tem como principal objetivo apresentar benefícios de utilizar a l
 
 Foi criado uma aplicação para mostrar na prática os conceitos apresentados no trabalho, todo o código está disponível na pasta [src](/src).
 
+### Objetivo da aplicação desenvolvida
+
+A aplicação desenvolvida teve como objetivo abordar o assunto ambiental, visando facilitar o dia a dia de uma pessoa com os cuidados de uma plantação, ou apenas a grama de um jardim, de uma forma mais sustentável.
+
+A solução dos problemas ambientais tem sido considerada cada vez mais urgente para garantir o futuro da humanidade, e como hoje temos meios que facilitem o cuidado com o meio ambiente e a diminuição de desperdício, uma das formas de unirmos o cuidado com a diminuição de desperdício é desenvolvendo uma aplicação que tenha tais funcionalidades.
+
 ## Docker
 
 Para iniciar a aplicação com apenas um comando, suba os containers indo até a pasta `src` e executando o comando:

@@ -519,9 +519,7 @@ Have you thought about creating a rapid prototyping of software or developing sc
 
 Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape se tornou uma das linguagens mais populares da atualidade, sendo a terceira camada do bolo quando se fala de tecnologias web, das quais HTML e CSS também fazem parte. 
 
-Com navegadores cada vez mais modernos a tendência é que nossos sites também fiquem cada vez mais sofisticados.
-
-Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e frameworks que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, single page applications, programas desktop, progressive web apps e muito mais.
+Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e \textit{frameworks} que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, \textit{single page applications}, programas \textit{desktop}, \textit{progressive web apps} e muito mais.
 
 Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
 
@@ -554,11 +552,11 @@ Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outr
 
 A vantagem mais clara que temos é a padronização, o ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
 
-Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo benefícios até mesmo a empresa em suas contratações.
+Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo assim benefícios também a empresa em suas contratações.
 
-Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de facilitar muito o debug, por os objetos serem bem parecidos, se não idênticos.
+Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de objetos serem bem parecidos, se não idênticos, facilitando muito o debug e a comunicação entre aplicações e serviços.
 
-Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários frameworks e de base para o desenvolvimento em qualquer ambiente.
+Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários \textit{frameworks} e de base para o desenvolvimento em qualquer ambiente.
 
 Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
 
@@ -570,13 +568,13 @@ A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo 
 \section{Arquitetura}
 \label{sec:Arquitetura}
 
-A arquitetura de um software consiste na definição de seus componentes, relacionamento com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
+A arquitetura de um software consiste na definição de seus componentes, relacionamentos com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
 
 Com este modelo de arquitetura isolamos funções da aplicação de forma modular, facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
 
 Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto. 
 
-A modularização refere-se a separar a lógica do negócio e regras de acesso ao banco de dados da camada de apresentação.
+A modularização refere-se a separar a lógica de negócios e regras de acesso ao banco de dados da camada de apresentação.
 
 \begin{figure}[h]
 	\centering
@@ -593,7 +591,7 @@ A arquitetura apresentada foi escolhida por criar um cenário de aplicação que
 \subsection{Cliente}
 \label{subsec:Cliente}
 
-O cliente representa a camada de apresentação, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle e ter o dever de garantir a consistência entre o dado e sua apresentação.
+O \textbf{cliente} representa a \textbf{camada de apresentação}, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle e ter o dever de garantir a consistência entre o dado e sua apresentação.
 
 Para o cliente pouco importa as regras de negócio, uma vez que seu papel é enviar informações e espera receber os dados processados, além de ser responsável por executar lógica no lado do cliente. Aqui encontramos a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
 
@@ -604,7 +602,7 @@ Eliminando problemas que podem ocorrer no controle de versão em outros tipos de
 \subsection{Serviço}
 \label{subsec:Servico}
 
-O serviço serve como camada de controle, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
+O \textbf{serviço} serve como \textbf{camada de controle}, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
 
 Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
 
@@ -617,7 +615,7 @@ O modelo \textit{REST} utiliza como gerenciamento de informações os chamados r
 \subsection{Servidor}
 \label{subsec:Servidor}
 
-Podemos considerar o servidor como a camada de lógicas de negócios. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
+Podemos considerar o \textbf{servidor} como a \textbf{camada de lógicas de negócios}. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
 
 Modularizar a lógica de negócios também traz benefícios, por os clientes acessarem uma mesma camada em comum (servidor), qualquer alteração realizada nas regras de negócios serão vistas por todas as aplicações clientes.
 
@@ -626,7 +624,7 @@ Também nos possibilita escalabilidade, com a utilização de outras arquitetura
 \subsection{Banco de dados}
 \label{subsec:BancoDeDados}
 
-O banco de dados representa a camada de dados, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
+O \textbf{banco de dados} representa a \textbf{camada de dados}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
 
 Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
@@ -639,21 +637,17 @@ As muitas vantagens de se utilizar o JavaScript fizeram com que ela se tornasse 
 
 JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
 
-Atualmente, é impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosséis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo o \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram a aplicação da linguagem em \textit{web sites}.
-
-A web está infestada de códigos JavaScript, pode ter certeza de que diariamente muitos \textit{scripts} estão sendo executados durante uma pesquisa no Google, seu tempo no Facebook, acesso a seu banco na internet, ou até mesmo para leitura de uma notícia em um portal. Seu uso primário na web é de funções incluídas no HTML que interagem com o Modelo de Objetos e Documentos (DOM) da página.
+Atualmente, é impossível imaginar a internet sem a existência do JavaScript, certamente você já se deparou com alguns dos exemplos como os famosos carrosséis (Figura \ref{fig:JSExampleCarrousel}, página \pageref{fig:JSExampleCarrousel}), as tão importantes validações de formulários (Figura \ref{fig:JSExampleValidation}, página \pageref{fig:JSExampleValidation}), ou até mesmo com um \textit{modal} (Figura \ref{fig:JSExampleModal}, página \pageref{fig:JSExampleModal}) que mostram algumas das aplicações da linguagem em \textit{web sites}.
 
 O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
 
 Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
 
-É uma linguagem interpretada, pois seus comandos são executados sem que haja necessidade de compilação, tendo como interpretador de \textit{script} o \textit{browser} do usuário. Sendo assim independente de plataformas, como os comandos são interpretados pelo navegador do usuário é irrelevante se o usuário está utilizando Windows, Linux ou Mac OS.
+É uma linguagem interpretada, pois seus comandos são executados sem que haja necessidade de compilação, tendo como interpretador de \textit{script} o \textit{browser} do usuário. Sendo assim independente de plataformas, como os comandos são interpretados pelo navegador do usuário, é irrelevante se o usuário está utilizando Windows, Linux ou Mac OS.
 
 Sua tipagem é dinâmica, ou seja, tipos são associados com valores. Por exemplo, uma variável pode ser associada a um número e posteriormente associada a um texto.
 
 Com JavaScript também é possível a detecção de eventos, sempre que algo de importante acontece é disparado um evento, o clique de um botão, o preenchimento de um campo de formulário, a movimentação do mouse, são alguns exemplos dos eventos que são disparados. Isso nos permite reagir a estes eventos deixando assim que nossa aplicação deixe de ser estática.
-
-A linguagem possui grande tolerância a erros, uma vez que conversões automáticas são realizadas durante suas operações.
 
 Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador pressionando as teclas F12, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
 
@@ -682,21 +676,21 @@ Inicialmente tratada como um extra para os navegadores, podemos dizer que a ling
 
 Praticamente tudo que envolve programação o JavaScript está presente, para criar um software desktop existe por exemplo o \textit{framework} Electron (\href{https://electronjs.org}{https://electronjs.org}), desenvolvido pelo GitHub ele possibilita criar aplicativos desktop multiplataforma através do JavaScript. No desenvolvimento de jogos a \textit{engine} Unity (\href{https://unity3d.com/pt}{https://unity3d.com/pt}) é uma das plataformas que oferecem suporte a linguagem.
 
-O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript até mesmo no \textit{back-end}. 
+O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript no \textit{back-end}. 
 
-Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando na área de \textit{back-end} ou até mesmo de teste.
+Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando em outras áreas, como \textit{back-end} e até mesmo teste de \textit{softwares}.
 
 \subsubsection{ECMA}
 
-Como vimos as vantagens do JavaScript vão muito além de ser a linguagem mais popular da web, ou de até mesmo possuir a maior comunidade de programadores. Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passa-se por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
-
-Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, suas últimas contribuições de maior expressão foram a inclusão dos operadores \textit{await} e \textit{async}, possibilitando agora que a linguagem trabalhe com funções assíncronas de uma maneira simples.
-
-Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão a seguir, tal criado e mantido até hoje pelo ECMA Internacional.
+Pela linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão, tal criado e mantido até hoje pelo ECMA Internacional. 
 
 Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript.
 
 Padronização que define a estrutura da linguagem, seus comportamentos e comandos, dando assim um padrão aos interpretadores da linguagem. 
+
+Como vimos, as vantagens do JavaScript vão muito além de ser a linguagem mais popular da web, ou de até mesmo possuir a maior comunidade de programadores. Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passa-se por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
+
+Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018.
 
 Com participação colaborativa de empresas que implementam o \textit{run-time} da linguagem, como Mozilla, Google, Microsoft e Apple, além da participação de desenvolvedores da comunidade, o ECMA coordena e faz o trabalho de desenvolvimento contínuo e descentralizado do JS.
 
@@ -705,9 +699,9 @@ Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-2
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
 \subsection{Por que o JavaScript?}
-Mas por que escolher o JavaScript e não outra linguagem? É possível utilizar sim outras linguagens para desenvolver uma aplicação \textit{client} e \textit{server-side} que compartilhem da mesma linguagem, como por exemplo o Java, onde podemos criar uma aplicação Android como cliente e desenvolver a aplicação servidor também utilizando a mesma linguagem.
+Mas por que escolher o JavaScript e não outra linguagem? É possível utilizar sim outras linguagens para desenvolver uma aplicação onde cliente e servidor compartilhem da mesma linguagem, como por exemplo o Java, onde podemos criar uma aplicação Android como cliente e desenvolver a aplicação servidor também utilizando a mesma linguagem.
 
-Porém quando o cenário for a web e necessitarmos executar lógica diretamente no navegador do cliente, o JavaScript se sobressaí, pois todo código final interpretado por um navegador é um HTML, CSS e JS, mesmo que o HTML tenha sido gerado por um servidor que roda PHP, por exemplo. Além de que a ferramenta com o papel de banco de dados apresentada neste trabalho, executa um shell que roda JavaScript, ou seja, a linguagem será utilizada até mesmo no banco de dados.
+Porém quando o cenário for a web e necessitarmos executar lógica diretamente no navegador do cliente, o JavaScript se sobressaí, pois todo código final interpretado por um navegador é um HTML, CSS e JS, mesmo que o HTML tenha sido gerado por um servidor que roda PHP, por exemplo. Além de que a ferramenta com o papel de banco de dados apresentada neste trabalho, executa um shell que também roda JavaScript, ou seja, a linguagem será utilizada até mesmo no banco de dados.
 
 E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma linguagem nativa? Como vimos anteriormente no capítulo \ref{subsec:JavaScriptAlemNavegadores}, graças ao crescimento da linguagem nos últimos tempos, ela nos permite a execução nos mais diversos ambientes. 
 
@@ -742,7 +736,7 @@ E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma l
 
 Como visto anteriormente no capítulo \ref{sec:UmaLinguagemDesenvolvimento} é bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript, isso é o que acontece com o MEAN.
 
-Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja front-end, back-end ou banco de dados.
+Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja \textit{front-end}, \textit{back-end} ou banco de dados.
 
 \begin{figure}[h]
 	\centering
@@ -754,7 +748,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 A figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue o modelo de arquitetura em multicamadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na figura \ref{fig:MultilayerArchitecture}.
 
-Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida, provando assim sua produtividade.
+Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida e provando assim sua produtividade.
 
 \subsection{MongoDB}
 
@@ -764,7 +758,7 @@ Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de c
 
 Para a execução de comandos no Mongo, existe um console que executa códigos JavaScript. Por esse motivo, desenvolvedores da linguagem terão facilidade em manter um banco MongoDB.
 
-Com ele é possível receber a entrada no navegador com JavaScript, transportar a demanda para o back end ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
+Com ele é possível receber a entrada no navegador com JavaScript, transportar a demanda para o \textit{back-end} ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
 
 Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura multicamadas a camada de dados, como visto anteriormente no capítulo \ref{subsec:BancoDeDados}.
 
@@ -772,7 +766,7 @@ Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabili
 
 Com o Mongo é possível inserir qualquer formato JSON nas coleções, por esse motivo não há nenhum controle sobre os dados inseridos. Isso pode causar inconsistência nos dados, inserindo informações inválidas podendo quebrar a aplicação, deixando a responsabilidade para o dev garantir a exatidão das informações.
 
-Para resolver esse problema existe o Mongoose que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquema para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
+Para resolver esse problema existe o Mongoose que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquemas para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
 
 \subsubsection{Instalação}
 
@@ -830,7 +824,7 @@ db.nome_do_banco.drop()
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e \textit{APIs}, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Com um conjunto de métodos utilitários HTTP e middlewares a seu dispor, criar uma \textit{API} robusta utilizando Express é rápido e fácil.
+Com um conjunto de métodos utilitários \textit{HTTP} e \textit{middlewares} a seu dispor, criar uma \textit{API} robusta utilizando Express é rápido e fácil.
 
 Na MEAN Stack, o Express tem a responsabilidade de disponibilizar endpoints \textit{REST}, que serão consumidos pela aplicação cliente. Ele representa na arquitetura multicamadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
 
@@ -864,7 +858,7 @@ Para iniciar o servidor basta executar o comando \verb|node app.js|, enfim abra 
 
 Com apenas o comando \verb|express nome_da_app| do Express Generator ele já estrutura uma aplicação Express simples. Após a execução do comando ele irá criar um novo diretório com o nome da aplicação informado anteriormente, contendo arquivos e dependências necessárias. 
 
-Antes de iniciarmos o servidor Express devemos instalar as dependências através do comando \verb|npm install| que irá baixar as dependências de acordo com o arquivo \verb|package.lock| gerado anteriormente. Enfim é hora de iniciar a aplicação executando o comando \verb|npm start| e acessá-la pelo endereço \href{http://localhost:3000}{http://localhost:3000}.
+Antes de iniciarmos o servidor Express devemos instalar as dependências através do comando \verb|npm install| que irá baixar as dependências de acordo com o arquivo \verb|package.json| gerado anteriormente. Enfim é hora de iniciar a aplicação executando o comando \verb|npm start| e acessá-la pelo endereço \href{http://localhost:3000}{http://localhost:3000}.
 
 \begin{figure}[h]
 	\centering
@@ -880,13 +874,13 @@ Para saber mais opções de geração de estruturas através do Express Generato
 
 \subsection{Angular}
 
-Angular é um framework JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
+Angular é um \textit{framework} JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
 
-O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a sempre utilizar uma variável ou objeto do mesmo tipo, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado.
+O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a sempre utilizar uma variável ou objeto do mesmo tipo, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado. Mas no final todo o código é compilado e transformado em JavaScript.
 
 Assim como o React o novo Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
-Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação de DOM, permite execução de lógica no client-side além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no capítulo \ref{subsec:Cliente}.
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no capítulo \ref{subsec:Cliente}.
 
 Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exemplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
 

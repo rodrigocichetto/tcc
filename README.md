@@ -32,6 +32,8 @@ docker-compose up -d
 - **tcc-api**
 
     Ip: 10.5.0.5:3000 (Abrir documentação no navegador)
+        
+    10.5.0.5:3000/monitor (Abrir monitor no navegador)
 
     Logs: `docker logs -f tcc-api`
 

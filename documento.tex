@@ -151,7 +151,7 @@
 \titulo{Desenvolvimento de aplicações com JavaScript }
 \autor{Rodrigo Cichetto Monteiro}
 \local{Brasil}
-\data{2018, v-1.0.0}
+\data{2018}
 \orientador{Leandro Carlos Fernandez}
 % \coorientador{Danielle Colturato}
 \instituicao{%
@@ -521,18 +521,18 @@ Inicialmente implementada com o objetivo no desenvolvimento web para o lado do c
 
 Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e \textit{frameworks} que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, \textit{single page applications}, programas \textit{desktop}, \textit{progressive web apps} e muito mais.
 
-Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js.
+Talvez nenhuma outra linguagem tenha conseguido ganhar tanta atenção dos desenvolvedores como o JavaScript. Em busca de  sua identidade a linguagem foi a única que conseguiu se enraizar nos navegadores, e atualmente também passou a se empoderar dos servidores de alta performance através do Node.js. % *
 
-O surgimento do Node.js possibilitou um novo mundo para os desenvolvedores, levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor).
+O surgimento do Node.js trouxe novas possibilidades para os desenvolvedores, levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor). % *
 
-Trabalhar com uma mesma linguagem em ambientes \textit{client-side} e \textit{server-side} podem trazer muitos benefícios, como reaproveitamento de recursos humanos e também de código. O JavaScript possibilita isso graças a seu crescimento nos permitindo a execução da linguagem nos mais diversos ambientes.
+Trabalhar com JavaScript em diversas plataformas como \textit{client-side} e \textit{server-side} a tempos atras poderia ser considerado uma utopia. Graças ao crescimento da linguagem agora é possivel a execução da linguagem nos mais diversos ambientes. %*
 
 % ---
 % Objetivos
 % ---
 \section{Objetivos}
 
-O trabalho tem como principal objetivo apresentar os benefícios de se utilizar apenas uma linguagem durante todo o desenvolvimento, assim como, relatar a evolução da linguagem JavaScript e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
+O trabalho tem como principal objetivo relatar a evolução da linguagem JavaScript e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
 Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo é apresentar informações e utilizar de tecnologias já existentes, que se encaixem com a arquitetura multicamadas apresentada e que compartilhem da mesma linguagem.
 
@@ -540,93 +540,7 @@ Não há soluções tecnológicas a serem resolvidas neste projeto, o objetivo �
 % CHAPTER:
 % Pesquisa bibliográfica
 % -----------------------------------
-\chapter{Pesquisa bibliográfica}
-
-% ---
-% Uma linguagem em todo o desenvolvimento
-% ---
-\section{Uma linguagem para todo o desenvolvimento}
-\label{sec:UmaLinguagemDesenvolvimento}
-
-Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
-
-A vantagem mais clara que temos é a padronização, o ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
-
-Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo assim benefícios também a empresa em suas contratações.
-
-Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de objetos serem bem parecidos, se não idênticos, facilitando muito o debug e a comunicação entre aplicações e serviços.
-
-Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários \textit{frameworks} e de base para o desenvolvimento em qualquer ambiente.
-
-Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
-
-A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possível.
-
-% ---
-% Arquitetura
-% ---
-\section{Arquitetura}
-\label{sec:Arquitetura}
-
-A arquitetura de um software consiste na definição de seus componentes, relacionamentos com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
-
-Com este modelo de arquitetura isolamos funções da aplicação de forma modular, facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
-
-Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto. 
-
-A modularização refere-se a separar a lógica de negócios e regras de acesso ao banco de dados da camada de apresentação.
-
-\begin{figure}[h]
-	\centering
-
-	\caption{Exemplo de arquitetura multicamadas} \label{fig:MultilayerArchitecture}
-    \includegraphics[scale=0.4]{multilayer-architecture}
-
-\end{figure}
-
-Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de protocolos de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
-
-A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles.
-
-\subsection{Cliente}
-\label{subsec:Cliente}
-
-O \textbf{cliente} representa a \textbf{camada de apresentação}, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle e ter o dever de garantir a consistência entre o dado e sua apresentação.
-
-Para o cliente pouco importa as regras de negócio, uma vez que seu papel é enviar informações e espera receber os dados processados, além de ser responsável por executar lógica no lado do cliente. Aqui encontramos a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
-
-Um benefício da modularização da arquitetura multicamadas nos possibilita é a criação de várias aplicações clientes que podem compartilhar as mesmas regras, pois ficam encapsuladas em uma camada de acesso comum. Por exemplo, posso ter um aplicativo e um web-site consumindo um mesmo serviço, compartilhando assim das mesmas regras.
-
-Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente da modular, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
-
-\subsection{Serviço}
-\label{subsec:Servico}
-
-O \textbf{serviço} serve como \textbf{camada de controle}, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
-
-Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
-
-Uma das formas de fazer essa comunicação é através de protocolos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
-
-\textit{REST} é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo \textit{HTTP}, em sua tese de doutorado e que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo \textit{HTTP}, porém muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
-
-O modelo \textit{REST} utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como \textit{URI}.
-
-\subsection{Servidor}
-\label{subsec:Servidor}
-
-Podemos considerar o \textbf{servidor} como a \textbf{camada de lógicas de negócios}. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
-
-Modularizar a lógica de negócios também traz benefícios, por os clientes acessarem uma mesma camada em comum (servidor), qualquer alteração realizada nas regras de negócios serão vistas por todas as aplicações clientes.
-
-Também nos possibilita escalabilidade, com a utilização de outras arquiteturas, é comum que ocorra uma queda de desempenho quando um grande número de máquinas clientes simultâneas se conectam ao servidor. Sendo isso evitado com a arquitetura modularizada, uma vez que é possível ter a mesma regra de negócio dividida entre vários servidores através do balanceamento de carga, ou seja, quando algum deles ficar sobrecarregado o outro entra em ação para ajudá-lo. 
-
-\subsection{Banco de dados}
-\label{subsec:BancoDeDados}
-
-O \textbf{banco de dados} representa a \textbf{camada de dados}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
-
-Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
+\chapter{Revisão bibliográfica}
 
 % ---
 % JavaScript
@@ -698,13 +612,6 @@ Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-2
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
-\subsection{Por que o JavaScript?}
-Mas por que escolher o JavaScript e não outra linguagem? É possível utilizar sim outras linguagens para desenvolver uma aplicação onde cliente e servidor compartilhem da mesma linguagem, como por exemplo o Java, onde podemos criar uma aplicação Android como cliente e desenvolver a aplicação servidor também utilizando a mesma linguagem.
-
-Porém quando o cenário for a web e necessitarmos executar lógica diretamente no navegador do cliente, o JavaScript se sobressaí, pois todo código final interpretado por um navegador é um HTML, CSS e JS, mesmo que o HTML tenha sido gerado por um servidor que roda PHP, por exemplo. Além de que a ferramenta com o papel de banco de dados apresentada neste trabalho, executa um shell que também roda JavaScript, ou seja, a linguagem será utilizada até mesmo no banco de dados.
-
-E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma linguagem nativa? Como vimos anteriormente no capítulo \ref{subsec:JavaScriptAlemNavegadores}, graças ao crescimento da linguagem nos últimos tempos, ela nos permite a execução nos mais diversos ambientes. 
-
 \pagebreak
 \begin{figure}[h]
 	\centering
@@ -722,6 +629,72 @@ E caso eu queira criar outro tipo de aplicação onde o JavaScript não é uma l
     Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/modal/}}
 
 \end{figure}
+
+% ---
+% Arquitetura
+% ---
+\section{Arquitetura}
+\label{sec:Arquitetura}
+
+A arquitetura de um software consiste na definição de seus componentes, relacionamentos com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
+
+Com este modelo de arquitetura isolamos funções da aplicação de forma modular, facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
+
+Também conhecidas como stacks, as camadas de uma aplicação são basicamente o \textit{front-end} (cliente) e \textit{back-end} (servidor). Camadas são uma maneira de separar responsabilidades, uma camada superior pode usar serviços de uma camada inferior, mas não o oposto. 
+
+A modularização refere-se a separar a lógica de negócios e regras de acesso ao banco de dados da camada de apresentação.
+
+\begin{figure}[h]
+	\centering
+
+	\caption{Exemplo de arquitetura multicamadas} \label{fig:MultilayerArchitecture}
+    \includegraphics[scale=0.4]{multilayer-architecture}
+
+\end{figure}
+
+Na parte inferior da figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, o qual se comunica com os servidores de aplicação através de protocolos de rede. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces. Este é basicamente o esquema de comunicação desta arquitetura.
+
+A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles.
+
+\subsection{Cliente}
+\label{subsec:Cliente}
+
+O \textbf{cliente} representa a \textbf{camada de apresentação}, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle e ter o dever de garantir a consistência entre o dado e sua apresentação.
+
+Para o cliente pouco importa as regras de negócio, uma vez que seu papel é enviar informações e espera receber os dados processados, além de ser responsável por executar lógica no lado do cliente. Aqui encontramos a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
+
+Um benefício da modularização da arquitetura multicamadas nos possibilita é a criação de várias aplicações clientes que podem compartilhar as mesmas regras, pois ficam encapsuladas em uma camada de acesso comum. Por exemplo, posso ter um aplicativo e um web-site consumindo um mesmo serviço, compartilhando assim das mesmas regras.
+
+Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente da modular, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
+
+\subsection{Serviço}
+\label{subsec:Servico}
+
+O \textbf{serviço} serve como \textbf{camada de controle}, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
+
+Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
+
+Uma das formas de fazer essa comunicação é através de protocolos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
+
+\textit{REST} é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo \textit{HTTP}, em sua tese de doutorado e que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo \textit{HTTP}, porém muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
+
+O modelo \textit{REST} utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como \textit{URI}.
+
+\subsection{Servidor}
+\label{subsec:Servidor}
+
+Podemos considerar o \textbf{servidor} como a \textbf{camada de lógicas de negócios}. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
+
+Modularizar a lógica de negócios também traz benefícios, por os clientes acessarem uma mesma camada em comum (servidor), qualquer alteração realizada nas regras de negócios serão vistas por todas as aplicações clientes.
+
+Também nos possibilita escalabilidade, com a utilização de outras arquiteturas, é comum que ocorra uma queda de desempenho quando um grande número de máquinas clientes simultâneas se conectam ao servidor. Sendo isso evitado com a arquitetura modularizada, uma vez que é possível ter a mesma regra de negócio dividida entre vários servidores através do balanceamento de carga, ou seja, quando algum deles ficar sobrecarregado o outro entra em ação para ajudá-lo. 
+
+\subsection{Banco de dados}
+\label{subsec:BancoDeDados}
+
+O \textbf{banco de dados} representa a \textbf{camada de dados}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
+
+Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
 % -----------------------------------
 % CHAPTER:

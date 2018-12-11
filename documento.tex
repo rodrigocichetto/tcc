@@ -608,7 +608,7 @@ Inicialmente tratada como um extra para os navegadores, podemos dizer que a ling
 \item Servidores 
 \end{enumerate}
 
-Praticamente tudo que envolve programação o JavaScript está presente, para criar um software desktop existe por exemplo o \textit{framework} Electron (\href{https://electronjs.org}{https://electronjs.org}), desenvolvido pelo GitHub ele possibilita criar aplicativos desktop multiplataforma através do JavaScript. No desenvolvimento de jogos a \textit{engine} Unity (\href{https://unity3d.com/pt}{https://unity3d.com/pt}) é uma das plataformas que oferecem suporte a linguagem.
+Praticamente tudo que envolve programação o JavaScript está presente, para criar um software desktop existe por exemplo o \textit{framework} Electron \footnote{\url{https://electronjs.org}{https://electronjs.org}}, desenvolvido pelo GitHub ele possibilita criar aplicativos desktop multiplataforma através do JavaScript. No desenvolvimento de jogos a \textit{engine} Unity \footnote{\url{https://unity3d.com/pt}{https://unity3d.com/pt}} é uma das plataformas que oferecem suporte a linguagem.
 
 O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript no \textit{back-end}. 
 
@@ -628,25 +628,25 @@ Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, f
 
 Com participação colaborativa de empresas que implementam o \textit{run-time} da linguagem, como Mozilla, Google, Microsoft e Apple, além da participação de desenvolvedores da comunidade, o ECMA coordena e faz o trabalho de desenvolvimento contínuo e descentralizado do JS.
 
-Em seu site \url{http://www.ecma-international.org/publications/standards/Ecma-262.htm}, a ECMA disponibiliza informações como versão atual e a documentação da linguagem, porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla \url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}, ou também o site da W3Schools \url{https://www.w3schools.com/jsref/default.asp}. 
+No site oficial \footnote{\url{http://www.ecma-international.org/publications/standards/Ecma-262.htm}} a ECMA disponibiliza informações como versão atual e a documentação da linguagem, porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla \footnote{\url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}}, ou também o site da W3Schools \footnote{\url{https://www.w3schools.com/jsref/default.asp}}. 
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
-\pagebreak
+% \pagebreak
 \begin{figure}[h]
 	\centering
 
 	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
     \includegraphics[scale=0.4]{js-example-carousel} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/carousel/}}
+    Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/carousel/}}}
 
     \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
     \includegraphics[scale=0.45]{js-example-validation} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/forms/}}
+    Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/forms/}}}
 	
     \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário. -- Exemplo de aplicação do JS} \label{fig:JSExampleModal}
     \includegraphics[scale=0.5]{js-example-modal} \\
-    Fonte: {Bootstrap \url{https://getbootstrap.com/docs/4.1/components/modal/}}
+    Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/modal/}}}
 
 \end{figure}
 
@@ -716,12 +716,6 @@ O \textbf{banco de dados} representa a \textbf{camada de dados}, pois nele estã
 
 Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
-% -----------------------------------
-% CHAPTER:
-% Metodologia e ferramentas
-% -----------------------------------
-\chapter{Metodologia e ferramentas}
-
 % ---
 % A pilha MEAN
 % ---
@@ -761,58 +755,6 @@ Com o Mongo é possível inserir qualquer formato JSON nas coleções, por esse 
 
 Para resolver esse problema existe o Mongoose que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquemas para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
 
-\subsubsection{Instalação}
-
-Para instalar o MongoDB, basta acessar o link \url{https://www.mongodb.com/download-center} e baixar o instalador de acordo com seu sistema operacional.
-
-É necessário criar um diretório para o Mongo escrever seus arquivos, crie a pasta "data" e dentro dela a pasta "db", se você utiliza Linux ou Mac pode utilizar os seguintes comandos:
-
-\begin{itemize}
-% mkdir -p /data/db
-% chown -R $USER:$USER /data/db     ou     chown -R \textdollar USER:\textdollar USER /data/db
-\item \verb|mkdir -p /data/db|
-\item \verb|chown -R $USER:$USER /data/db|
-\end{itemize}
-
-Para iniciar o servidor Mongo, acesse o diretório de instalação pelo terminal e execute o comando bin/mongod.exe se utilizar Windows ou bin/mongod se utilizar Linux ou Mac. Logo após é possível iniciar o MongoDB pelo comando bin/mongo , caso esteja em um ambiente Windows execute bin/mongo.exe .
-
-Através deste terminal podemos criar bancos de dados, documentos e coleções. Se em qualquer momento for preciso obter ajuda, basta dar o comando \verb|help| na linha de comando do terminal do Mongo.
-
-\subsubsection{Primeiros passos}
-
-Por padrão o terminal do Mongo inicia conectado ao banco de dados \verb|test|. Para mudarmos para outro banco de dados utilizamos o comando \verb|use nome_do_banco|. Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
-
-\textit{Insert}, através da função \verb|insert()| insere novos dados e pode receber como parâmetro um objeto JSON ou um array de objetos.
-
-\begin{lstlisting}[language=javascript]
-// Exemplo insert
-db.nome_do_banco.insert()
-\end{lstlisting}
-
-\textit{Find}, através da função \verb|find()|, busca por objetos inseridos em uma \textit{collection}, podendo receber como parâmetro um objeto com os critérios de filtragem, ou nenhum para retornar todos os objetos.
- 
-\begin{lstlisting}[language=javascript]
-// Exemplo find
-db.nome_do_banco.find()
-\end{lstlisting}
-
-\textit{Update}, através da função \verb|update()| atualiza os dados, recebendo dois parâmetros, sendo o primeiro a condição para achar o documento, e o segundo o novo documento.
-
-\begin{lstlisting}[language=javascript]
-// Exemplo update
-db.nome_do_banco.update()
-\end{lstlisting}
-
-\textit{Remove}, através da função \verb|remove()| remove os dados, podendo passar um parâmetro para informar qual objeto remover ou nenhum para remover todos, caso esse seja seu objetivo, também é possível utilizar o comando \verb|drop()|.
-
-\begin{lstlisting}[language=javascript]
-// Exemplo remove
-db.nome_do_banco.remove()
-// Exemplo drop
-db.nome_do_banco.drop()
-\end{lstlisting}
-
-
 \subsection{Express}
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para Ruby. Ele facilita o desenvolvimento de aplicações web e \textit{APIs}, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
@@ -825,46 +767,6 @@ Através da figura \ref{fig:MEANStackFlow} percebemos que o Express e Node.js fa
 
 Com o Express podemos criar nossa \textit{REST API}, configurando funções a serem executadas após o recebimento de chamadas em rotas, também conhecidas como URI's, pelos métodos \textit{HTTP} \textit{GET}, \textit{POST}, \textit{PUT}, \textit{PATH} e \textit{DELETE}.
 
-\subsubsection {Primeiros passos}
-
-Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados, caso não saiba como instalá-los veja a explicação no capítulo \ref{subsec:NodePrimeirosPassos}.
-
-No terminal inicie um projeto node a partir do comando \verb|npm init|, preencha as informações e então execute o comando \verb|npm install express| dentro do diretório do seu projeto para instalar o express. Desta maneira conseguimos importar o express para nosso código. Finalmente é só criar um arquivo \verb|app.js| com o código abaixo.
-
-\begin{lstlisting}[language=javascript]
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
-app.get('/', (req, res) => {
-   res.send('Hello World');
-});
-
-app.listen(PORT, () => {
-    console.log('Servidor disponivel na porta ' + PORT);
-});
-\end{lstlisting}
-
-Para iniciar o servidor basta executar o comando \verb|node app.js|, enfim abra seu navegador no endereço \href{http://localhost:3000}{http://localhost:3000} ele deve retornar nosso \textit{Hello World}.
-
-\subsubsection{Express Generator}
-
-Com apenas o comando \verb|express nome_da_app| do Express Generator ele já estrutura uma aplicação Express simples. Após a execução do comando ele irá criar um novo diretório com o nome da aplicação informado anteriormente, contendo arquivos e dependências necessárias. 
-
-Antes de iniciarmos o servidor Express devemos instalar as dependências através do comando \verb|npm install| que irá baixar as dependências de acordo com o arquivo \verb|package.json| gerado anteriormente. Enfim é hora de iniciar a aplicação executando o comando \verb|npm start| e acessá-la pelo endereço \href{http://localhost:3000}{http://localhost:3000}.
-
-\begin{figure}[h]
-	\centering
-
-	\caption{Aplicação gerada pelo Express Generator} \label{fig:ExpressGeneratorApp}
-    \includegraphics[scale=0.5]{express-generator-app} \\
-
-\end{figure}
-
-Essa página só é exibida porque no arquivo \verb|routes/index.js| está configurado a rota padrão para que renderize o arquivo \verb|views/index.jade| passando o título com o valor Express, sendo interpretado pela \textit{template engine} JADE, configurada por padrão pelo Express Generator.
-
-Para saber mais opções de geração de estruturas através do Express Generator, execute o comando \verb|express -h|.
-
 \subsection{Angular}
 
 Angular é um \textit{framework} JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
@@ -876,25 +778,6 @@ Assim como o React o novo Angular trabalha com componentes, que são trechos de 
 Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no capítulo \ref{subsec:Cliente}.
 
 Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exemplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
-
-\subsection{Angular CLI} 
-
-Instalado a partir do comando do node \verb|npm install -g @angular/cli|, o Angular CLI é uma interface de linha de comando para o Angular, que nos permite trabalhar de forma mais amistosa com a tecnologia.
-
-Com o Angular CLI é possível criar projetos e estruturá-los a partir do comando \verb|ng|. Por exemplo, para criar um novo projeto, basta executar o comando \verb|ng new app-name|, assim não precisamos nos preocupar com a estrutura inicial do projeto e suas dependências cruciais para o funcionamento do Angular. 
-
-Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}.
-
-Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de forma rápida com o comando \verb|ng generate|.
-
-\pagebreak
-\begin{figure}[h]
-	\centering
-
-	\caption{Aplicação gerada pelo Angular Cli} \label{fig:AngularCliApp}
-    \includegraphics[scale=0.4]{angular-cli-app} \\
-
-\end{figure}
 
 \subsection{Node.js}
 
@@ -912,23 +795,25 @@ O arquivo \verb|package.json| é responsável por gerenciar os pacotes cujo noss
 
 Isso também nos ajuda a padronizar as versões de nossas dependências, facilitando informar os requisitos mínimos e atualizações, garantindo assim que todos os desenvolvedores terão a mesma versão em suas máquinas. Outra vantagem é para que outro desenvolvedor tenha acesso a nosso código, basta enviar o código em si, sem se preocupar com as dependências, pois basta ele executar o comando do node \verb|npm install| para fazer o download.
 
-\subsubsection {Primeiros passos}
-\label{subsec:NodePrimeirosPassos}
+% -----------------------------------
+% CHAPTER:
+% Projeto
+% -----------------------------------
+\chapter{Projeto}
 
-Instalar o Node.js é muito simples, basta acessar o link \href{https://nodejs.org/en/download/}{https://nodejs.org/en/download/} e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
+O projeto desenvolvido tem como objetivo abordar o assunto sobre informações ambientais e o desenvolvimento de uma aplicação que facilite o dia a dia de uma pessoa com o gerenciamento de irrigações de uma pequena plantação, ou apenas a grama de um jardim de forma sustentável.
 
-Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
+A solução dos problemas ambientais tem sido considerada cada vez mais urgente para garantir o futuro da humanidade, e como hoje existem meios que facilitem o cuidado com o ambiente e a diminuição de desperdício, uma das formas de unirmos o cuidado com a diminuição de desperdício é desenvolvendo uma aplicação que tenha essa funcionalidade.
 
-Agora é só começar a desenvolver e instalar suas dependências, que devem ficar salvas no arquivo gerado anteriormente.
+Para o desenvolvimento do projeto foi utilizado a linguagem JavaScript em conjunto dos \textit{frameworks} que compõem a MEAN Stack, seguindo a arquitetura apresentada no Capítulo \ref{sec:Arquitetura}.
 
-% \pagebreak
-\begin{figure}[h]
-	\centering
+Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsábilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
 
-  \caption{Exemplo de configurações preenchidas no comando npm init} \label{fig:NpmInitExample}
-    \includegraphics[scale=0.5]{npm-init-example} \\
+\section{Aplicação mobile}
 
-\end{figure}
+\section{Servidor}
+
+\section{Banco de Dados}
 
 % -----------------------------------
 % CHAPTER:
@@ -965,7 +850,8 @@ A solução dos problemas ambientais tem sido considerada cada vez mais urgente 
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{abntex2-modelo-references}
+% \bibliography{abntex2-modelo-references}
+\bibliography{referencias-bibliograficas}
 
 % ----------------------------------------------------------
 % Glossário
@@ -983,10 +869,133 @@ A solução dos problemas ambientais tem sido considerada cada vez mais urgente 
 % ---
 % Inicia os anexos
 % ---
-% \begin{anexosenv}
+\begin{anexosenv}
 
 % % Imprime uma página indicando o início dos anexos
-% \partanexos
+\partanexos
+
+% -----------------------------------
+% Primeiros passos Mongo
+% -----------------------------------
+\chapter{Primeiros passos Mongo}
+
+Por padrão o terminal do Mongo inicia conectado ao banco de dados \verb|test|. Para mudarmos para outro banco de dados utilizamos o comando \verb|use nome_do_banco|. Caso o banco indicado não exista, o Mongo criará um novo assim que dados forem incluídos nele.
+
+\textit{Insert}, através da função \verb|insert()| insere novos dados e pode receber como parâmetro um objeto JSON ou um array de objetos.
+
+\begin{lstlisting}[language=javascript]
+// Exemplo insert
+db.nome_do_banco.insert()
+\end{lstlisting}
+
+\textit{Find}, através da função \verb|find()|, busca por objetos inseridos em uma \textit{collection}, podendo receber como parâmetro um objeto com os critérios de filtragem, ou nenhum para retornar todos os objetos.
+ 
+\begin{lstlisting}[language=javascript]
+// Exemplo find
+db.nome_do_banco.find()
+\end{lstlisting}
+
+\textit{Update}, através da função \verb|update()| atualiza os dados, recebendo dois parâmetros, sendo o primeiro a condição para achar o documento, e o segundo o novo documento.
+
+\begin{lstlisting}[language=javascript]
+// Exemplo update
+db.nome_do_banco.update()
+\end{lstlisting}
+
+\textit{Remove}, através da função \verb|remove()| remove os dados, podendo passar um parâmetro para informar qual objeto remover ou nenhum para remover todos, caso esse seja seu objetivo, também é possível utilizar o comando \verb|drop()|.
+
+\begin{lstlisting}[language=javascript]
+// Exemplo remove
+db.nome_do_banco.remove()
+// Exemplo drop
+db.nome_do_banco.drop()
+\end{lstlisting}
+
+% -----------------------------------
+% Primeiros passos Express
+% -----------------------------------
+\chapter {Primeiros passos Express}
+
+Para criarmos um servidor com o Express, necessitamos primeiro do Node.js e o NPM instalados, caso não saiba como instalá-los veja a explicação no capítulo \ref{subsec:NodePrimeirosPassos}.
+
+No terminal inicie um projeto node a partir do comando \verb|npm init|, preencha as informações e então execute o comando \verb|npm install express| dentro do diretório do seu projeto para instalar o express. Desta maneira conseguimos importar o express para nosso código. Finalmente é só criar um arquivo \verb|app.js| com o código abaixo.
+
+\begin{lstlisting}[language=javascript]
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+   res.send('Hello World');
+});
+
+app.listen(PORT, () => {
+    console.log('Servidor disponivel na porta ' + PORT);
+});
+\end{lstlisting}
+
+Para iniciar o servidor basta executar o comando \verb|node app.js|, enfim abra seu navegador no endereço \href{http://localhost:3000}{http://localhost:3000} ele deve retornar nosso \textit{Hello World}.
+
+\section{Express Generator}
+
+Com apenas o comando \verb|express nome_da_app| do Express Generator ele já estrutura uma aplicação Express simples. Após a execução do comando ele irá criar um novo diretório com o nome da aplicação informado anteriormente, contendo arquivos e dependências necessárias. 
+
+Antes de iniciarmos o servidor Express devemos instalar as dependências através do comando \verb|npm install| que irá baixar as dependências de acordo com o arquivo \verb|package.json| gerado anteriormente. Enfim é hora de iniciar a aplicação executando o comando \verb|npm start| e acessá-la pelo endereço \href{http://localhost:3000}{http://localhost:3000}.
+
+\begin{figure}[h]
+	\centering
+
+	\caption{Aplicação gerada pelo Express Generator} \label{fig:ExpressGeneratorApp}
+    \includegraphics[scale=0.5]{express-generator-app} \\
+
+\end{figure}
+
+Essa página só é exibida porque no arquivo \verb|routes/index.js| está configurado a rota padrão para que renderize o arquivo \verb|views/index.jade| passando o título com o valor Express, sendo interpretado pela \textit{template engine} JADE, configurada por padrão pelo Express Generator.
+
+Para saber mais opções de geração de estruturas através do Express Generator, execute o comando \verb|express -h|.
+
+% -----------------------------------
+% Primeiros passos Angular CLI
+% -----------------------------------
+\chapter{Primeiros passos Angular CLI} 
+
+Instalado a partir do comando do node \verb|npm install -g @angular/cli|, o Angular CLI é uma interface de linha de comando para o Angular, que nos permite trabalhar de forma mais amistosa com a tecnologia.
+
+Com o Angular CLI é possível criar projetos e estruturá-los a partir do comando \verb|ng|. Por exemplo, para criar um novo projeto, basta executar o comando \verb|ng new app-name|, assim não precisamos nos preocupar com a estrutura inicial do projeto e suas dependências cruciais para o funcionamento do Angular. 
+
+Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}.
+
+Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de forma rápida com o comando \verb|ng generate|.
+
+% \pagebreak
+\begin{figure}[h]
+	\centering
+
+	\caption{Aplicação gerada pelo Angular Cli} \label{fig:AngularCliApp}
+    \includegraphics[scale=0.4]{angular-cli-app} \\
+
+\end{figure}
+
+% -----------------------------------
+% Primeiros passos Node.js
+% -----------------------------------
+\chapter {Primeiros passos Node.js}
+\label{anexo:NodePrimeirosPassos}
+
+Instalar o Node.js é muito simples, basta acessar o link \href{https://nodejs.org/en/download/}{https://nodejs.org/en/download/} e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
+
+Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
+
+Agora é só começar a desenvolver e instalar suas dependências, que devem ficar salvas no arquivo gerado anteriormente.
+
+% \pagebreak
+\begin{figure}[h]
+	\centering
+
+  \caption{Exemplo de configurações preenchidas no comando npm init} \label{fig:NpmInitExample}
+    \includegraphics[scale=0.5]{npm-init-example} \\
+
+\end{figure}
 
 % % ---
 % \chapter{Morbi ultrices rutrum lorem.}
@@ -1006,7 +1015,7 @@ A solução dos problemas ambientais tem sido considerada cada vez mais urgente 
 
 % \lipsum[32]
 
-% \end{anexosenv}
+\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO

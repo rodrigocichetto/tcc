@@ -730,7 +730,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 	\centering
 
 	\caption{\textit{MEAN Stack} - Fluxo das ferramentas que integram o MEAN} \label{fig:MEANStackFlow}
-    \includegraphics[scale=0.3]{mean-stack-flow}
+    \includegraphics[scale=0.4]{mean-stack-flow}
 
 \end{figure}
 
@@ -810,7 +810,25 @@ Para o desenvolvimento do projeto foi utilizado a linguagem JavaScript em conjun
 
 Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsábilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
 
+\begin{figure}[h]
+	\centering
+
+	\caption{Fluxo do projeto de aplicação criado} \label{fig:ProjectFlow}
+    \includegraphics[scale=0.35]{project-flow} \\
+
+\end{figure}
+
+Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o projeto tem o Cliente se comunicando com o Servidor que também realiza a comunicação com Banco de Dados e o serviço externo do INPE, sendo assim o fluxo das operações da aplicação.
+
 \section{Aplicação mobile}
+
+O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele pode se cadastrar como usuário, cadastrar e gerenciar os irrigadores além de saber a previsão do tempo para a cidade veículada para seu usuário e também para cada irrigador separadamente.
+
+Seu papel é realizar a comunicação com o servidor através do protocolo \textit{REST}, enviando e pedindo dados, além de exibir as informações para o usuário.
+
+Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}\footnote{\url{https://ionicframework.com/}}, que como descrito em seu própio site é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
+
+No build é possível escolher entre as plataformas \textit{iOS, Android, PWA} e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida.
 
 \begin{figure}[h]
 	\centering
@@ -819,6 +837,8 @@ Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as cama
     \includegraphics[scale=0.4]{client-app} \\
 
 \end{figure}
+
+A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas da aplicação com as quais o usuário pode interagir.
 
 \section{Servidor}
 
@@ -841,7 +861,9 @@ Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no
 
 O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente escolheria o JS. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua  ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
-Também foi criado uma aplicação (Figuras \ref{fig:ClientAppExample} e \ref{fig:ServerAppExample}) para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através do repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}}, com todas as informações de licença e de como executar.
+Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através do repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}}, com todas as informações de licença e de como executar.
+
+Desenvolver uma aplicação \textit{full stack} utilizando \textit{HTML, CSS} e \textit{JavaScript} proporcionou uma excelente experiência como desenvolvedor, pela flexibilidade de poder aplicar a lógica inteiramente com JavaScript, pelo rápido processamento, sobretudo no desenvolvimento da aplicação cliente, onde o aplicativo era renderizado no navegador web, bem mais rápido que o emulador \textit{Android} presente no \textit{Android Studio}, o que consequentemente exigiu menos processamento, além da vantagem de o \textit{build} ser multiplataforma, o que não acontece quando desenvolvemos no \textit{Android Studio}.
 
 A aplicação desenvolvida teve também como objetivo abordar o assunto ambiental, visando facilitar o dia a dia de uma pessoa com os cuidados de uma plantação, ou apenas a grama de um jardim, de uma forma mais sustentável.
 

@@ -273,7 +273,7 @@ Orientador: Prof. \imprimirorientador}
 	
 	\hspace{0.5cm}
 		1. JavaScript.
-        2. Arquitetura multicamadas.
+        2. Arquitetura em camadas.
         3. MEAN Stack.
 		I. Orientador \imprimirorientador.
 		II. Universidade Paulista -- UNIP.
@@ -427,11 +427,11 @@ Orientador: Prof. \imprimirorientador}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 %  Segundo a \citeonline[3.1-3.2]{NBR6028:2003}
-Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, \textit{mobile}, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo apresentar benefícios de utilizar a linguagem JavaScript em todas as camadas do desenvolvimento, destacando ferramentas já existentes aplicadas à arquitetura multicamadas. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, \textit{mobile}, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo apresentar benefícios de utilizar a linguagem JavaScript em todas as camadas do desenvolvimento, destacando ferramentas já existentes aplicadas à arquitetura em camadas. Mas lembre-se com grandes poderes vem grandes responsabilidades.
 
  \vspace{\onelineskip}
 
- \textbf{Palavras-chaves}: javascript, arquitetura multicamadas, frameworks
+ \textbf{Palavras-chaves}: javascript, arquitetura em camadas, frameworks
 \end{resumo}
 
 % resumo em inglês
@@ -657,7 +657,9 @@ A 10ª edição já está em desenvolvimento, devendo chegar até o final de Jun
 % \citeauthor{sommerville_engenharia}
 % \cite{sommerville_engenharia}
 
-A arquitetura de um software consiste na definição de seus componentes, relacionamentos com softwares externos e suas propriedades. Na arquitetura multicamadas temos o famoso Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separados.
+A arquitetura de um software consiste na definição de seus componentes, relacionamentos com softwares externos e suas propriedades. Segundo Sommerville\cite{sommerville_engenharia} o projeto de arquitetura está preocupado com a compreensão de como um sistema deve ser organizado e com a estrutura geral desse sistema.
+
+Na \textbf{arquitetura em camadas} temos um sistema Cliente-Servidor onde as camadas de apresentação, processamento de aplicativos e gerenciamento de dados são separadas, apoiando o desenvolvimento incremental de sistemas. Conforme descrito por Sommerville\cite{sommerville_engenharia} na arquitetura em camadas a funcionalidade do sistema é organizada em camadas separadas, e cada camada só depende dos recursos e serviços oferecidos pela camada imediatamente abaixo dela.
 
 Com este modelo de arquitetura isolamos funções da aplicação de forma modular, facilitando sua manutenção e depuração, além de criar uma hierarquia de níveis de acesso, protegendo as camadas mais internas.
 
@@ -668,32 +670,35 @@ A modularização refere-se a separar a lógica de negócios e regras de acesso 
 \begin{figure}[h]
 	\centering
 
-	\caption{Exemplo de arquitetura multicamadas} \label{fig:MultilayerArchitecture}
-    \includegraphics[scale=0.4]{multilayer-architecture}
+	\caption{Uma arquitetura genérica em camadas} \label{fig:MultilayerArchitecture}
+    \includegraphics[scale=0.4]{multilayer-architecture} \\
+    Fonte: {\cite{sommerville_engenharia} p.111}
 
 \end{figure}
 
-Na parte inferior da Figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, no qual fornece os dados para os servidores da aplicação. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces e protocolos de rede. Este é basicamente o esquema de comunicação desta arquitetura.
+De acordo com Sommerville\cite{sommerville_engenharia} a Figura \ref{fig:MultilayerArchitecture} é um exemplo de uma arquitetura em camadas, com quatro camadas. A camada mais baixa inclui software de apoio ao sistema — geralmente, apoio de banco de dados e de sistema operacional. A próxima camada é a camada de aplicação, que inclui os componentes relacionados com a funcionalidade da aplicação e os componentes utilitários que são usados por outros componentes da aplicação. A terceira camada está preocupada com o gerenciamento de interface de usuário e fornecimento de autenticação e autorização de usuário, com a camada superior fornecendo recursos de interface com o usuário. Certamente, o número de camadas é arbitrário. Qualquer camada na Figura \ref{fig:MultilayerArchitecture} pode ser dividida em mais camadas.
 
-A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles, assim como a flexibilidade do JavaScript.
+% Na parte inferior da Figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, no qual fornece os dados para os servidores da aplicação. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces e protocolos de rede. Este é basicamente o esquema de comunicação desta arquitetura.
+
+O objetivo deste capítulo é introduzir os conceitos da arquitetura de software e do projeto de arquitetura. A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles, assim como a flexibilidade do JavaScript.
 
 \subsection{Cliente}
 \label{subsec:Cliente}
 
-O \textbf{Cliente} representa a \textbf{camada de apresentação}, ela é responsável pela interação com o usuário além de se comunicar com a camada de controle e ter o dever de garantir a consistência entre o dado e sua apresentação.
+O \textbf{Cliente} representa a \textbf{interface de usuário}, ela é responsável pela interação com o usuário além de se comunicar com a camada de gerenciamento de interface de usuário e ter o dever de garantir a consistência entre o dado e sua apresentação.
 
 Para o cliente pouco importa as regras de negócio, uma vez que seu papel é enviar informações e espera receber os dados processados, além de ser responsável por executar lógica no lado do cliente. Aqui encontramos a parte da aplicação \textit{client-side}, em ambientes web também conhecida como \textit{front-end}.
 
-Um benefício da modularização da arquitetura multicamadas nos possibilita é a criação de várias aplicações clientes que podem compartilhar as mesmas regras, pois ficam encapsuladas em uma camada de acesso comum. Por exemplo, posso ter um aplicativo e um web-site consumindo um mesmo serviço, compartilhando assim das mesmas regras.
+Um benefício da modularização da arquitetura em camadas nos possibilita é a criação de várias aplicações clientes que podem compartilhar as mesmas regras, pois ficam encapsuladas em uma camada de acesso comum. Por exemplo, posso ter um aplicativo e um web-site consumindo um mesmo serviço, compartilhando assim das mesmas regras.
 
-Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente da modular, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
+Eliminando problemas que podem ocorrer no controle de versão em outros tipos de arquitetura, pois em uma arquitetura diferente, que não utilize essa modularização, se determinado usuário possui uma versão mais antiga do que outro, pode ocorrer erros de dados lógicos no processamento das regras de negócios, uma vez que não compartilham da mesma regra.
 
 \subsection{Serviço}
 \label{subsec:Servico}
 
-O \textbf{Serviço} serve como \textbf{camada de controle}, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de apresentação e a lógica. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
+O \textbf{Serviço} serve como \textbf{gerenciamento de interface de usuário}, onde recebe as requisições e comanda o fluxo servindo como uma camada intermediária entre a camada de interface de usuário e a de lógica de negócio principal. De forma que o banco de dados e o servidor podem estar fisicamente distantes da aplicação cliente.
 
-Normalmente a camada de controle costuma trabalhar junto da camada de lógica de negócios, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
+Normalmente a camada de gerenciamento de interface de usuário costuma trabalhar junto da camada de lógica de negócio principal, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
 
 Uma das formas de fazer essa comunicação é através de protocolos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
 
@@ -704,7 +709,7 @@ O modelo \textit{REST} utiliza como gerenciamento de informações os chamados r
 \subsection{Servidor}
 \label{subsec:Servidor}
 
-Podemos considerar o \textbf{Servidor} como a \textbf{camada de lógicas de negócios}. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
+Podemos considerar o \textbf{Servidor} como a \textbf{lógica de negócio principal}. Nela recebemos requisições devolvendo informações que podem ser processadas por esta própria camada ou retornar informações através da camada de acesso a dados. Aqui está a parte da aplicação \textit{server-side}, em ambientes web também conhecida como \textit{back-end}.
 
 Modularizar a lógica de negócios também traz benefícios, por os clientes acessarem uma mesma camada em comum (servidor), qualquer alteração realizada nas regras de negócios serão vistas por todas as aplicações clientes.
 
@@ -713,7 +718,7 @@ Também nos possibilita escalabilidade, com a utilização de outras arquitetura
 \subsection{Banco de dados}
 \label{subsec:BancoDeDados}
 
-O \textbf{Banco de dados} representa a \textbf{camada de dados}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócios. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
+O \textbf{Banco de dados} representa a \textbf{apoio de sistema}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócio principal. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
 
 Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
@@ -734,7 +739,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 \end{figure}
 
-A Figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue o modelo de arquitetura em multicamadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na Figura \ref{fig:MultilayerArchitecture}.
+A Figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue a arquitetura em camadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na Figura \ref{fig:MultilayerArchitecture}.
 
 Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida e provando assim sua produtividade.
 
@@ -748,7 +753,7 @@ Para a execução de comandos no Mongo, existe um console que executa códigos J
 
 Com ele é possível receber a entrada no navegador com JavaScript, transportar a demanda para o \textit{back-end} ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
 
-Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura multicamadas a camada de dados, como visto anteriormente no capítulo \ref{subsec:BancoDeDados}.
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura em camadas a camada de dados, como visto anteriormente no capítulo \ref{subsec:BancoDeDados}.
 
 \subsubsection{Mongoose}
 
@@ -762,7 +767,7 @@ Express é um \textit{framework} web rápido, flexível e minimalista para Node.
 
 Com um conjunto de métodos utilitários \textit{HTTP} e \textit{middlewares} a seu dispor, criar uma \textit{API} robusta utilizando Express é rápido e fácil.
 
-Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} \textit{REST}, que serão consumidos pela aplicação cliente. Ele representa na arquitetura multicamadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} \textit{REST}, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
 
 Através da Figura \ref{fig:MEANStackFlow} percebemos que o Express e Node.js fazem parte da mesma camada, o servidor.
 
@@ -776,7 +781,7 @@ O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a m
 
 A versão mais recente do Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
-Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura multicamadas a camada de apresentação, como visto anteriormente no Capítulo \ref{subsec:Cliente}.
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura em camadas a camada de apresentação, como visto anteriormente no Capítulo \ref{subsec:Cliente}.
 
 Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exemplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
 
@@ -786,7 +791,7 @@ O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem Jav
 
 Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
-Na MEAN Stack, o Node é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura multicamadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos Capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
+Na MEAN Stack, o Node é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura em camadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos Capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
 
 \subsubsection{Node Package Manager}
 
@@ -818,7 +823,7 @@ Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as cama
 
 \end{figure}
 
-Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o projeto tem o Cliente se comunicando com o Servidor que também realiza a comunicação com Banco de Dados e o serviço externo do INPE, sendo assim o fluxo das operações da aplicação.
+Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do INPE, sendo assim o fluxo das operações da aplicação.
 
 \section{Aplicação mobile}
 
@@ -857,7 +862,7 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 % Conclusão
 % -----------------------------------
 \chapter{Conclusão}
-Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no caso o JavaScript, em todas as camadas do desenvolvimento. Através da arquitetura multicamadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
+Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no caso o JavaScript, em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
 
 O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente escolheria o JS. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua  ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 

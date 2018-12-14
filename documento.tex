@@ -469,15 +469,15 @@ Have you thought about creating a rapid prototyping of software or developing sc
 %   \item[ABNT] Associação Brasileira de Normas Técnicas
 %   \item[abnTeX] ABsurdas Normas para TeX
   \item[JS] JavaScript
-  \item[HTML] Abreviação para \textit{HyperText Markup Language}, que em português significa Linguagem de Marcação de Hipertexto.
-  \item[DOM] Abreviação para \textit{Document Object Model}, que em português significa Modelo de Objetos e Documentos.
-  \item[CSS] Abreviação para \textit{Cascading Style Sheets}, que em português significa Folhas de Estilo em Cascata.
-  \item[ECMA] Abreviação para \textit{European Computer Manufacturers Association}, que em português significa Associação Européia de Fabricantes de Computadores.
-  \item[API] Abreviação para \textit{Application Programming Interface}, que em português significa Interface de programação de aplicações.
-  \item[REST] Abreviação para \textit{Representational State Transfer}, que em português significa Transferência de Estado Representacional.
-  \item[HTTP] Abreviação para \textit{Hypertext Transfer Protocol}, que em português significa Protocolo de Transferência de Hipertexto.
-  \item[URI] Abreviação para \textit{Uniform Resource Identifier}, que em português significa Identificador Uniforme de Recurso.
-  \item[SQL] Abreviação para \textit{Structured Query Language}, que em português significa Linguagem de Consulta Estruturada.
+  \item[HTML] \textit{HyperText Markup Language}
+  \item[DOM] \textit{Document Object Model}
+  \item[CSS] \textit{Cascading Style Sheets}
+  \item[ECMA] \textit{European Computer Manufacturers Association}
+  \item[API] \textit{Application Programming Interface}
+  \item[REST] \textit{Representational State Transfer}
+  \item[HTTP] \textit{Hypertext Transfer Protocol}
+  \item[URI] \textit{Uniform Resource Identifier}
+  \item[SQL] \textit{Structured Query Language}
 \end{siglas}
 % ---
 
@@ -540,25 +540,23 @@ Não há soluções tecnológicas a serem resolvidas neste projeto, nele é apre
 % -----------------------------------
 \chapter{Revisão bibliográfica}
 
-% ---
-% Uma linguagem em todo o desenvolvimento
-% ---
-\section{Uma linguagem para todo o desenvolvimento}
-\label{sec:UmaLinguagemDesenvolvimento}
+% Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
 
-Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
+Quando pensamos no contexto a se seguir para tornar-se um desenvolvedor \textit{full-stack} pode-se considerar como um grande desafio, são muitas tecnologias e habilidades a aprender. Basicamente ser um desenvolvedor \textit{full-stack} é ser capaz de trabalhar em todas as camadas do desenvolvimento, como por exemplo, \textit{front-end, back-end} e \textit{devops}. Ter uma visão e conhecimento amplos do funcionamento de uma aplicação faz também com que ele possa atuar em qualquer área dentro de um time de desenvolvimento.
 
-A vantagem mais clara que temos é a padronização, o ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
+Inicialmente criado por Kamran Ahmed\cite{ahmedse_roadmap}, mas com contribuições da comunidade, propôs com base em suas experiências um roteiro para se tornar um desenvolvedor web em 2018, conforme descrito pelo próprio repositório\footnote{\url{https://github.com/kamranahmedse/developer-roadmap}} no GitHub, nele você encontra um conjunto de gráficos demonstrando os caminhos que você pode seguir e as tecnologias que deveria adotar para se tornar um \textit{front-end}, \textit{back-end} ou \textit{devops}. Consequentemente estudando todos esses caminhos pode-se considerar como um desenvolvedor \textit{full-stack}.
 
-Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes. Isso faz com que times \textit{front-end} e \textit{back-end} se tornem times \textit{full-stack} sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo, trazendo assim benefícios também a empresa em suas contratações.
+De acordo com Kamran\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre a paisagem e guiar os estudantes que estiverem confusos sobre o que aprender, a seguir e não para incentivá-lo a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
+
+Uma vantagem a se considerar, ao utilizar o JavaScript em todas as camadas do desenvolvimento, é a padronização. O ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
+
+Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes, sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
 
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de objetos serem bem parecidos, se não idênticos, facilitando muito o debug e a comunicação entre aplicações e serviços.
 
 Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários \textit{frameworks} e de base para o desenvolvimento em qualquer ambiente.
 
-Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
-
-A abordagem de se utilizar uma linguagem para todo o desenvolvimento, vem sendo muito utilizada em hackathons e competições curtas de programação, onde deve-se perder o menor tempo possível e com isso criar protótipos de forma rápida.
+% Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
 
 % ---
 % JavaScript
@@ -651,7 +649,7 @@ A 10ª edição já está em desenvolvimento, devendo chegar até o final de Jun
 % ---
 % Arquitetura
 % ---
-\section{Arquitetura}
+\section{Arquitetura em camadas}
 \label{sec:Arquitetura}
 
 % \citeauthor{sommerville_engenharia}
@@ -718,7 +716,7 @@ Também nos possibilita escalabilidade, com a utilização de outras arquitetura
 \subsection{Banco de dados}
 \label{subsec:BancoDeDados}
 
-O \textbf{Banco de dados} representa a \textbf{apoio de sistema}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócio principal. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
+O \textbf{Banco de dados} representa o \textbf{apoio de sistema}, pois nele estão as técnicas de persistência de dados que são expostos para camadas superiores, como por exemplo a camada de lógica de negócio principal. São de vital importância para empresas e hoje é considerado a principal peça dos sistemas da informação.
 
 Seu principal objetivo é armazenar dados que quando relacionados criando algum sentido são chamados de informações. Operado por um Sistema Gerenciador de Banco de Dados (SGBD), executa comandos em linguagens, como por exemplo o SQL, com o objetivo de retirar da aplicação cliente a responsabilidade de gerenciar o acesso, a persistência, a manipulação e a organização dos dados.
 
@@ -727,9 +725,13 @@ Seu principal objetivo é armazenar dados que quando relacionados criando algum 
 % ---
 \section{A pilha MEAN}
 
-Como visto anteriormente no capítulo \ref{sec:UmaLinguagemDesenvolvimento} é bem atraente a possibilidade de usar apenas uma linguagem em todo o desenvolvimento, ganhando não só reaproveitamento de recursos humanos como de código, sendo assim possível criar códigos que podem ser executados em qualquer plataforma que interprete JavaScript, isso é o que acontece com o MEAN.
+Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas é possível desenvolver com a linguagem JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja \textit{front-end}, \textit{back-end} ou banco de dados.
 
-Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome dado quando integramos todas essas ferramentas para desenvolver uma aplicação. Sendo que todas utilizam como linguagem o JavaScript, possibilitando que um programador da linguagem tenha maior facilidade para trabalhar em todas as partes da aplicação, seja \textit{front-end}, \textit{back-end} ou banco de dados.
+O acrônimo MEAN foi cunhado em 2013 por Valeri Karpov do time do \textit{MongoDB} \cite{karpov_mean} para denotar o uso de uma \textit{stack} completa para desenvolvimento de aplicações incluindo \textit{MongoDB, Express, AngularJS} e \textit{Node.js}.
+
+De acordo com Osmani\cite{osmani_addy} a MEAN aposta na onipresença da linguagem JavaScript, o que significa que a comunidade pode contribuir com novas stacks baseadas em JavaScript na plataforma Node.js que tornem ainda mais produtivo e divertido o desenvolvimento de aplicações web.
+
+Para quem já trabalha com a Web a MEAN Stack com JavaScript em todas as pontas é interessantíssima, abrindo muitas possibilidades, criando aplicações completas ou apenas protótipos de forma rápida. Pois seu principal foco é a produtividade.
 
 \begin{figure}[h]
 	\centering
@@ -741,7 +743,7 @@ Das iniciais das ferramentas MongoDB, Express, Angular e Node.js, MEAN é o nome
 
 A Figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue a arquitetura em camadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na Figura \ref{fig:MultilayerArchitecture}.
 
-Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida e provando assim sua produtividade.
+Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida provando assim sua produtividade.
 
 \subsection{MongoDB}
 
@@ -831,7 +833,7 @@ O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele
 
 Seu papel é realizar a comunicação com o servidor através do protocolo \textit{REST}, enviando e pedindo dados, além de exibir as informações para o usuário.
 
-Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}\footnote{\url{https://ionicframework.com/}}, que como descrito em seu própio site é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
+Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}, que como descrito em seu própio site\footnote{\url{https://ionicframework.com/}} é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
 
 No build é possível escolher entre as plataformas \textit{iOS, Android, PWA} e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida.
 
@@ -862,13 +864,13 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 % Conclusão
 % -----------------------------------
 \chapter{Conclusão}
-Foi apresentado os benefícios na abordagem de utilizar apenas uma linguagem, no caso o JavaScript, em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
+Foi apresentado a flexibilidade da linguagem, no caso o JavaScript, de aplicação em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
 
-O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente escolheria o JS. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua  ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
+O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente o escolheria. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
 Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através do repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}}, com todas as informações de licença e de como executar.
 
-Desenvolver uma aplicação \textit{full stack} utilizando \textit{HTML, CSS} e \textit{JavaScript} proporcionou uma excelente experiência como desenvolvedor, pela flexibilidade de poder aplicar a lógica inteiramente com JavaScript, pelo rápido processamento, sobretudo no desenvolvimento da aplicação cliente, onde o aplicativo era renderizado no navegador web, bem mais rápido que o emulador \textit{Android} presente no \textit{Android Studio}, o que consequentemente exigiu menos processamento, além da vantagem de o \textit{build} ser multiplataforma, o que não acontece quando desenvolvemos no \textit{Android Studio}.
+Desenvolver uma aplicação \textit{full stack} utilizando \textit{HTML, CSS} e \textit{JavaScript} proporcionou uma excelente experiência como desenvolvedor, pela flexibilidade de poder aplicar a lógica inteiramente com JavaScript, pelo rápido processamento, sobretudo no desenvolvimento da aplicação cliente, onde o aplicativo era renderizado no navegador web, bem mais rápido que outras experiências de desenvolvimento, como por exemplo o emulador \textit{Android} presente no \textit{Android Studio}, o que consequentemente exigiu menos processamento, além da vantagem de ser multiplataforma, o que não acontece quando desenvolvemos exclusivamente para \textit{Android} no \textit{Android Studio}.
 
 A aplicação desenvolvida teve também como objetivo abordar o assunto ambiental, visando facilitar o dia a dia de uma pessoa com os cuidados de uma plantação, ou apenas a grama de um jardim, de uma forma mais sustentável.
 
@@ -1015,7 +1017,7 @@ Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de 
 \chapter {Primeiros passos Node.js}
 \label{anexo:NodePrimeirosPassos}
 
-Instalar o Node.js é muito simples, basta acessar o link \href{https://nodejs.org/en/download/}{https://nodejs.org/en/download/} e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
+Instalar o Node.js é muito simples, basta acessar o site\footnote{\url{https://nodejs.org/en/download/}} oficial e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
 
 Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
 

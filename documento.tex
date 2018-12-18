@@ -472,10 +472,15 @@ Have you thought about creating a rapid prototyping of software or developing sc
   \item[HTML] \textit{HyperText Markup Language}
   \item[DOM] \textit{Document Object Model}
   \item[CSS] \textit{Cascading Style Sheets}
+  \item[Sass] \textit{Syntactically Awesome Style Sheets} 
+  \item[BEM] \textit{Block Element Modifier} 
+  \item[NPM] \textit{Node Package Manager} 
   \item[ECMA] \textit{European Computer Manufacturers Association}
   \item[API] \textit{Application Programming Interface}
   \item[REST] \textit{Representational State Transfer}
   \item[HTTP] \textit{Hypertext Transfer Protocol}
+  \item[HTTPS] \textit{Hypertext Transfer Protocol Secure}
+  \item[SSH] \textit{Secure Shell}  
   \item[URI] \textit{Uniform Resource Identifier}
   \item[SQL] \textit{Structured Query Language}
 \end{siglas}
@@ -542,15 +547,50 @@ Não há soluções tecnológicas a serem resolvidas neste projeto, nele é apre
 
 % Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
 
-Quando pensamos no contexto a se seguir para tornar-se um desenvolvedor \textit{full-stack} pode-se considerar como um grande desafio, são muitas tecnologias e habilidades a aprender. Basicamente ser um desenvolvedor \textit{full-stack} é ser capaz de trabalhar em todas as camadas do desenvolvimento, como por exemplo, \textit{front-end, back-end} e \textit{devops}. Ter uma visão e conhecimento amplos do funcionamento de uma aplicação faz também com que ele possa atuar em qualquer área dentro de um time de desenvolvimento.
+Quando pensamos no caminho a se seguir para tornar-se um desenvolvedor \textit{full-stack} pode-se considerar como um grande desafio, são muitas tecnologias e habilidades a aprender. Basicamente ser um desenvolvedor \textit{full-stack} é ser capaz de trabalhar em todas as camadas do desenvolvimento, bem como, \textit{front-end, back-end} e \textit{devops}. Ter uma visão e conhecimentos amplos do funcionamento de uma aplicação faz também com que o desenvolvedor possa atuar em qualquer área dentro de um time de desenvolvimento.
 
-Inicialmente criado por Kamran Ahmed\cite{ahmedse_roadmap}, mas com contribuições da comunidade, propôs com base em suas experiências um roteiro para se tornar um desenvolvedor web em 2018, conforme descrito pelo próprio repositório\footnote{\url{https://github.com/kamranahmedse/developer-roadmap}} no GitHub, nele você encontra um conjunto de gráficos demonstrando os caminhos que você pode seguir e as tecnologias que deveria adotar para se tornar um \textit{front-end}, \textit{back-end} ou \textit{devops}. Consequentemente estudando todos esses caminhos pode-se considerar como um desenvolvedor \textit{full-stack}.
+Inicialmente criado por Kamran Ahmed\cite{ahmedse_roadmap}, mas com contribuições da comunidade, propôs com base em suas experiências um roteiro para se tornar um desenvolvedor web em 2018, conforme descrito pelo próprio repositório\footnote{\url{https://github.com/kamranahmedse/developer-roadmap}} no GitHub, nele você encontra um conjunto de gráficos demonstrando os caminhos que você pode seguir e as tecnologias que deveria adotar para se tornar um \textit{front-end}, \textit{back-end} ou \textit{devops}. Consequentemente estudando todos esses caminhos pode-se considerar como um desenvolvedor \textit{full-stack}, conforme ilustra a Figura \ref{fig:FullstackRoadmap}.
 
-De acordo com Kamran\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre a paisagem e guiar os estudantes que estiverem confusos sobre o que aprender, a seguir e não para incentivá-lo a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
+\begin{figure}[h]
+	\centering
+
+	\caption{\textit{Web Developer in 2018}} \label{fig:FullstackRoadmap}
+    \includegraphics[scale=0.4]{fullstack-roadmap} \\
+    Fonte: {\cite{ahmedse_roadmap}}
+
+\end{figure}
+
+O roteiro apresentado na Figura \ref{fig:FullstackRoadmap} nos mostra que há tecnologias independentementes, consideradas como requisitos em qualquer caminho a se seguir, ainda mais quando se trata de um desenvolvedor \textit{full-stack}, sendo algumas delas SSH, HTTP/HTTPS e APIs, uso básico do terminal, sistema de controle de versões, codificações de caracteres e outros.
+
+De acordo com o próprio Kamran\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre o mercado e guiar os estudantes que estiverem confusos sobre o que aprender, e não para incentivá-los a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
+
+Na Figura \ref{fig:FrontendRoadmap} é apresentado por Morelli\cite{morelli_roadmap} o roteiro a se seguir para tornar-se um desenvolvedor \textit{front-end}. Primeiro deve-se aprender o básico, que são as linguagens HTML, CSS e JavaScript, requisitadas para qualquer desenvolvedor web. Em seguida deve-se aprofundar o conhecimento nas linguagens a partir de metodologias, processadores, \textit{frameworks} e outros, sendo alguns dos itens citados o Angular\footnote{\url{https://angular.io/}}, React\footnote{\url{https://reactjs.org/}}, NPM\footnote{\url{https://www.npmjs.com/}} e Webpack\footnote{\url{https://webpack.js.org/}} para JavaScript e Bootstrap\footnote{\url{https://getbootstrap.com/}}, Sass\footnote{\url{https://sass-lang.com/}} e BEM para CSS.
+
+Um desenvolvedor \textit{front-end} cuida de como a interface do usuário funciona, e como deve ser a aparência de um site. 
+
+\begin{figure}[h!]
+	\centering
+
+	\caption{\textit{Front-end roadmap}} \label{fig:FrontendRoadmap}
+    \includegraphics[scale=0.35]{frontend-roadmap} \\
+    Fonte: {\cite{morelli_roadmap}}
+
+\end{figure}
+
+Já no \textit{back-end}, no roteiro apresentado por Morelli\cite{morelli_roadmap}, na Figura \ref{fig:BackendRoadmap}, primeiro deve-se escolher uma linguagem para a partir daí ter um caminho traçado, nele são citados as linguagens Ruby, Python, PHP e vale destacar a presença do Node.js que utiliza como linguagem o JavaScript, uma linguagem comum apresentada também no \textit{roadmap front-end}, ilustrado pela Figura \ref{fig:FrontendRoadmap}.
+
+\begin{figure}[h!]
+	\centering
+
+	\caption{\textit{Back-end roadmap}} \label{fig:BackendRoadmap}
+    \includegraphics[scale=0.32]{backend-roadmap} \\
+    Fonte: {\cite{morelli_roadmap}}
+
+\end{figure}
 
 Uma vantagem a se considerar, ao utilizar o JavaScript em todas as camadas do desenvolvimento, é a padronização. O ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
 
-Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, reduzindo o tempo ocioso de equipes que dependem do trabalho de outras equipes, sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
+Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, podendo de certa forma reduzir o tempo ocioso de equipes que dependem do trabalho de outras equipes, sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
 
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de objetos serem bem parecidos, se não idênticos, facilitando muito o debug e a comunicação entre aplicações e serviços.
 
@@ -698,11 +738,11 @@ O \textbf{Serviço} serve como \textbf{gerenciamento de interface de usuário}, 
 
 Normalmente a camada de gerenciamento de interface de usuário costuma trabalhar junto da camada de lógica de negócio principal, ou seja o serviço trabalha junto com o servidor, resumidos a apenas uma camada.
 
-Uma das formas de fazer essa comunicação é através de protocolos, como o \textit{HTTP} que através de um modelo, como por exemplo \textit{REST} nos permite realizar essa comunicação entre camadas.
+Uma das formas de fazer essa comunicação é através de protocolos, como o HTTP que através de um modelo, como por exemplo REST nos permite realizar essa comunicação entre camadas.
 
-\textit{REST} é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo \textit{HTTP}, em sua tese de doutorado, que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo \textit{HTTP}, muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
+REST é um modelo descrito por Roy Fielding, um dos principais criadores do protocolo HTTP, em sua tese de doutorado, que foi adotado como o modelo a ser utilizado na evolução da arquitetura do protocolo HTTP, muitos desenvolvedores perceberam de que ele poderia também ser utilizado na implementação de \textit{Web Services}.
 
-O modelo \textit{REST} utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como \textit{URI}.
+O modelo REST utiliza como gerenciamento de informações os chamados recursos, que nada mais são do que uma abstração sobre um determinado tipo de informação que uma aplicação gerencia, sendo que um dos princípios é de que todo recurso deve possuir uma identificação única, também conhecidos como URI.
 
 \subsection{Servidor}
 \label{subsec:Servidor}
@@ -765,15 +805,15 @@ Para resolver esse problema o Mongoose, que nos ajuda a modelar objetos de forma
 
 \subsection{Express}
 
-Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para \textit{Ruby}. Ele facilita o desenvolvimento de aplicações web e \textit{APIs}, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
+Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para \textit{Ruby}. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Com um conjunto de métodos utilitários \textit{HTTP} e \textit{middlewares} a seu dispor, criar uma \textit{API} robusta utilizando Express é rápido e fácil.
+Com um conjunto de métodos utilitários HTTP e \textit{middlewares} a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
 
-Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} \textit{REST}, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} REST, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
 
 Através da Figura \ref{fig:MEANStackFlow} percebemos que o Express e Node.js fazem parte da mesma camada, o servidor.
 
-Com o Express podemos criar nossa \textit{REST API}, configurando funções a serem executadas após o recebimento de chamadas em rotas, também conhecidas como URI's, pelos métodos \textit{HTTP} \textit{GET}, \textit{POST}, \textit{PUT}, \textit{PATH} e \textit{DELETE}.
+Com o Express podemos criar nossa REST API, configurando funções a serem executadas após o recebimento de chamadas em rotas, também conhecidas como URI's, pelos métodos HTTP GET, POST, PUT, PATH e DELETE.
 
 \subsection{Angular}
 
@@ -864,11 +904,11 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 % Conclusão
 % -----------------------------------
 \chapter{Conclusão}
-Foi apresentado a flexibilidade da linguagem, no caso o JavaScript, de aplicação em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nos mais diversos ambientes.
+Foi apresentado a flexibilidade da linguagem, no caso o JavaScript, de aplicação em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nas mais diversas plataformas.
 
 O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente o escolheria. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
-Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através do repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}}, com todas as informações de licença e de como executar.
+Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através de um repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}} com todas as informações de licença e de como executar.
 
 Desenvolver uma aplicação \textit{full stack} utilizando \textit{HTML, CSS} e \textit{JavaScript} proporcionou uma excelente experiência como desenvolvedor, pela flexibilidade de poder aplicar a lógica inteiramente com JavaScript, pelo rápido processamento, sobretudo no desenvolvimento da aplicação cliente, onde o aplicativo era renderizado no navegador web, bem mais rápido que outras experiências de desenvolvimento, como por exemplo o emulador \textit{Android} presente no \textit{Android Studio}, o que consequentemente exigiu menos processamento, além da vantagem de ser multiplataforma, o que não acontece quando desenvolvemos exclusivamente para \textit{Android} no \textit{Android Studio}.
 

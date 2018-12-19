@@ -522,7 +522,7 @@ Have you thought about creating a rapid prototyping of software or developing sc
 % -----------------------------------
 \chapter{Introdução}
 
-Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape, tornou-se uma das linguagens mais populares da atualidade. 
+Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape, tornou-se uma das linguagens mais populares da atualidade.
 
 Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e \textit{frameworks} que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, \textit{single page applications}, programas \textit{desktop}, \textit{progressive web apps} e muito mais.
 
@@ -562,48 +562,74 @@ Inicialmente criado por Kamran Ahmed\cite{ahmedse_roadmap}, mas com contribuiç�
 
 O roteiro apresentado na Figura \ref{fig:FullstackRoadmap} nos mostra que há tecnologias independentementes, consideradas como requisitos em qualquer caminho a se seguir, ainda mais quando se trata de um desenvolvedor \textit{full-stack}, sendo algumas delas SSH, HTTP/HTTPS e APIs, uso básico do terminal, sistema de controle de versões, codificações de caracteres e outros.
 
-De acordo com o próprio Kamran\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre o mercado e guiar os estudantes que estiverem confusos sobre o que aprender, e não para incentivá-los a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
+De acordo com o próprio Ahmed\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre o mercado e guiar os estudantes que estiverem confusos sobre o que aprender, e não para incentivá-los a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
 
 Na Figura \ref{fig:FrontendRoadmap} é apresentado por Morelli\cite{morelli_roadmap} o roteiro a se seguir para tornar-se um desenvolvedor \textit{front-end}. Primeiro deve-se aprender o básico, que são as linguagens HTML, CSS e JavaScript, requisitadas para qualquer desenvolvedor web. Em seguida deve-se aprofundar o conhecimento nas linguagens a partir de metodologias, processadores, \textit{frameworks} e outros, sendo alguns dos itens citados o Angular\footnote{\url{https://angular.io/}}, React\footnote{\url{https://reactjs.org/}}, NPM\footnote{\url{https://www.npmjs.com/}} e Webpack\footnote{\url{https://webpack.js.org/}} para JavaScript e Bootstrap\footnote{\url{https://getbootstrap.com/}}, Sass\footnote{\url{https://sass-lang.com/}} e BEM para CSS.
 
-Um desenvolvedor \textit{front-end} cuida de como a interface do usuário funciona, e como deve ser a aparência de um site. 
+Um desenvolvedor \textit{front-end} cuida de como a interface do usuário funciona, e como deve ser a aparência de um site. Ele também é responsável por coletar a entrada do usuário em várias formas e processá-la para adequá-la a uma especificação em que o \textit{back-end} possa utilizar, além de realizar a comunicação com o \textit{back-end}.
 
 \begin{figure}[h!]
 	\centering
 
 	\caption{\textit{Front-end roadmap}} \label{fig:FrontendRoadmap}
-    \includegraphics[scale=0.35]{frontend-roadmap} \\
+    \includegraphics[scale=0.36]{frontend-roadmap} \\
     Fonte: {\cite{morelli_roadmap}}
 
 \end{figure}
 
-Já no \textit{back-end}, no roteiro apresentado por Morelli\cite{morelli_roadmap}, na Figura \ref{fig:BackendRoadmap}, primeiro deve-se escolher uma linguagem para a partir daí ter um caminho traçado, nele são citados as linguagens Ruby, Python, PHP e vale destacar a presença do Node.js que utiliza como linguagem o JavaScript, uma linguagem comum apresentada também no \textit{roadmap front-end}, ilustrado pela Figura \ref{fig:FrontendRoadmap}.
+No \textit{back-end}, de acordo com o roteiro apresentado por Morelli\cite{morelli_roadmap}, na Figura \ref{fig:BackendRoadmap}, primeiro deve-se escolher uma linguagem para a partir daí ter um caminho traçado, nele são citados as linguagens Ruby, Python, PHP e vale destacar a presença do Node.js que utiliza como linguagem o JavaScript, uma linguagem comum apresentada também no \textit{roadmap front-end}, ilustrado pela Figura \ref{fig:FrontendRoadmap}. Em seguida para aprofundar o conhecimento o \textit{roadmap} sugere o estudo de alguns itens como Web Server, REST API, autenticações, expressões regulares, Docker e ainda banco de dados, \textit{message brokers} e outros.
+
+O desenvolvedor \textit{back-end} trabalha com a regra de negócios, segurança, banco de dados e integração de serviços. De forma sucinta ele escreve o código que manipula o fluxo de dados, salvando informações, atualizando informações, lendo informações e excluindo dados e também gerenciando as permissões de acesso aos dados. 
 
 \begin{figure}[h!]
 	\centering
 
 	\caption{\textit{Back-end roadmap}} \label{fig:BackendRoadmap}
-    \includegraphics[scale=0.32]{backend-roadmap} \\
+    \includegraphics[scale=0.34]{backend-roadmap} \\
     Fonte: {\cite{morelli_roadmap}}
 
 \end{figure}
 
-Uma vantagem a se considerar, ao utilizar o JavaScript em todas as camadas do desenvolvimento, é a padronização. O ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{full-stack}. 
+Enfim no \textit{roadmap} para \textit{devops} proposto por Ahmed\cite{ahmedse_roadmap}, na Figura \ref{fig:DevopsRoadmap}, ainda é preciso aprender uma linguagem de programação, sendo citadas algumas delas como Python, Ruby, Go e novamente o Node.js. Além de entender alguns conceitos de diferentes sistemas operacionais, gerenciamento de servidores, redes e segurança, integração contínua e entrega contínua, infraestrutura como código e provedores de nuvem.
+
+A função de um \textit{devops} é unir o desenvolvimento e as operações de um \textit{software}, automatizando e monitorando todas as etapas na construção de um sistema, passando por implementação, integração, testes e implantação. Ele também é responsável pelo gerenciamento de infraestrutura e padronização dos ambientes de desenvolvimento.
+
+\begin{figure}[h!]
+	\centering
+
+	\caption{\textit{Devops roadmap}} \label{fig:DevopsRoadmap}
+    \includegraphics[scale=0.29]{devops-roadmap} \\
+    Fonte: {\cite{ahmedse_roadmap}}
+
+\end{figure}
+
+Perceba a linguagem JavaScript como um elemento comum e transversal a todos os \textit{roadmaps} apresentados, de forma que isso permita o desenvolvimento em diversas plataformas. É importante ressaltar também de como a presença da linguagem nos diversos roteiros apresentados pode acelerar o aprendizado, uma vez que inicialmente o estudante não terá que aprender várias linguagens e suas particularidades. 
+
+O site \textit{I Love Coding}\cite{ilovecoding_roadmap} apresenta também um \textit{roadmap}, de forma resumida, de como o JavaScript pode ser utilizado não apenas para o desenvolvimento \textit{front-end} e \textit{back-end}, mas também para desenvolver aplicações para dispositivos móveis e de área de trabalho, além de citar ferramentas para isto, como React Native\footnote{\url{https://facebook.github.io/react-native/}} e Electron\footnote{\url{https://electronjs.org/}}, conforme ilustra a Figura \ref{fig:IlovecodingRoadmap}.
+
+\begin{figure}[h!]
+	\centering
+
+	\caption{\textit{Full-stack roadmap - I Love Coding}} \label{fig:IlovecodingRoadmap}
+    \includegraphics[scale=0.4]{ilovecoding-roadmap} \\
+    Fonte: {\cite{ilovecoding_roadmap}}
+
+\end{figure}
+
+Utilizar o JavaScript como linguagem comum em todas essas camadas do desenvolvimento, pode trazer alguns possíveis benefícios. Uma vantagem a se considerar, ao utilizar o JavaScript em todas as camadas do desenvolvimento, é a padronização. O ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{devops}. 
 
 Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, podendo de certa forma reduzir o tempo ocioso de equipes que dependem do trabalho de outras equipes, sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
 
 Outra vantagem a se considerar é a possibilidade de reaproveitar código. Reutilizar trechos de código é uma forma de reduzir a carga de trabalho dos desenvolvedores e acelerar o desenvolvimento. Além de objetos serem bem parecidos, se não idênticos, facilitando muito o debug e a comunicação entre aplicações e serviços.
 
-Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários \textit{frameworks} e de base para o desenvolvimento em qualquer ambiente.
-
-% Com todas essas vantagens atingimos também diretamente o cliente, que precisa esperar menos para seu projeto ficar pronto e consequentemente reduz o custo final do desenvolvimento.
+Também há benefícios para o desenvolvedor, uma vez que conhecer uma linguagem que pode ser um elemento comum a vários \textit{frameworks} e de base para o desenvolvimento em qualquer plataforma.
 
 % ---
 % JavaScript
 % ---
 \section{JavaScript}
 
-As muitas vantagens de se utilizar o JavaScript fizeram com que ela se tornasse a linguagem de programação mais popular do mundo, desbancando até mesmo linguagens de maior expressão como Java, C\#, PHP, Phyton e outras.
+% As muitas vantagens de se utilizar o JavaScript fizeram com que ela se tornasse a linguagem de programação mais popular do mundo, desbancando até mesmo linguagens de maior expressão como Java, C\#, PHP, Phyton e outras.
 
 JavaScript é uma linguagem de programação dinâmica interpretada, inicialmente utilizada pelos navegadores para execução de \textit{scripts} no lado do cliente, ou seja, no seu \textit{browser}. Os \textit{scripts} são incorporados a páginas HTML tendo como função adicionar interatividade para o usuário.
 
@@ -613,23 +639,23 @@ Atualmente, é impossível imaginar a internet sem a existência do JavaScript, 
 \begin{figure}[h]
 	\centering
 
-	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel. -- Exemplo de aplicação do JS} \label{fig:JSExampleCarrousel}
-    \includegraphics[scale=0.4]{js-example-carousel} \\
+	\caption{\textit{Carrousel} - Um componente de apresentação de slides para percorrer imagens ou slides de texto - como um carrossel.} \label{fig:JSExampleCarrousel}
+    \includegraphics[scale=0.35]{js-example-carousel} \\
     Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/carousel/}}}
 
-    \caption{\textit{Validation} - Validação de formulários -- Exemplo de aplicação do JS} \label{fig:JSExampleValidation}
-    \includegraphics[scale=0.45]{js-example-validation} \\
+    \caption{\textit{Validation} - Validação de formulários.} \label{fig:JSExampleValidation}
+    \includegraphics[scale=0.4]{js-example-validation} \\
     Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/forms/}}}
 	
-    \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário. -- Exemplo de aplicação do JS} \label{fig:JSExampleModal}
-    \includegraphics[scale=0.5]{js-example-modal} \\
+    \caption{\textit{Modal} - Caixas de diálogo para notificações ao usuário.} \label{fig:JSExampleModal}
+    \includegraphics[scale=0.45]{js-example-modal} \\
     Fonte: {Bootstrap \footnote{\url{https://getbootstrap.com/docs/4.1/components/modal/}}}
 
 \end{figure}
 
-O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, mas não confunda pois a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
+O JavaScript apresenta uma sintaxe simples que facilita o aprendizado, a primeira vista muitos desenvolvedores podem acreditar que a linguagem é defeituosa ou esquisita, pois não compreendem o real poder que se esconde por trás desta simplicidade. 
 
-Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
+Inicialmente classificada como linguagem do tipo \textit{client side}, é por si só uma linguagem compacta, mas muito flexível, com comportamentos diferenciados das demais. Ela permite, por exemplo, que um objeto tenha seus atributos adicionados ou removidos em tempo de execução, o que não é muito comum para desenvolvedores de outras linguagens.
 
 É uma linguagem interpretada, pois seus comandos são executados sem que haja necessidade de compilação, tendo como interpretador de \textit{script} o \textit{browser} do usuário. Sendo assim independente de plataformas, como os comandos são interpretados pelo navegador do usuário, é irrelevante se o usuário está utilizando Windows, Linux ou Mac OS.
 
@@ -637,9 +663,9 @@ Sua tipagem é dinâmica, ou seja, tipos são associados com valores. Por exempl
 
 Com JavaScript também é possível a detecção de eventos, sempre que algo de importante acontece é disparado um evento, o clique de um botão, o preenchimento de um campo de formulário, a movimentação do mouse, são alguns exemplos dos eventos que são disparados. Isso nos permite reagir a estes eventos deixando assim que nossa aplicação deixe de ser estática.
 
-Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador pressionando as teclas F12, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
+Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
 
-No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador e só. O JavaScript revolucionou o que podemos fazer, hoje não só na web, mas praticamente em todas as áreas que se possa programar. 
+No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador, de forma estática. O JavaScript trouxe novas possibilidades, hoje não somente para web, mas em muitas plataformas onde é possivel desenvolver com a linguagem. 
 
 \subsection{A linguagem nos dias atuais}
 
@@ -666,7 +692,7 @@ Praticamente tudo que envolve programação o JavaScript está presente, para cr
 
 O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. Hoje grandes empresas como Google, Microsoft, Netflix, Uber e Linkedin usam JavaScript no \textit{back-end}. 
 
-Isso acabou impactando o mundo dos desenvolvedores, fazendo com que seja obrigatório todo programador saber pelo menos o básico da linguagem, mesmo atuando em outras áreas, como \textit{back-end} e até mesmo teste de \textit{softwares}.
+Isso acabou impactando os profissionais da área, chamando a atenção de desenvolvedores para saberem pelo menos o básico da linguagem, mesmo atuando em outras áreas, como \textit{back-end, devops} e até mesmo na automatização de testes de \textit{softwares}.
 
 \subsubsection{ECMA}
 

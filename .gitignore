@@ -16,3 +16,4 @@
 materiais/
 node_modules
 src/db/data/*
+package-lock.json

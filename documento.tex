@@ -472,24 +472,26 @@ Have you thought about creating a rapid prototyping of software or developing sc
 \begin{siglas}
 %   \item[ABNT] Associação Brasileira de Normas Técnicas
 %   \item[abnTeX] ABsurdas Normas para TeX
-  \item[JS] JavaScript
-  \item[HTML] \textit{HyperText Markup Language}
-  \item[DOM] \textit{Document Object Model}
-  \item[CSS] \textit{Cascading Style Sheets}
-  \item[Sass] \textit{Syntactically Awesome Style Sheets} 
-  \item[BEM] \textit{Block Element Modifier} 
-  \item[ECMA] \textit{European Computer Manufacturers Association}
-  \item[INPE] Instituto Nacional de Pesquisas Espaciais
-  \item[PWA] \textit{Progressive Web Apps}
-  \item[NPM] \textit{Node Package Manager} 
-  \item[ECMA] \textit{European Computer Manufacturers Association}
   \item[API] \textit{Application Programming Interface}
-  \item[REST] \textit{Representational State Transfer}
+  \item[BEM] \textit{Block Element Modifier} 
+  \item[CSS] \textit{Cascading Style Sheets}
+  \item[DOM] \textit{Document Object Model}
+  \item[ECMA] \textit{European Computer Manufacturers Association}
+  \item[HTML] \textit{HyperText Markup Language}
   \item[HTTP] \textit{Hypertext Transfer Protocol}
   \item[HTTPS] \textit{Hypertext Transfer Protocol Secure}
+  \item[INPE] Instituto Nacional de Pesquisas Espaciais
+  \item[JS] JavaScript
+  \item[JSON] JavaScript \textit{Object Notation}
+  \item[JWS] JSON \textit{Web Signature}
+  \item[JWT] JSON \textit{Web Token} 
+  \item[NPM] \textit{Node Package Manager} 
+  \item[PWA] \textit{Progressive Web Apps}
+  \item[REST] \textit{Representational State Transfer}
+  \item[Sass] \textit{Syntactically Awesome Style Sheets} 
+  \item[SQL] \textit{Structured Query Language}
   \item[SSH] \textit{Secure Shell}  
   \item[URI] \textit{Uniform Resource Identifier}
-  \item[SQL] \textit{Structured Query Language}
 \end{siglas}
 % ---
 
@@ -718,11 +720,11 @@ Padronização que define a estrutura da linguagem, seus comportamentos e comand
 
 Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passou por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
 
-Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, conforme consta na página da especificação da linguagem\cite{ecma_standard}.
+Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, conforme consta na página da especificação da linguagem (\citeauthor{ecma_standard}).
 
 Com participação colaborativa de empresas que implementam o \textit{run-time} da linguagem, como Mozilla, Google, Microsoft e Apple, além da participação de desenvolvedores da comunidade, o ECMA coordena e faz o trabalho de desenvolvimento contínuo e descentralizado do JS.
 
-No site oficial a ECMA\cite{ecma_standard} disponibiliza informações como versão atual e a documentação da linguagem. Porém é aconselhável buscar documentações em sites como o da Mozilla \footnote{\url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}}, ou também o site da W3Schools \footnote{\url{https://www.w3schools.com/jsref/default.asp}}. 
+No site oficial a ECMA(\citeauthor{ecma_standard}) disponibiliza informações como versão atual e a documentação da linguagem. Porém é aconselhável buscar documentações em sites como o da Mozilla\footnote{\url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}}, ou também o site da W3Schools\footnote{\url{https://www.w3schools.com/jsref/default.asp}}. 
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
@@ -823,7 +825,7 @@ Com o surgimento do Node.js, permitindo utilizar código JavaScript também no s
 
 \end{figure}
 
-A Figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue a arquitetura em camadas apresentado no capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na Figura \ref{fig:MultilayerArchitecture}.
+A Figura \ref{fig:MEANStackFlow} ilustra bem como a MEAN Stack segue a arquitetura em camadas apresentado no Capítulo \ref{sec:Arquitetura}, apenas aplicando as tecnologias nas camadas exibidas na Figura \ref{fig:MultilayerArchitecture}.
 
 Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalho no desenvolvimento, mas ao contrário disso a MEAN Stack é utilizada até mesmo em curtas competições de programação conhecidas como \textit{Hackathon}, conseguindo protótipos de forma rápida provando assim sua produtividade.
 
@@ -837,13 +839,13 @@ Para a execução de comandos no Mongo, existe um console que executa códigos J
 
 Com ele é possível receber a entrada no navegador com JavaScript, transportar a demanda para o \textit{back-end} ainda com a linguagem e, por fim, salvar um objeto no MongoDB ainda com o JavaScript. Naturalmente, o fluxo reverso também será tão prático quanto.
 
-Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura em camadas a camada de dados, como visto anteriormente no capítulo \ref{subsec:BancoDeDados}.
+Em uma aplicação desenvolvida em cima do MEAN Stack o Mongo tem a responsabilidade de persistir os dados, ou seja, permite armazenar e recuperar dados. Ele representa na arquitetura em camadas a camada de apoio de sistema, como visto anteriormente no Capítulo \ref{subsec:BancoDeDados}.
 
 \subsubsection{Mongoose}
 
 Com o Mongo é possível inserir qualquer formato JSON nas coleções, por esse motivo não há nenhum controle sobre os dados inseridos. Isso pode causar inconsistência nos dados, inserindo informações inválidas podendo quebrar a aplicação, deixando a responsabilidade para o desenvolvedor garantir a exatidão das informações.
 
-Para resolver esse problema o Mongoose, que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquemas para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
+Para resolver esse problema o Mongoose\footnote{\url{https://mongoosejs.com/}}, que nos ajuda a modelar objetos de forma elegante para o MongoDB, ele fornece uma solução direta e baseada em esquemas para modelar os dados da nossa aplicação, incluindo conversão de tipo incorporada, validação, criação de consulta, ganchos de lógica de negócios e muito mais.
 
 \subsection{Express}
 
@@ -853,7 +855,7 @@ Com um conjunto de métodos utilitários HTTP e \textit{middlewares} a seu dispo
 
 De acordo com Almeida\cite{flavioalmeida_meanstack} o Express estende as capacidades do servidor padrão do Node.js adicionando \textit{middlewares} e outras capacidades como views e rotas.
 
-Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} REST, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
+Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} REST, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de gerenciamento de interface de usuário e autenticação e autorização, como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
 
 Através da Figura \ref{fig:MEANStackFlow} percebemos que o Express e Node.js fazem parte da mesma camada, o servidor.
 
@@ -867,7 +869,7 @@ O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a m
 
 A versão mais recente do Angular trabalha com componentes, que são trechos de códigos que definem elementos com aparência e comportamentos da interface. A ideia é que componentes sejam genéricos para que sejam utilizados e principalmente reutilizados em qualquer lugar da aplicação.
 
-Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura em camadas a camada de apresentação, como visto anteriormente no Capítulo \ref{subsec:Cliente}.
+Na MEAN Stack, o Angular é responsável pela aplicação do usuário, ele cria interfaces dinâmicas sem manipulação direta no DOM, permite execução de lógica no \textit{client-side} além de facilitar a troca de dados \textit{REST}. Ele representa na arquitetura em camadas a camada de interface de usuário, como visto anteriormente no Capítulo \ref{subsec:Cliente}.
 
 Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arquitetura, aqui poderíamos adotar qualquer outra ferramenta ou tecnologia, ou até mesmo diferentes tecnologias que consumissem o mesmo serviço, possibilitando assim criar infinitas aplicações clientes, como por exemplo um aplicativo para \textit{mobile} e outra aplicação mas voltada para web.
 
@@ -877,7 +879,7 @@ O Node.js\footnote{\url{https://nodejs.org/en/}} é uma plataforma de desenvolvi
 
 Neste modelo, as operações de entrada e saída não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
-Na MEAN Stack, o Node.js é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura em camadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos Capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
+Na MEAN Stack, o Node.js é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura em camadas a camada de lógica de negócio principal, como visto anteriormente no Capítulo \ref{subsec:Servidor}.
 
 \subsubsection{Node Package Manager}
 
@@ -911,6 +913,8 @@ Foi utilizado contêineres da tecnologia Docker\footnote{\url{https://www.docker
 
 Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica, via protocolo REST no formato JSON, com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do Instituto Nacional de Pesquisas Espaciais (INPE), também utilizandno o protocolo REST mas com o fortmato XML, sendo assim o fluxo das operações da aplicação.
 
+Todo o código criado foi disponibilizado via GitHub, através de um repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}} junto de todas as informações de licença e de como executar a aplicação.
+
 \section{Aplicação mobile}
 
 O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele pode se cadastrar como usuário, cadastrar e gerenciar os irrigadores além de saber a previsão do tempo para a cidade veículada para seu usuário e também para cada irrigador separadamente.
@@ -919,13 +923,13 @@ Seu papel é realizar a comunicação com o servidor através do protocolo \text
 
 Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}, que como descrito em seu própio site\footnote{\url{https://ionicframework.com/}} é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
 
-No build é possível escolher entre as plataformas iOS, Android, PWA e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida.
+No build é possível escolher entre as plataformas iOS, Android, PWA e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida. Dessa forma é utilizado o mesmo código para multiplataformas.
 
 \begin{figure}[h]
 	\centering
 
 	\caption{Aplicação cliente criada com \textit{Angular} para dispositivos móveis} \label{fig:ClientAppExample}
-    \includegraphics[scale=0.4]{client-app} \\
+    \includegraphics[scale=0.35]{client-app} \\
 
 \end{figure}
 
@@ -935,13 +939,19 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 
 Para o desenvolvimento do Web Service foi utilizado o Node.js junto do Express, ele serve como regra de negócio, além de expor URIs para comunicação com a aplicação cliente. O servidor representa as camadas de gerenciamento de interface de usuário, autenticação e autorização e a lógica de negócio principal.
 
+Seu papel é antender as requisições dos clientes realizadas através do protocolo \textit{REST}, processando as informações e retornando as respostas.
+
 Os \textit{endpoints} expostos servem para realizar operações com os usuários e irrigações, além de fazer a comunicação com o serviço externo do INPE e retornar uma resposta em formato JSON. É possível cadastrar, listar, atualizar e exluir usuários e irrigações, além de realizar autenticações de login e de permissões para determinadas ações. 
+
+A autenticação de usuário através de login e senha retorna um \textit{token} JWT\footnote{\url{https://jwt.io/}}. JSON \textit{Web Token} (JWT) é um meio compacto e seguro para URL de representar declarações a serem transferidas entre duas partes. As declarações em um JWT são codificadas como um objeto JSON que é assinado digitalmente usando o JSON \textit{Web Signature} (JWS), permitindo decodificar, verificar a autenticidade e gerar novos \textit{tokens}.
+
+As informações de usuário e irrigações são armazenadas no banco de dados MongoDB também em formato JSON. A comunicação entre servidor e banco de dados é realizada através do Mongoose\footnote{\url{https://mongoosejs.com/}}.
 
 \begin{figure}[h]
 	\centering
 
     \caption{Serviço criado com \textit{Node.JS, Express} expõe a documentação e monitoramento em tempo real dos dados através do \textit{browser}} \label{fig:ServerAppExample}
-    \includegraphics[scale=0.45]{server-app} \\
+    \includegraphics[scale=0.46]{server-app} \\
 
 \end{figure}
 
@@ -1075,7 +1085,7 @@ Antes de iniciarmos o servidor Express devemos instalar as dependências atravé
 
 \end{figure}
 
-Essa página só é exibida porque no arquivo \verb|routes/index.js| está configurado a rota padrão para que renderize o arquivo \verb|views/index.jade| passando o título com o valor Express, sendo interpretado pela \textit{template engine} JADE, configurada por padrão pelo Express Generator.
+A página ilustrada na Figura \ref{fig:ExpressGeneratorApp} só é exibida porque no arquivo \verb|routes/index.js| está configurado a rota padrão para que renderize o arquivo \verb|views/index.jade| passando o título com o valor Express, sendo interpretado pela \textit{template engine} JADE, configurada por padrão pelo Express Generator. Abaixo da página web na Figura \ref{fig:ExpressGeneratorApp} é exibido um terminal com o log da aplicação.
 
 Para saber mais opções de geração de estruturas através do Express Generator, execute o comando \verb|express -h|.
 
@@ -1088,7 +1098,7 @@ Instalado a partir do comando do node \verb|npm install -g @angular/cli|, o Angu
 
 Com o Angular CLI é possível criar projetos e estruturá-los a partir do comando \verb|ng|. Por exemplo, para criar um novo projeto, basta executar o comando \verb|ng new app-name|, assim não precisamos nos preocupar com a estrutura inicial do projeto e suas dependências cruciais para o funcionamento do Angular. 
 
-Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}.
+Para iniciar o servidor com o Angular, basta executar o comando \verb|ng serve| e abrir seu navegador no endereço \href{http://localhost:4200}{http://localhost:4200}. A Figura \ref{fig:AngularCliApp} mostra a página padrão criada pelo Angular CLI e logo abaixo é exibido um terminal com o log da aplicação.
 
 Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de forma rápida com o comando \verb|ng generate|.
 
@@ -1109,7 +1119,7 @@ Ainda é possível criar componentes, pipes, módulos, diretivas e serviços de 
 
 Instalar o Node.js é muito simples, basta acessar o site\footnote{\url{https://nodejs.org/en/download/}} oficial e baixar o instalador ou seguir as instruções de instalação de acordo com o seu sistema operacional.
 
-Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal.
+Para iniciar um projeto em Node.js devemos primeiro criar um diretório, em seguida acessá-lo via terminal, enfim digitamos o comando \verb|npm init| e preenchemos as informações de acordo com nosso projeto. Perceba que ele gerou o arquivo \verb|package.json| com as informações preenchidas no comando via terminal, ilustrado pela Figura \ref{fig:NpmInitExample}.
 
 Agora é só começar a desenvolver e instalar suas dependências, que devem ficar salvas no arquivo gerado anteriormente.
 

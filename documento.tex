@@ -150,7 +150,7 @@
 % ---
 \titulo{Desenvolvimento de aplicações com JavaScript }
 \autor{Rodrigo Cichetto Monteiro}
-\local{Brasil}
+\local{Araraquara}
 \data{2018}
 \orientador{Leandro Carlos Fernandes}
 % \coorientador{Danielle Colturato}
@@ -346,13 +346,17 @@ Orientador: Prof. \imprimirorientador}
     \vspace*{\fill}
    \end{center}
         
-   Trabalho aprovado. \imprimirlocal, 24 de novembro de 2018:
+   Trabalho aprovado. \imprimirlocal, 28 de novembro de 2018:
 
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
+    \begin{center}\textbf{Banca Examinadora} \end{center}
+
+    \assinatura{\textbf{\imprimirorientador} \\ \textbf{Título:} Doutor em Ciência da Computação pela USP \\ \textbf{Instuição:} Universidade Paulista (UNIP)}
+    % \assinatura{\textbf{Professor} \\ Convidado 1}
+    \assinatura{\textbf{Prof. MSc. Flávio Luiz dos Santos Souza} \\ \textbf{Título:} Mestre em Ciência da Computação pela USP \\ \textbf{Instuição:} Universidade Paulista (UNIP)}
+    % \assinatura{\textbf{Professor} \\ Convidado 2}
+    \assinatura{\textbf{Prof. MSc João Paulo Moreira dos Santos} \\ \textbf{Título:} Mestre em Ciência da Computação pela UFSCar \\ \textbf{Instuição:} Universidade Paulista (UNIP) }
+    %\assinatura{\textbf{Professor} \\ Convidado 3}
+    %\assinatura{\textbf{Professor} \\ Convidado 4}
       
    \begin{center}
     \vspace*{0.5cm}
@@ -474,6 +478,9 @@ Have you thought about creating a rapid prototyping of software or developing sc
   \item[CSS] \textit{Cascading Style Sheets}
   \item[Sass] \textit{Syntactically Awesome Style Sheets} 
   \item[BEM] \textit{Block Element Modifier} 
+  \item[ECMA] \textit{European Computer Manufacturers Association}
+  \item[INPE] Instituto Nacional de Pesquisas Espaciais
+  \item[PWA] \textit{Progressive Web Apps}
   \item[NPM] \textit{Node Package Manager} 
   \item[ECMA] \textit{European Computer Manufacturers Association}
   \item[API] \textit{Application Programming Interface}
@@ -592,7 +599,7 @@ O desenvolvedor \textit{back-end} trabalha com a regra de negócios, segurança,
 
 Enfim no \textit{roadmap} para \textit{devops} proposto por Ahmed\cite{ahmedse_roadmap}, na Figura \ref{fig:DevopsRoadmap}, ainda é preciso aprender uma linguagem de programação, sendo citadas algumas delas como Python, Ruby, Go e novamente o Node.js. Além de entender alguns conceitos de diferentes sistemas operacionais, gerenciamento de servidores, redes e segurança, integração contínua e entrega contínua, infraestrutura como código e provedores de nuvem.
 
-A função de um \textit{devops} é unir o desenvolvimento e as operações de um \textit{software}, automatizando e monitorando todas as etapas na construção de um sistema, passando por implementação, integração, testes e implantação. Ele também é responsável pelo gerenciamento de infraestrutura e padronização dos ambientes de desenvolvimento.
+A função de um \textit{devops} é de unir o desenvolvimento e as operações de um \textit{software}, automatizando e monitorando todas as etapas na construção de um sistema, passando por implementação, integração, testes e implantação. Ele também é responsável pelo gerenciamento de infraestrutura e padronização dos ambientes de desenvolvimento.
 
 \begin{figure}[h!]
 	\centering
@@ -617,6 +624,10 @@ O site \textit{I Love Coding} apresenta também um \textit{roadmap}\footnote{\ur
 \end{figure}
 
 Utilizar o JavaScript como linguagem comum em todas essas camadas do desenvolvimento, pode trazer alguns possíveis benefícios. Uma vantagem a se considerar, ao utilizar o JavaScript em todas as camadas do desenvolvimento, é a padronização. O ser humano tem uma enorme facilidade no reconhecimento de padrões, por tudo ser escrito na mesma linguagem a uniformidade é maior, tornando assim o trabalho mais compreensivo para os programadores envolvidos no projeto, seja ele \textit{front-end}, \textit{back-end} ou \textit{devops}. 
+
+{\begin{adjustwidth}{4cm}{0cm}
+    “A onipresença da linguagem ajuda na integração da equipe: \textit{front-end} e \textit{back-end} trabalhando com a mesma linguagem! Isso diminui o \textit{truck factor}.” \cite{flavioalmeida_meanstack}.
+\end{adjustwidth}}
 
 Se um programador compreende bem a linguagem ele será capaz também de desenvolver sobre todas as camadas, podendo de certa forma reduzir o tempo ocioso de equipes que dependem do trabalho de outras equipes, sendo assim mais versáteis, ágeis e que compreendem melhor o produto como um todo.
 
@@ -671,7 +682,11 @@ No início da internet as páginas não eram nada interativas, documentos aprese
 
 \subsection{JavaScript além dos navegadores}
 
-Se existe alguma linguagem que evoluiu nos últimos tempos, essa linguagem é o JavaScript. Conforme a linguagem evoluiu se tornou mais poderosa e independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em várias plataformas. 
+É incontestável a evolução que a linguagem JavaScript sofreu, conforme a linguagem evoluiu se tornou também independente do navegador. Isso possibilitou que a linguagem fosse utilizada não somente para a web como \textit{client side} mas agora em várias plataformas. 
+
+{\begin{adjustwidth}{4cm}{0cm}
+“Talvez nenhuma outra linguagem tenha conseguido invadir o coletivo imaginário dos desenvolvedores como JavaScript fez. Em sua história fabular em busca de identidade, foi a única que conseguiu se enraizar nos navegadores, e nos últimos anos passou a empoderar servidores de alta performance através da plataforma Node.js. Com tudo isso, tornou-se uma linguagem em que todo desenvolvedor precisa ter algum nível de conhecimento.” \cite{flavioalmeida_cangaceirojs}.
+\end{adjustwidth}}
 
 Inicialmente tratada como um extra para os navegadores, podemos dizer que a linguagem caminhou com o avanço da tecnologia, isso possibilitou o uso da linguagem em diversas plataformas sendo algumas delas:
 
@@ -693,21 +708,21 @@ O ecossistema JavaScript é gigante e tem atraído empresas de todos os portes. 
 
 Isso acabou impactando os profissionais da área, chamando a atenção de desenvolvedores para saberem pelo menos o básico da linguagem, mesmo atuando em outras áreas, como \textit{back-end, devops} e até mesmo na automatização de testes de \textit{softwares}.
 
-\subsection{ECMA}
+\subsection{ECMAScript}
 
-Para a linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade entre os navegadores. Para isso é necessário um padrão, tal criado e mantido até hoje pelo ECMA Internacional. 
+Para a linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade. Para isso é necessário um padrão, tal criado e mantido até hoje pelo \textit{European Computer Manufacturers Association} (ECMA) \textit{Internacional}. 
 
-Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript.
+Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript, que nada mais é do que o JavaScript padronizado pela ECMA International na especificação ECMA-262. 
 
 Padronização que define a estrutura da linguagem, seus comportamentos e comandos, dando assim um padrão aos interpretadores da linguagem. 
 
-Como vimos, as vantagens do JavaScript vão muito além de ser a linguagem mais popular da web, ou de até mesmo possuir a maior comunidade de programadores. Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passa-se por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
+Depois de 2015, a partir do ES6 (ECMAScript 6) fez com que a linguagem passou por uma série de mudanças essenciais que fizeram com que a linguagem se consolidasse e desde então não parou de evoluir.
 
-Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018.
+Atualmente a linguagem se encontra na 9ª edição chamada de ECMAScript 2018, finalizada em Junho de 2018, conforme consta na página da especificação da linguagem\cite{ecma_standard}.
 
 Com participação colaborativa de empresas que implementam o \textit{run-time} da linguagem, como Mozilla, Google, Microsoft e Apple, além da participação de desenvolvedores da comunidade, o ECMA coordena e faz o trabalho de desenvolvimento contínuo e descentralizado do JS.
 
-No site oficial\footnote{\url{http://www.ecma-international.org/publications/standards/Ecma-262.htm}} a ECMA disponibiliza informações como versão atual e a documentação da linguagem. Porém aconselho a buscar documentações na internet, uma boa referência a seguir é o site da Mozilla \footnote{\url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}}, ou também o site da W3Schools \footnote{\url{https://www.w3schools.com/jsref/default.asp}}. 
+No site oficial a ECMA\cite{ecma_standard} disponibiliza informações como versão atual e a documentação da linguagem. Porém é aconselhável buscar documentações em sites como o da Mozilla \footnote{\url{https://developer.mozilla.org/pt-BR/docs/Web/JavaScript}}, ou também o site da W3Schools \footnote{\url{https://www.w3schools.com/jsref/default.asp}}. 
 
 A 10ª edição já está em desenvolvimento, devendo chegar até o final de Junho no ano de 2019, sendo chamada de ECMAScript 2019.
 
@@ -814,7 +829,7 @@ Por utilizar quatro tecnologias distintas, podemos pensar que dará mais trabalh
 
 \subsection{MongoDB}
 
-Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB é gratuito e de código aberto.
+Um banco de dados flexível, poderoso, escalonável e de alta performance orientado a documentos. Lançado em 2009, escrito em C++, o MongoDB\footnote{\url{https://www.mongodb.com/}} é gratuito e de código aberto.
 
 Por ser orientado à documentos JSON, ou seja, retém os dados usando pares de chave/valor, podemos modelar dados de forma mais natural, utilizando a forma como os dados realmente serão utilizados em nossa aplicação, ao invés de criar várias ligações entre tabelas, o que o dá a característica ao MongoDB de banco não-relacional.
 
@@ -834,7 +849,9 @@ Para resolver esse problema o Mongoose, que nos ajuda a modelar objetos de forma
 
 Express é um \textit{framework} web rápido, flexível e minimalista para Node.js inspirado no Sinatra, um \textit{framework} para \textit{Ruby}. Ele facilita o desenvolvimento de aplicações web e APIs, tanto pequenas quanto mais robustas, tornando fácil escalonar aplicações criadas com ele.
 
-Com um conjunto de métodos utilitários HTTP e \textit{middlewares} a seu dispor, criar uma API robusta utilizando Express é rápido e fácil.
+Com um conjunto de métodos utilitários HTTP e \textit{middlewares} a seu dispor, criar uma API robusta utilizando Express é rápido e fácil, afirma o próprio site\footnote{\url{https://expressjs.com/}} do \textit{framework}.
+
+De acordo com Almeida\cite{flavioalmeida_meanstack} o Express estende as capacidades do servidor padrão do Node.js adicionando \textit{middlewares} e outras capacidades como views e rotas.
 
 Na MEAN Stack, o Express tem a responsabilidade de disponibilizar \textit{endpoints} REST, que serão consumidos pela aplicação cliente. Ele representa na arquitetura em camadas a camada de controle, e também como camada de lógica de negócios como visto anteriormente nos Capítulos \ref{subsec:Servico} e \ref{subsec:Servidor}.
 
@@ -844,7 +861,7 @@ Com o Express podemos criar nossa REST API, configurando funções a serem execu
 
 \subsection{Angular}
 
-Angular é um \textit{framework} JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and Desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
+Angular\footnote{\url{https://angular.io/}} é um \textit{framework} JavaScript de código aberto, mantido pela Google. E tem como princípio "\textit{One framework. Mobile and Desktop}", que basicamente significa utilizarmos o Angular para criar nossa aplicação web e também aplicações para dispositivos móveis.
 
 O \textit{framework} utiliza TypeScript como linguagem, isso pode nos ajudar a manter melhor um projeto grande, já que a tipagem de variáveis nos força a atribuir um valor ou objeto do tipo correspondente, dando assim de certa forma uma garantia de que não teremos problemas ao acessar algum dado. Mas no final todo o código é compilado e transformado em JavaScript.
 
@@ -856,11 +873,11 @@ Perceba que o Angular é apenas uma tecnologia que faz o papel de cliente na arq
 
 \subsection{Node.js}
 
-O Node.js é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, executada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
+O Node.js\footnote{\url{https://nodejs.org/en/}} é uma plataforma de desenvolvimento construída sobre a linguagem JavaScript, por sua natureza assíncrona, executada pelo interpretador V8 criado pela Google e utilizado no Google Chrome, focado em migrar a linguagem JS para servidores. Foi criado pensando em um modelo não bloqueante para as operações de entrada e saída de dados (I/O - \textit{Input and Output}).
 
-Neste modelo, as operações de I/O não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
+Neste modelo, as operações de entrada e saída não bloqueiam o atendimento aos outros clientes, ou seja, quando são feitas operações como uma leitura no disco ou consulta de banco de dados, as requisições de outros clientes vão sendo enfileiradas. Após o processamento ser finalizado e respondido ao primeiro cliente, o próximo cliente é atendido.
 
-Na MEAN Stack, o Node é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura em camadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos Capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
+Na MEAN Stack, o Node.js é o core pois ele é nosso ambiente de execução, que além de manter tudo disponível, contém as regras de negócio da nossa aplicação \textit{back-end}, também conhecida como \textit{server-side}. Ele representa na arquitetura em camadas a camada de lógica de negócios, que trabalhando junto do Express também serve como camada de controle como visto anteriormente nos Capítulos \ref{subsec:Servidor} e \ref{subsec:Servico}.
 
 \subsubsection{Node Package Manager}
 
@@ -880,9 +897,9 @@ O projeto desenvolvido tem como objetivo abordar o assunto sobre informações a
 
 A solução dos problemas ambientais tem sido considerada cada vez mais urgente para garantir o futuro da humanidade, e como hoje existem meios que facilitem o cuidado com o ambiente e a diminuição de desperdício, uma das formas de unirmos o cuidado com a diminuição de desperdício é desenvolvendo uma aplicação que tenha essa funcionalidade.
 
-Para o desenvolvimento do projeto foi utilizado a linguagem JavaScript em conjunto dos \textit{frameworks} que compõem a MEAN Stack, seguindo a arquitetura apresentada no Capítulo \ref{sec:Arquitetura}.
+Para o desenvolvimento do projeto foi utilizado a linguagem JavaScript em conjunto dos \textit{frameworks} que compõem a MEAN Stack, seguindo a arquitetura em camadas apresentada no Capítulo \ref{sec:Arquitetura}.
 
-Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsábilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
+Foi utilizado contêineres da tecnologia Docker\footnote{\url{https://www.docker.com/}} para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsábilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
 
 \begin{figure}[h]
 	\centering
@@ -892,17 +909,17 @@ Foi utilizado contêineres da tecnologia Docker para iniciar e gerenciar as cama
 
 \end{figure}
 
-Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do INPE, sendo assim o fluxo das operações da aplicação.
+Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica, via protocolo REST no formato JSON, com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do Instituto Nacional de Pesquisas Espaciais (INPE), também utilizandno o protocolo REST mas com o fortmato XML, sendo assim o fluxo das operações da aplicação.
 
 \section{Aplicação mobile}
 
 O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele pode se cadastrar como usuário, cadastrar e gerenciar os irrigadores além de saber a previsão do tempo para a cidade veículada para seu usuário e também para cada irrigador separadamente.
 
-Seu papel é realizar a comunicação com o servidor através do protocolo \textit{REST}, enviando e pedindo dados, além de exibir as informações para o usuário.
+Seu papel é realizar a comunicação com o servidor através do protocolo \textit{REST}, enviando e pedindo dados, além de exibir as informações para o usuário. Ele representa a camada de interface de usuário na aplicação.
 
 Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}, que como descrito em seu própio site\footnote{\url{https://ionicframework.com/}} é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
 
-No build é possível escolher entre as plataformas \textit{iOS, Android, PWA} e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida.
+No build é possível escolher entre as plataformas iOS, Android, PWA e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida.
 
 \begin{figure}[h]
 	\centering
@@ -916,6 +933,10 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 
 \section{Servidor}
 
+Para o desenvolvimento do Web Service foi utilizado o Node.js junto do Express, ele serve como regra de negócio, além de expor URIs para comunicação com a aplicação cliente. O servidor representa as camadas de gerenciamento de interface de usuário, autenticação e autorização e a lógica de negócio principal.
+
+Os \textit{endpoints} expostos servem para realizar operações com os usuários e irrigações, além de fazer a comunicação com o serviço externo do INPE e retornar uma resposta em formato JSON. É possível cadastrar, listar, atualizar e exluir usuários e irrigações, além de realizar autenticações de login e de permissões para determinadas ações. 
+
 \begin{figure}[h]
 	\centering
 
@@ -924,7 +945,9 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 
 \end{figure}
 
-\section{Banco de Dados}
+A Figura \ref{fig:ServerAppExample} exibe respectivamente as páginas com a documentação exposta com todas as URIs pelo servidor e uma aplicação para monitorar as irrigações cadastradas acompanhando todas as mudanças em tempo real.
+
+% \section{Banco de Dados}
 
 % -----------------------------------
 % CHAPTER:

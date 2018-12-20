@@ -431,23 +431,26 @@ Orientador: Prof. \imprimirorientador}
 \setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
 \begin{resumo}
 %  Segundo a \citeonline[3.1-3.2]{NBR6028:2003}
-Já pensou em criar uma rápida prototipação de software ou desenvolver aplicações escaláveis de forma rápida e utilizando apenas uma linguagem? Isso é possível e traz benefícios a empresa, desenvolvedores e até mesmo ao cliente. Nos últimos tempos o JavaScript ganhou muita importância em quaisquer cenários, e vem sendo utilizada em sites, aplicações, \textit{mobile}, servidores, automação de testes, automação de tarefas, internet das coisas, entre outros. Este trabalho tem como principal objetivo apresentar benefícios de utilizar a linguagem JavaScript em todas as camadas do desenvolvimento, destacando ferramentas já existentes aplicadas à arquitetura em camadas. Mas lembre-se com grandes poderes vem grandes responsabilidades.
+O JavaScript é um elemento comum quando queremos desenvolver para aplicações \textit{front-end, back-end} e \textit{devops}, assim é apresentado em roteiros para desenvolvedores que visam se tornar \textit{full-stack}. Ajudando assim desenvolvedores no aprendizado em todas essas áreas, uma vez que inicialmente não terá que aprender várias linguagens e suas particularidades. A partir da MEAN Stack aplicada a arquitetura em camadas, conseguimos criar nossa aplicação consistida em um cliente, servidor e banco de dados desenvolvendo inteiramente com JavaScript, sendo possível também desenvolver para diversas outras plataformas, como internet das coisas, automação de testes e realidade virtual. Este trabalho tem como objetivo apresentar a evolução da linguagem JavaScript e sua ampla utilização, para as mais diferentes plataformas.
 
  \vspace{\onelineskip}
 
- \textbf{Palavras-chaves}: javascript, full-stack, MEAN Stack
+ \textbf{Palavras-chaves}: JavaScript, full-stack, MEAN Stack
 \end{resumo}
 
 % resumo em inglês
 \begin{resumo}[Abstract]
  \begin{otherlanguage*}{english}
+ 
+JavaScript is a common element when we want to develop for front-end, back-end and devops applications, so it's presented in roadmaps for developers looking to become full-stack. Helping developers in learning in all these areas, since initially will not have to learn several languages and their particularities. From MEAN Stack applied the layered architecture, we were able to create our application consisting of a client, server and database entirely developed with JavaScript, being possible also to develop for several other platforms, such as internet of things, test automation and virtual reality. This work aims to present the evolution of the JavaScript language and its wide use, for the most different platforms.
 
-Have you thought about creating a rapid prototyping of software or developing scalable applications quickly and using only one programming language? This is possible and brings benefits to the company, developers and even the customer. In recent times JavaScript has gained a lot of importance in any scenario, and has been used in websites, applications, mobile, servers, automation of tests, automation of tasks, internet of things, among others. This work has as main objective to present benefits of using the JavaScript language in all layers of development, highlighting existing tools applied to multilayer architecture. But remember with great powers comes great responsibilities.
+% JavaScript is a common element when we want to develop for front-end, back-end, and devops applications, so it's presented in roadmaps for developers looking to become full-stack. Helping developers in learning in all these areas, since initially will not have to learn several languages ​​and their particularities. From MEAN Stack applied the layered architecture, we were able to create our application consisting of a client, server and database entirely developed with JavaScript, being possible also to develop for several other platforms, such as internet of things, test automation and virtual reality. This work aims to present the evolution of the JavaScript language and its wide use, for the most different platforms.
+
 
    \vspace{\onelineskip}
  
    \noindent 
-   \textbf{Key-words}: javascript, multilayer architecture, frameworks
+   \textbf{Key-words}: JavaScript, full-stack, MEAN Stack
  \end{otherlanguage*}
 \end{resumo}
 % ---
@@ -530,14 +533,17 @@ Have you thought about creating a rapid prototyping of software or developing sc
 % Introdução
 % -----------------------------------
 \chapter{Introdução}
+\label{cap:Introducao}
 
-Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape, tornou-se uma das linguagens mais populares da atualidade.
+Tornar-se um desenvolvedor web que tenha conhecimento em todas as camadas que envolvem o desenvolvimento de uma aplicação, também conhecido como desenvolvedor \textit{full-stack}, pode ser considerado um grande desafio. Para isso é necessário ter conhecimento amplo de \textit{front-end, back-end} e \textit{devops}, cada área com suas particularidades também apresentam linguagens específicas que podem ser utilizadas para seu desenvolvimento. 
 
-Nos últimos anos a linguagem JavaScript ganhou maior importância, com o surgimento de bibliotecas e \textit{frameworks} que possibilitaram o desenvolvimento de não somente web sites mas também aplicativos, \textit{single page applications}, programas \textit{desktop}, \textit{progressive web apps} e muito mais.
+Ter a linguagem JavaScript como um elemento comum e transversal a todas essas áreas, além de ajudar o aluno pode também acelerar o aprendizado, uma vez que inicialmente o estudante não terá que aprender várias linguagens e suas particularidades.
 
-O surgimento do Node.js trouxe novas possibilidades para os desenvolvedores, levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor). % *
+Inicialmente implementada com o objetivo no desenvolvimento web para o lado do cliente, a linguagem criada por Brendan Eich enquanto trabalhou na Netscape, evoluiu e se tornou independente do navegador possibilitando o uso da linguagem em diversas plataformas, como internet das coisas, realidade virtual, automação de testes e outros. Trabalhar com JavaScript em diversas plataformas como \textit{client-side} e \textit{server-side} a tempos atrás poderia ser considerado uma utopia.
 
-Trabalhar com JavaScript em diversas plataformas como \textit{client-side} e \textit{server-side} a tempos atras poderia ser considerado uma utopia. Graças ao crescimento da linguagem agora é possivel a execução da linguagem nos mais diversos ambientes. %*
+O surgimento do Node.js trouxe novas possibilidades para os desenvolvedores, levando a linguagem para um novo patamar. Criado com um modelo não bloqueante na entrada e saída de dados, possibilitou que a linguagem fosse levada agora também para aplicações \textit{back-end}, ou seja, para o \textit{server-side} (lado do servidor).
+
+A MEAN Stack é uma das formas que nos possibilita a criar uma aplicação completa e integrada desenvolvendo inteiramente com JavaScript.
 
 % ---
 % Objetivos
@@ -548,13 +554,24 @@ O trabalho tem como objetivo relatar a evolução da linguagem JavaScript e sua 
 
 Não há soluções tecnológicas a serem resolvidas neste projeto, nele é apresentado informações e tecnologias já existentes, que se encaixem com a arquitetura apresentada e que compartilhem da mesma linguagem.
 
+\section{Estrutura do trabalho}
+
+Este trabalho está estruturado em quatro capítulos.
+
+O Capítulo \ref{cap:Introducao} trata da apresentação do trabalho fazendo uma breve introdução .
+
+O Capítulo \ref{cap:RevisaoBibliografica} traz roteiros propostos para tornar-se um desenvolvedor \textit{full-stack}, uma introdução a linguagem JavaScript, arquitetura em camadas e a MEAN Stack.
+
+O Capítulo \ref{cap:Projeto} descreve o projeto desenvolvido no trabalho, apresentando a aplicação dos conceitos apresentados no Capítulo \ref{cap:RevisaoBibliografica}.
+
+E por fim o Capítulo \ref{cap:Conclusao} apresenta a conclusão obtida por este trabalho.
+
 % -----------------------------------
 % CHAPTER:
 % Pesquisa bibliográfica
 % -----------------------------------
 \chapter{Revisão bibliográfica}
-
-% Por que não em vez de utilizar uma linguagem para o \textit{client-side} e outra para o \textit{server-side}, utilizar apenas uma linguagem para ambos? Ao utilizar a mesma linguagem em todas as camadas de uma aplicação, você traz vantagens para o projeto, equipe e até mesmo para o cliente final. Todo mundo ganha!
+\label{cap:RevisaoBibliografica}
 
 Quando pensamos no caminho a se seguir para tornar-se um desenvolvedor \textit{full-stack} pode-se considerar como um grande desafio, são muitas tecnologias e habilidades a aprender. Basicamente ser um desenvolvedor \textit{full-stack} é ser capaz de trabalhar em todas as camadas do desenvolvimento, bem como, \textit{front-end, back-end} e \textit{devops}. Ter uma visão e conhecimentos amplos do funcionamento de uma aplicação faz também com que o desenvolvedor possa atuar em qualquer área dentro de um time de desenvolvimento.
 
@@ -569,9 +586,9 @@ Inicialmente criado por Kamran Ahmed\cite{ahmedse_roadmap}, mas com contribuiç�
 
 \end{figure}
 
-O roteiro apresentado na Figura \ref{fig:FullstackRoadmap} nos mostra que há tecnologias independentementes, consideradas como requisitos em qualquer caminho a se seguir, ainda mais quando se trata de um desenvolvedor \textit{full-stack}, sendo algumas delas SSH, HTTP/HTTPS e APIs, uso básico do terminal, sistema de controle de versões, codificações de caracteres e outros.
+O roteiro apresentado na Figura \ref{fig:FullstackRoadmap} nos mostra que há tecnologias independentes, consideradas como requisitos em qualquer caminho a se seguir, ainda mais quando se trata de um desenvolvedor \textit{full-stack}, sendo algumas delas SSH, HTTP/HTTPS e APIs, uso básico do terminal, sistema de controle de versões, codificações de caracteres e outros.
 
-De acordo com o próprio Ahmed\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma idéia sobre o mercado e guiar os estudantes que estiverem confusos sobre o que aprender, e não para incentivá-los a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
+De acordo com o próprio Ahmed\cite{ahmedse_roadmap} o objetivo do roteiro é dar uma ideia sobre o mercado e guiar os estudantes que estiverem confusos sobre o que aprender, e não para incentivá-los a escolher o que é moderno e atual. Ressalta ainda que é necessário entender melhor por que uma ferramenta seria mais adequada para alguns casos do que a outra e lembrar que a moda nunca são as mais adequadas para o trabalho.
 
 Na Figura \ref{fig:FrontendRoadmap} é apresentado por Morelli\cite{morelli_roadmap} o roteiro a se seguir para tornar-se um desenvolvedor \textit{front-end}. Primeiro deve-se aprender o básico, que são as linguagens HTML, CSS e JavaScript, requisitadas para qualquer desenvolvedor web. Em seguida deve-se aprofundar o conhecimento nas linguagens a partir de metodologias, processadores, \textit{frameworks} e outros, sendo alguns dos itens citados o Angular\footnote{\url{https://angular.io/}}, React\footnote{\url{https://reactjs.org/}}, NPM\footnote{\url{https://www.npmjs.com/}} e Webpack\footnote{\url{https://webpack.js.org/}} para JavaScript e Bootstrap\footnote{\url{https://getbootstrap.com/}}, Sass\footnote{\url{https://sass-lang.com/}} e BEM para CSS.
 
@@ -586,7 +603,7 @@ Um desenvolvedor \textit{front-end} cuida de como a interface do usuário funcio
 
 \end{figure}
 
-No \textit{back-end}, de acordo com o roteiro apresentado por Morelli\cite{morelli_roadmap}, na Figura \ref{fig:BackendRoadmap}, primeiro deve-se escolher uma linguagem para a partir daí ter um caminho traçado, nele são citados as linguagens Ruby, Python, PHP e vale destacar a presença do Node.js que utiliza como linguagem o JavaScript, uma linguagem comum apresentada também no \textit{roadmap front-end}, ilustrado pela Figura \ref{fig:FrontendRoadmap}. Em seguida para aprofundar o conhecimento o \textit{roadmap} sugere o estudo de alguns itens como Web Server, REST API, autenticações, expressões regulares, Docker e ainda banco de dados, \textit{message brokers} e outros.
+No \textit{back-end}, de acordo com o roteiro apresentado por Morelli\cite{morelli_roadmap}, na Figura \ref{fig:BackendRoadmap}, primeiro deve-se escolher uma linguagem para a partir daí ter um caminho traçado, nele são citados as linguagens Ruby, Python, PHP e vale destacar a presença do Node.js que utiliza como linguagem o JavaScript, uma linguagem comum apresentada também no \textit{roadmap front-end}, ilustrado pela Figura \ref{fig:FrontendRoadmap}. Em seguida para aprofundar o conhecimento o \textit{roadmap} sugere o estudo de alguns itens como \textit{Web Server}, REST API, autenticações, expressões regulares, Docker e ainda banco de dados, \textit{message brokers} e outros.
 
 O desenvolvedor \textit{back-end} trabalha com a regra de negócios, segurança, banco de dados e integração de serviços. De forma sucinta ele escreve o código que manipula o fluxo de dados, salvando informações, atualizando informações, lendo informações e excluindo dados e também gerenciando as permissões de acesso aos dados. 
 
@@ -680,7 +697,7 @@ Com JavaScript também é possível a detecção de eventos, sempre que algo de 
 
 Podemos executar códigos JS de várias formas na web, sendo uma delas pelo próprio console do navegador, importando um script em uma página HTML, ou até mesmo envolvendo o trecho de código na tag <script>.
 
-No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador, de forma estática. O JavaScript trouxe novas possibilidades, hoje não somente para web, mas em muitas plataformas onde é possivel desenvolver com a linguagem. 
+No início da internet as páginas não eram nada interativas, documentos apresentavam seu conteúdo exatamente como foram criados para serem exibidos no navegador, de forma estática. O JavaScript trouxe novas possibilidades, hoje não somente para web, mas em muitas plataformas onde é possível desenvolver com a linguagem. 
 
 \subsection{JavaScript além dos navegadores}
 
@@ -712,9 +729,9 @@ Isso acabou impactando os profissionais da área, chamando a atenção de desenv
 
 \subsection{ECMAScript}
 
-Para a linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade. Para isso é necessário um padrão, tal criado e mantido até hoje pelo \textit{European Computer Manufacturers Association} (ECMA) \textit{Internacional}. 
+Para a linguagem rodar em ambientes que podem variar, algo importante a considerar é a compatibilidade. Para isso é necessário um padrão, tal criado e mantido até hoje pelo \textit{European Computer Manufacturers Association} (ECMA) \textit{International}. 
 
-Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript, que nada mais é do que o JavaScript padronizado pela ECMA International na especificação ECMA-262. 
+Já em 1996 a Netscape, detentora do JavaScript, anunciou que submetia a linguagem para o ECMA Internacional como candidata a padrão industrial, resultando então no ECMAScript, que nada mais é do que o JavaScript padronizado pela ECMA \textit{International} na especificação ECMA-262. 
 
 Padronização que define a estrutura da linguagem, seus comportamentos e comandos, dando assim um padrão aos interpretadores da linguagem. 
 
@@ -757,8 +774,6 @@ A modularização refere-se a separar a lógica de negócios e regras de acesso 
 \end{figure}
 
 De acordo com Sommerville\cite{sommerville_engenharia} a Figura \ref{fig:MultilayerArchitecture} é um exemplo de uma arquitetura em camadas, com quatro camadas. A camada mais baixa inclui software de apoio ao sistema — geralmente, apoio de banco de dados e de sistema operacional. A próxima camada é a camada de aplicação, que inclui os componentes relacionados com a funcionalidade da aplicação e os componentes utilitários que são usados por outros componentes da aplicação. A terceira camada está preocupada com o gerenciamento de interface de usuário e fornecimento de autenticação e autorização de usuário, com a camada superior fornecendo recursos de interface com o usuário. Certamente, o número de camadas é arbitrário. Qualquer camada na Figura \ref{fig:MultilayerArchitecture} pode ser dividida em mais camadas.
-
-% Na parte inferior da Figura \ref{fig:MultilayerArchitecture}, está localizado o servidor de banco de dados, no qual fornece os dados para os servidores da aplicação. Já na parte superior estão os clientes, que fazem a comunicação com a camada intermediária através da utilização de interfaces e protocolos de rede. Este é basicamente o esquema de comunicação desta arquitetura.
 
 O objetivo deste capítulo é introduzir os conceitos da arquitetura de software e do projeto de arquitetura. A arquitetura apresentada foi escolhida por criar um cenário de aplicação que exemplifica bem as separações das responsabilidades, podendo assim mostrar a aplicação de apenas uma linguagem em todos eles, assim como a flexibilidade do JavaScript.
 
@@ -813,7 +828,7 @@ O acrônimo MEAN foi cunhado em 2013 por Valeri Karpov do time do \textit{MongoD
 
 De acordo com Osmani\cite{osmani_addy} a MEAN aposta na onipresença da linguagem JavaScript, o que significa que a comunidade pode contribuir com novas stacks baseadas em JavaScript na plataforma Node.js que tornem ainda mais produtivo e divertido o desenvolvimento de aplicações web.
 
-Para quem já trabalha com a Web a MEAN Stack com JavaScript em todas as pontas é interessantíssima, abrindo muitas possibilidades, criando aplicações completas ou apenas protótipos de forma rápida. Pois seu principal foco é a produtividade.
+Para quem já trabalha com o JavaScript a MEAN Stack tendo a linguagem em todas as tecnologias é interessantíssima, abrindo muitas possibilidades, criando aplicações completas ou apenas protótipos de forma rápida. Pois seu principal foco é a produtividade.
 
 Com o surgimento do Node.js, permitindo utilizar código JavaScript também no servidor, combinado com o MongoDB, que permite trabalhar e enviar JSON, e o uso dos mais diversos \textit{frameworks front-end} em JavaScript, é aplicado a linguagem em toda a \textit{stack} da aplicação.
 
@@ -894,6 +909,7 @@ Isso também nos ajuda a padronizar as versões de nossas dependências, facilit
 % Projeto
 % -----------------------------------
 \chapter{Projeto}
+\label{cap:Projeto}
 
 O projeto desenvolvido tem como objetivo abordar o assunto sobre informações ambientais e o desenvolvimento de uma aplicação que facilite o dia a dia de uma pessoa com o gerenciamento de irrigações de uma pequena plantação, ou apenas a grama de um jardim de forma sustentável.
 
@@ -901,7 +917,7 @@ A solução dos problemas ambientais tem sido considerada cada vez mais urgente 
 
 Para o desenvolvimento do projeto foi utilizado a linguagem JavaScript em conjunto dos \textit{frameworks} que compõem a MEAN Stack, seguindo a arquitetura em camadas apresentada no Capítulo \ref{sec:Arquitetura}.
 
-Foi utilizado contêineres da tecnologia Docker\footnote{\url{https://www.docker.com/}} para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsábilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
+Foi utilizado contêineres da tecnologia Docker\footnote{\url{https://www.docker.com/}} para iniciar e gerenciar as camadas da aplicação. Um contêiner para cada responsabilidade, um para a Aplicação mobile, um para o Servidor e outro para o Banco de Dados, totalizando 3 contêineres. Sendo possível um maior controle por funcionalidade, podendo gerir e escalar em unidades, de forma que não influencie nos outros contêineres.
 
 \begin{figure}[h]
 	\centering
@@ -911,19 +927,19 @@ Foi utilizado contêineres da tecnologia Docker\footnote{\url{https://www.docker
 
 \end{figure}
 
-Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica, via protocolo REST no formato JSON, com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do Instituto Nacional de Pesquisas Espaciais (INPE), também utilizandno o protocolo REST mas com o fortmato XML, sendo assim o fluxo das operações da aplicação.
+Conforme ilustrado na Figura \ref{fig:ProjectFlow}, o Cliente se comunica, via protocolo REST no formato JSON, com o Servidor que também realiza a comunicações com o Banco de Dados e o serviço externo do Instituto Nacional de Pesquisas Espaciais (INPE), também utilizando o protocolo REST mas com o formato XML, sendo assim o fluxo das operações da aplicação.
 
 Todo o código criado foi disponibilizado via GitHub, através de um repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}} junto de todas as informações de licença e de como executar a aplicação.
 
 \section{Aplicação mobile}
 
-O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele pode se cadastrar como usuário, cadastrar e gerenciar os irrigadores além de saber a previsão do tempo para a cidade veículada para seu usuário e também para cada irrigador separadamente.
+O aplicativo desenvolvido serve de gerenciador para o usuário cliente, onde ele pode se cadastrar como usuário, cadastrar e gerenciar os irrigadores além de saber a previsão do tempo para a cidade veiculada para seu usuário e também para cada irrigador separadamente.
 
 Seu papel é realizar a comunicação com o servidor através do protocolo \textit{REST}, enviando e pedindo dados, além de exibir as informações para o usuário. Ele representa a camada de interface de usuário na aplicação.
 
-Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}, que como descrito em seu própio site\footnote{\url{https://ionicframework.com/}} é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
+Foi utilizado o \textit{Angular}, que é uma ferramenta presente na MEAN Stack, junto do \textit{Ionic}, que como descrito em seu próprio site\footnote{\url{https://ionicframework.com/}} é um \textit{framework} que facilita a criação de aplicativos móveis e web progressivos de alto desempenho (ou PWAs) com aparência e beleza em qualquer plataforma ou dispositivo. Ele fornece componentes de interface do usuário, facilitando a criação de aplicativos com as linguagens HTML, CSS e JavaScript.
 
-No build é possível escolher entre as plataformas iOS, Android, PWA e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida. Dessa forma é utilizado o mesmo código para multiplataformas.
+No \textit{build} é possível escolher entre as plataformas iOS, Android, PWA e até mesmo \textit{Desktop} para geração do arquivo final respectivo a plataforma escolhida. Dessa forma é utilizado o mesmo código para multiplataformas.
 
 \begin{figure}[h]
 	\centering
@@ -937,11 +953,11 @@ A Figura \ref{fig:ClientAppExample} mostra a aplicação criada e algumas telas 
 
 \section{Servidor}
 
-Para o desenvolvimento do Web Service foi utilizado o Node.js junto do Express, ele serve como regra de negócio, além de expor URIs para comunicação com a aplicação cliente. O servidor representa as camadas de gerenciamento de interface de usuário, autenticação e autorização e a lógica de negócio principal.
+Para o desenvolvimento do \textit{Web Service} foi utilizado o Node.js junto do Express, ele serve como regra de negócio, além de expor URIs para comunicação com a aplicação cliente. O servidor representa as camadas de gerenciamento de interface de usuário, autenticação e autorização e a lógica de negócio principal.
 
-Seu papel é antender as requisições dos clientes realizadas através do protocolo \textit{REST}, processando as informações e retornando as respostas.
+Seu papel é atender as requisições dos clientes realizadas através do protocolo \textit{REST}, processando as informações e retornando as respostas.
 
-Os \textit{endpoints} expostos servem para realizar operações com os usuários e irrigações, além de fazer a comunicação com o serviço externo do INPE e retornar uma resposta em formato JSON. É possível cadastrar, listar, atualizar e exluir usuários e irrigações, além de realizar autenticações de login e de permissões para determinadas ações. 
+Os \textit{endpoints} expostos servem para realizar operações com os usuários e irrigações, além de fazer a comunicação com o serviço externo do INPE e retornar uma resposta em formato JSON. É possível cadastrar, listar, atualizar e excluir usuários e irrigações, além de realizar autenticações de login e de permissões para determinadas ações. 
 
 A autenticação de usuário através de login e senha retorna um \textit{token} JWT\footnote{\url{https://jwt.io/}}. JSON \textit{Web Token} (JWT) é um meio compacto e seguro para URL de representar declarações a serem transferidas entre duas partes. As declarações em um JWT são codificadas como um objeto JSON que é assinado digitalmente usando o JSON \textit{Web Signature} (JWS), permitindo decodificar, verificar a autenticidade e gerar novos \textit{tokens}.
 
@@ -964,9 +980,13 @@ A Figura \ref{fig:ServerAppExample} exibe respectivamente as páginas com a docu
 % Conclusão
 % -----------------------------------
 \chapter{Conclusão}
-Foi apresentado a flexibilidade da linguagem, no caso o JavaScript, de aplicação em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicamos a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nas mais diversas plataformas.
+\label{cap:Conclusao}
 
-O JavaScript evolui a cada dia que passa, se eu pudesse apostar em uma linguagem pro futuro certamente o escolheria. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
+Apresentou-se \textit{roadmaps} para se tornar um desenvolvedor \textit{full-stack}, que tenha conhecimentos nas áreas \textit{front-end, back-end} e \textit{devops}, e ressaltou-se a linguagem JavaScript como um elemento comum e transversal a todos os \textit{roadmaps} apresentados, de forma que isso permita o desenvolvimento em diversas plataformas. Além de como a presença da linguagem nos diversos roteiros pode acelerar o aprendizado, uma vez que inicialmente o estudante não terá que aprender várias linguagens e suas particularidades.
+
+Foi apresentado a flexibilidade da linguagem, no caso o JavaScript, de aplicação em todas as camadas do desenvolvimento. Através da arquitetura em camadas aplicou-se a MEAN Stack, relacionando uma ferramenta para cada camada, mostrando ser capaz utilizar a linguagem nas mais diversas plataformas.
+
+É incontestável a evolução que a linguagem JavaScript sofreu nos últimos anos, conforme a linguagem evoluiu se tornou também independente do navegador possibilitando que a linguagem fosse utilizada não somente para a web como \textit{client side} mas em várias plataformas. Ao mesmo tempo que é uma linguagem de fácil aprendizado é uma linguagem forte e consolidada. Assim foi relatado a evolução da linguagem e sua ampla utilização, para os mais diferentes tipos de sistemas, no contexto atual.
 
 Também foi criado uma aplicação para mostrar na prática os conceitos aqui apresentados, e todo o código foi disponibilizado via GitHub, através de um repositório\footnote{\url{https://github.com/rodrigocichetto/tcc}} com todas as informações de licença e de como executar.
 

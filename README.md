@@ -69,7 +69,7 @@ docker-compose up -d
 
     Logs: `docker logs -f tcc-mongodb`
 
-    Tecnologias: MongoDB
+    Tecnologias: MongoDB.
 
     O banco de dados é onde as informações de usuário e irrigações são armazenadas também em formato JSON.
 
